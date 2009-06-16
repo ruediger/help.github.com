@@ -1,9 +1,9 @@
 ---
 layout: default
+title: Welcome to the GitHub Help site
 ---
 
 <div class="span-21" id="welcome">
-  <h1>Welcome to the GitHub Help site</h1>
   <p>
     Here we have compiled many guides to help you set up and use GitHub.
     Be aware that these guides generall only cover GitHub-specific topics, for help learning
@@ -36,22 +36,26 @@ layout: default
 </div>
 
 <div class="span-5">
-  <h2>Beginner</h2>
-  <div class='episode'>
-    <b><a href="p/intro.html">Introduction To Git</a></b>
-    <p>What Git is, why you would want to use it and where to get it and learn about it.</p>
-  </div>
+  <h2>Windows</h2>
+  {% for post in site.categories.windows %}
+    <div class='episode'>
+      <b><a href="{{ post.url }}">{{ post.title }}</a></b>
+      {% if post.description %}
+        <p>{{ post.description }}</p>
+      {% endif %}
+    </div>
+  {% endfor %}
 </div>
 
 <div class="span-5">
-  <h2>Intermediate</h2>
+  <h2>Mac OSX</h2>
   <div class='episode'><b>Distributed Git</b>
     <p>Fetch, merge, pull and push between multiple remote repositories.</p>
   </div>
 </div>
 
 <div class="span-5">
-  <h2>Advanced</h2>
+  <h2>Linux</h2>
   <div class='episode'>
     <b>Filter Branch</b>
     <p>Modify large sections of your commit history at once, changing emails, names or files globally.</p>
