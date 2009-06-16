@@ -17,9 +17,9 @@ h2 { background: #ddd; text-align: center; padding: 4px; }
 
 .info, .fork { padding: 10px; }
 .content { font-size: 1.2em; }
-.content h3 { background: #dfd; font-size: 1.7em; padding: 6px 2px; }
+.content h3 { background: #fdd; font-size: 1.7em; padding: 6px 2px; }
 
-pre { padding: 20px; background: #ffd; font-size: 0.9em; }
+pre { padding: 20px; background: #444; color: white; font-size: 0.9em; }
 
 #links { padding: 10px; }
 
