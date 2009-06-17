@@ -4,17 +4,16 @@ title: Welcome to the GitHub Help site
 ---
 
 <div class="span-21" id="welcome">
-  <p>
-    Here we have compiled many guides to help you set up and use GitHub.
-    Be aware that these guides generall only cover GitHub-specific topics, for help learning
-    how to use Git, please check out <a href="http://learn.github.com/">Learn.GitHub</a>
-  </p>
-  <p>This site is a work in progress.</p>
+
+p. Here we have compiled many guides to help you set up and use GitHub.  Be aware that these guides generally only cover GitHub-specific topics, for help learning how to use Git, please check out "Learn.GitHub":http://learn.github.com/
+
+p. This site is a work in progress.
+
 </div>
 
 <div class="span-7" id="start">
   <div class="button red">
-    <a href="p/intro.html">Start the Full Course</a>
+    "Start the Full Course":p/intro.html
   </div>
 </div>
 
