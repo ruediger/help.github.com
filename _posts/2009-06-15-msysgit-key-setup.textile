@@ -1,7 +1,8 @@
 ---
 layout: guide
-title: Generating SSH keys with msysgit
+title: Generating SSH keys (msysgit)
 subtitle: This guide will step you through the process of generating a keypair in msysgit and uploading it to GitHub
+description: Setting up SSH keys with msysgit on Windows
 categories:
 - windows
 - setup

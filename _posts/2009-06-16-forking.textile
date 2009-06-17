@@ -2,7 +2,7 @@
 layout: guide
 title: Forking a project
 subtitle: This guide will step you through the process of forking, pushing you changes, and pulling in changes from the upstream repo.
-description: Fork a project, make changes, and pull from other repos in the fork network
+description: How to fork a project, submit changes, and pull from other repos in the fork network
 categories: collaborating
 ---
 

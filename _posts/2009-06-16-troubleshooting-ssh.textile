@@ -2,6 +2,7 @@
 layout: guide
 title: Troubleshooting SSH issues
 subtitle: This guide contains the solutions to the most common SSH connection issues encountered on GitHub
+description: Solutions to common SSH issues
 categories: setup
 ---
 
