@@ -3,9 +3,7 @@ layout: guide
 title: Generating SSH keys (msysgit)
 subtitle: This guide will step you through the process of generating a keypair in msysgit and uploading it to GitHub
 description: Setting up SSH keys with msysgit on Windows
-categories:
-- windows
-- setup
+categories: windows setup
 ---
 
 Generating an SSH key with msysgit is a fairly straightforward process.  First and foremost, make sure you're working in the Git Bash console, not cmd (the default Windows command line).  You can find Git Bash under the git folder in your start menu, or by right clicking on a folder and selecting "Git Bash Here" if you choose to install context menu items during the msysgit installation.
@@ -26,6 +24,8 @@ Here we have an existing keypair, @id_rsa@ and @id_rsa.pub@, which we've copied 
 
 h3. Generating a key
 
+p(. _If you have an existing keypair you wish to use, you can skip this step._
+
 Now that we're certain ssh won't use an existing key, it's time to generate a new keypair.  Lets make an RSA keypair:
 
 <pre>$ ssh-keygen -t rsa -c "tekkub@gmail.com"
@@ -43,6 +43,8 @@ At each prompt we just hit enter.  This will generate the key with the default n
 h3. Adding the key to your GitHub account
 
 Now launch your browser and open the "account page":https://github.com/account.  In the "SSH Public Keys" section click "add another public key", then paste your key into the "key" field.  If you leave the title blank the key comment (your email) will be used for the title.
+
+Make sure you use the public key (@id_rsa.pub@ in our example), and do not add any newlines or whitespace inside the key.
 
 !/images/add_key.png!
 
