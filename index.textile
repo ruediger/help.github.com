@@ -35,37 +35,18 @@ title: Welcome to the GitHub Help site
   <hr/>
 </div>
 
-<div class="span-5">
-  <h2>Windows</h2>
-  {% for post in site.categories.windows %}
-    <div class='episode'>
+{% for cat in site.categories %}
+  {% case forloop.index %}
+  {% when 3 or 6 or 9 or 12 or 15 or 18 or 21 %}
+    {% assign c = 'span-7 last' %}
+  {% else %}
+    {% assign c = 'span-7' %}
+  {% endcase %}
+  <div class="{{ c }}">
+    <h2>{{ cat[0] | capitalize }}</h2>
+    {% for post in cat[1] %}
       <b><a href="{{ post.url }}">{{ post.title }}</a></b>
-      {% if post.description %}
-        <p>{{ post.description }}</p>
-      {% endif %}
-    </div>
-  {% endfor %}
-</div>
-
-<div class="span-5">
-  <h2>Mac OSX</h2>
-  <div class='episode'><b>Distributed Git</b>
-    <p>Fetch, merge, pull and push between multiple remote repositories.</p>
+      <p>{{ post.description }}</p>
+    {% endfor %}
   </div>
-</div>
-
-<div class="span-5">
-  <h2>Linux</h2>
-  <div class='episode'>
-    <b>Filter Branch</b>
-    <p>Modify large sections of your commit history at once, changing emails, names or files globally.</p>
-  </div>
-</div>
-
-<div class="span-6 last">
-  <h2>Special Interest</h2>
-  <div class='episode'>
-    <b>Git and Windows - General</b>
-    <p>Install and use Git on a Windows environment using the default mSysGit tools.</p>
-  </div>
-</div>
+{% endfor %}
