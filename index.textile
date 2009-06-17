@@ -35,13 +35,7 @@ p. This site is a work in progress.
 </div>
 
 {% for cat in site.categories %}
-  {% case forloop.index %}
-  {% when 3 or 6 or 9 or 12 or 15 or 18 or 21 %}
-    {% assign c = 'span-7 last' %}
-  {% else %}
-    {% assign c = 'span-7' %}
-  {% endcase %}
-  <div class="{{ c }}">
+  <div class="{% cycle 'span-7', 'span-7', 'span-7 last' %}">
     <h2>{{ cat[0] | capitalize }}</h2>
     {% for post in cat[1] %}
       <b><a href="{{ post.url }}">{{ post.title }}</a></b>
