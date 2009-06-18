@@ -1,6 +1,13 @@
 ---
 layout: default
 title: Welcome to the GitHub Help site
+index_cats:
+- setup
+- mac
+- windows
+- collaborating
+last_cats:
+- windows
 ---
 
 <div class="span-21" id="welcome">
@@ -34,12 +41,13 @@ p. This site is a work in progress.
   <hr/>
 </div>
 
-{% for cat in site.categories %}
-  <div class="{% cycle 'span-7', 'span-7', 'span-7 last' %}">
-    <h2>{{ cat[0] | capitalize }}</h2>
-    {% for post in cat[1] %}
+{% for cat in (page.index_cats) %}
+  <div class="span-7 {% if page.last_cats contains cat %}last{% endif %}">
+    <h2>{{ cat | capitalize }}</h2>
+    {% for post in site.posts %}{% if post.categories contains cat %}
       <b><a href="{{ post.url }}">{{ post.title }}</a></b>
       <p>{{ post.description }}</p>
-    {% endfor %}
+    {% endif %}{% endfor %}
   </div>
 {% endfor %}
+
