@@ -18,29 +18,6 @@ p. This site is a work in progress.
 
 </div>
 
-<div class="span-7" id="start">
-  <div class="button red">
-    "Start the Full Course":p/intro.html
-  </div>
-</div>
-
-<div class="span-7" id="how">
-  <div class="button green">
-    10 Minute Crash Course
-  </div>
-</div>
-
-<div class="span-7 last" id="why">
-  <div class="button blue">
-    "Why Git" in 5 Minutes
-  </div>
-</div>
-
-<div class="span-21 last">
-  <br clear="both"/>
-  <hr/>
-</div>
-
 {% for cat in (page.index_cats) %}
   <div class="span-7 {% if page.last_cats contains cat %}last{% endif %}">
     <h2>{{ cat | capitalize }}</h2>
