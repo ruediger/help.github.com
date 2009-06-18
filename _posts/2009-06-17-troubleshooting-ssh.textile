@@ -6,8 +6,9 @@ description: Solutions to common SSH issues
 categories: setup
 ---
 
-The first step to testing your connection is to run <code>ssh git@github.com</code>.  If your key works, you should get a message like:
-<pre>Hi username! You've successfully authenticated, but GitHub does not provide shell access.</pre>
+The first step to testing your connection is to run <code>ssh git@github.com</code>.  If your key works, you should get a success message:
+<pre>$ ssh git@github.com
+Hi username! You've successfully authenticated, but GitHub does not provide shell access.</pre>
 
 If this step fails, try running <code>ssh -v git@github.com</code>.  This will print out debug info on what ssh is trying to do.  In this output you should check that ssh is connecting to the correct server, on the correct port (22).  Many firewalls and proxies will block this connection.  Also ensure that ssh is reading the correct key files, these are at ~/.ssh/id_rsa, id_dsa and identity by default.  If your key is not at this location, you should move it or create an override (see the "SSH config" section below).
 
@@ -19,11 +20,13 @@ h3. Permission denied (publickey)
 
 This is usually caused when ssh cannot find your keys.  Make sure your key is in the default location, @~/.ssh@. If you run @ssh-keygen@ again and just press enter at all 3 prompts it will be placed here automatically. Then you can add the contents of id_rsa.pub to "my github keys":https://github.com/account. If id_rsa.pub doesn't work try id_dsa.pub. You might need to generate a new dsa key with @ssh-keygen -t dsa@ if you just have an rsa key.
 
-h4. Issues when using sudo
+h3. Issues when using sudo
+
+p((. _You shouldn't run @sudo git@ unless you have a very good reason.  If you don't know if you have a good reason to use sudo, it's likely that you do not have one._
 
 If you are using sudo with git commands (e.g. using <code>sudo git clone</code> because you are deploying to a root-owned folder), ensure that you also generated the key using sudo.  Otherwise, you will have generated a key for your current user, but when you are doing sudo git, you are actually the root user - thus, the keys will not match.
 
-In summary, if you are using <code>sudo git</code>, then also use <code>sudo ssh-keygen</code>.
+Simply put, if you are using <code>sudo git</code>, then also use <code>sudo ssh-keygen</code>.
 
 h3. SSH config
 
