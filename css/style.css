@@ -9,7 +9,9 @@ a { color: #008; }
 
 h2 { background: #ddd; text-align: center; padding: 4px; }
 
-#welcome p { font-size: 1.3em; color: #444; text-align:center;}
+#welcome { margin-bottom: 0.5em; }
+#welcome p { font-size: 1.3em; color: #444; text-align:center; padding: 0 5em; }
+#welcome p:last-child { margin-bottom: 0; }
 
 #header { }
 #footer { background: #ddd;}
@@ -17,7 +19,8 @@ h2 { background: #ddd; text-align: center; padding: 4px; }
 
 .info, .fork { padding: 10px; }
 .content { font-size: 1.2em; }
-.content h3 { background: #fdd; font-size: 1.7em; padding: 6px 2px; }
+.content h3 { background: #fdd; font-size: 1.7em; padding: 6px 2px; margin-top: 1.5em; }
+.content p { margin-top: 1.5em; }
 
 pre { padding: 20px; background: #444; color: white; font-size: 0.9em; }
 

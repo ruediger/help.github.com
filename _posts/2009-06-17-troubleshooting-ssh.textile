@@ -54,7 +54,9 @@ See "this post":http://groups.google.com/group/github/browse_thread/thread/21fd0
 Especially with cygwin-git+pageant+putty/plink, you might want to set GIT_SSH to your plink.exe location -- unless that doesn't work for you. In certain circumstances (perhaps after a service pack installation), you will find git network operations failing with
 this is because plink.exe running from your (cygwin-provided) git command "*can't talk with pageant to get its keys*":http://www.chiark.greenend.org.uk/~sgtatham/putty/wishlist/cygwin-clobbers-pageant.html . A solution is to set up a script that has:
 <pre>/cygdrive/c/ntnot/plink.exe -i "c:\users\you\.ssh\key-file-for-github.ppk" $1 $2</pre>
+
 and set GIT_SSH to point to this:
+
 <pre>declare -x GIT_SSH="c:\path\to\script"</pre>
 
 This explicitly provides the key for plink to use, rather than have it talk with pageant.
