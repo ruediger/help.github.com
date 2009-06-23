@@ -16,7 +16,7 @@ The SSH login credentials used to push and pull can not be used to access a shel
 
 h3. File system and backups
 
-We do not encrypt repositories on disk because it would not be any more secure: the website and git backend would need to decrypt the repositories on demand, slowing down response times.  Any user with shell access to the file system would have access to the decryption routine, thus negating any security it provides. Therefore, we focus on making our machines and network as secure as possible.
+We do not encrypt repositories on disk because it would not be any more secure: the website and git back-end would need to decrypt the repositories on demand, slowing down response times.  Any user with shell access to the file system would have access to the decryption routine, thus negating any security it provides. Therefore, we focus on making our machines and network as secure as possible.
 
 Our database and your repositories are backed up nightly off-site.  We do not retroactively remove repositories from backups when deleted by the user, as we may need to restore the repo for the user if it was removed accidentally.
 
