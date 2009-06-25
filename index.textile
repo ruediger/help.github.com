@@ -6,6 +6,7 @@ index_cats:
 - mac
 - windows
 - collaborating
+- repos
 ---
 
 <div class="span-21" id="welcome">
