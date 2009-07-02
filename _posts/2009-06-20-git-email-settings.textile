@@ -8,7 +8,7 @@ categories: setup
 
 h3. Setting user name and email globally in git
 
-Git needs to know your username and email address to properly credit your commits.  Setting this setting will also let GitHub link the commits you make to your GitHub account.
+Git needs to know your username and email address to properly credit your commits.  Setting this setting will also let GitHub link the commits you make to your GitHub account.  Only commits made after you change this setting will use the new info, old commits will preserve the info they were committed with.
 
 p(. _The "email" setting does not have to be a valid email address, it only need match the "user@server" naming scheme._
 
