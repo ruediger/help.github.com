@@ -4,9 +4,9 @@ title: Welcome to the GitHub Help site
 index_cats:
 - setup
 - mac
+- repos
 - windows
 - collaborating
-- repos
 ---
 
 <div class="span-21" id="welcome">
