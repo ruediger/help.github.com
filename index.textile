@@ -20,7 +20,7 @@ p. This site is a work in progress.
 {% for cat in (page.index_cats) %}
   <div class="category_index">
     <h2>{{ cat | capitalize }}</h2>
-    {% for post in site.posts %}{% if post.categories contains cat %}
+    {% for post in site.posts reversed %}{% if post.categories contains cat %}
       <b><a href="{{ post.url }}">{{ post.title }}</a></b>
       <p>{{ post.description }}</p>
     {% endif %}{% endfor %}
