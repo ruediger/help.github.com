@@ -35,10 +35,15 @@ _Note that some projects do not accept pull requests.  Make sure you submit your
 
 h3. Pulling in upstream changes
 
-Some time has passed, the upstream repo has changed and you want to update your fork before you submit a new patch.
+Some time has passed, the upstream repo has changed and you want to update your fork before you submit a new patch.  There are two ways to do this:
+<pre>$ git fetch upstream master
+$ git merge upstream/master</pre>
+
 <pre>$ git pull upstream master</pre>
 
-This command does two things, @git fetch upstream master@ to update your local tracking branch, then @git merge upstream/master@ to bring the changes into your currently checked out branch.  If you have local commits that are not in the upstream branch, a normal merge will occur.  If your local commits are in the upstream branch, a fast-forward merge will be done, moving your local branch to the same commit as upstream/master.  You may have to resolve merge conflicts if there are any.
+@git pull@ is a more direct way, but the merge it performs can be confusing if the user doesn't expect it and a merge conflict results.  @git fetch@ will also grab all branches, where @git pull@ will only grab the one specified.
+
+If you have local commits that are not in the upstream branch, a normal merge will occur.  If your local commits are in the upstream branch, a fast-forward merge will be done, moving your local branch to the same commit as upstream/master.  If both repos have edits to the same location in the same file, you may run into a merge conflict.  Conflicts must be resolved by hand and a commit made to complete the merge.
 
 Now that your local branch has been updated, you can commit, push, and send a pull request.
 
