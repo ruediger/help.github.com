@@ -9,20 +9,20 @@ index_cats:
 - collaborating
 ---
 
-<div class="span-21" id="welcome">
+Here we have compiled many guides to help you set up and use GitHub.  Be aware that these guides generally only cover GitHub-specific topics, for help learning how to use Git, please check out "Learn.GitHub":http://learn.github.com/
 
-p. Here we have compiled many guides to help you set up and use GitHub.  Be aware that these guides generally only cover GitHub-specific topics, for help learning how to use Git, please check out "Learn.GitHub":http://learn.github.com/
-
-p. This site is a work in progress.
-
-</div>
+This site is a work in progress.
 
 {% for cat in (page.index_cats) %}
   <div class="category_index">
     <h2>{{ cat | capitalize }}</h2>
-    {% for post in site.posts reversed %}{% if post.categories contains cat %}
-      <b><a href="{{ post.url }}">{{ post.title }}</a></b>
-      <p>{{ post.description }}</p>
-    {% endif %}{% endfor %}
+    <dl>
+      {% for post in site.posts reversed %}{% if post.categories contains cat %}
+        <dt><a href="{{ post.url }}">{{ post.title }}</a></dt>
+        <dd>{{ post.description }}</dd>
+      {% endif %}{% endfor %}
+    </dl>
   </div>
 {% endfor %}
+
+<div class="clear"></div>

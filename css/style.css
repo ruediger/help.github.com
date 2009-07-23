@@ -1,4 +1,9 @@
-a { color: #008; }
+
+.site { width: 60em; }
+
+#content.site { width: 59em; }
+
+/*a { color: #008; }
 
 #welcome h1 {
   padding: 20px;
@@ -7,7 +12,6 @@ a { color: #008; }
   color: #fff;
   }
 
-h2 { background: #ddd; text-align: center; padding: 4px; }
 
 #welcome { margin-bottom: 0.5em; }
 #welcome p { font-size: 1.3em; color: #444; text-align:center; padding: 0 5em; }
@@ -16,9 +20,14 @@ h2 { background: #ddd; text-align: center; padding: 4px; }
 #header { }
 #footer { background: #ddd;}
 #footer a { color: #444; }
+*/
+.category_index { float: left; margin: 0.25em; width:19em; }
+.category_index h2 { background: #ddd; text-align: center; padding: 0.25em; margin-bottom: 0.5em; }
+.category_index dt, .category_index dd { margin-right: 0.5em; }
+.category_index dt { margin-left: 0.5em !important; }
+.category_index dd { margin-left: 1.5em !important; }
 
-.category_index { float: left; margin: 4px; width:255px; }
-.info, .fork { padding: 10px; }
+/*.info, .fork { padding: 10px; }
 .content { font-size: 1.2em; }
 .content h3 { background: #fdd; font-size: 1.7em; padding: 6px 2px; margin-top: 1.5em; }
 .content p { margin-top: 1.5em; }
@@ -35,3 +44,4 @@ pre { padding: 20px; background: #444; color: white; font-size: 0.9em; }
 .red a { color: #a44; }
 .green { border: 3px solid #8a8; background: #efe;}
 .blue  { border: 3px solid #88a; background: #eef;}
+*/
