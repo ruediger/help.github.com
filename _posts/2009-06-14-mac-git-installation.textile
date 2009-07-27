@@ -7,11 +7,11 @@ categories: mac setup
 main_category: setup
 ---
 
-h3. Pre-compiled Installer
+h2. Pre-compiled Installer
 
 Download and run "git-osx-installer":http://code.google.com/p/git-osx-installer/
 
-h3. MacPorts
+h2. MacPorts
 
 # Install "MacPorts":http://macports.org/install.php if you haven't already done so.
 # Make sure your ports are up to date.
@@ -40,6 +40,6 @@ $ sudo port install git-core +svn
 --->  Activating git-core 1.5.5.3_0+doc
 </pre>
 
-h3. Compiling git manually
+h2. Compiling git manually
 
 See "compiling and installing git on mac os x":http://github.com/guides/compiling-and-installing-git-on-mac-os-x.

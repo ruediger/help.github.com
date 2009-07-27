@@ -9,7 +9,7 @@ main_category: setup
 
 Generating an SSH key on OSX is a fairly straightforward process.  First and foremost, open up Terminal.app.  You can usually find it at @/Applications/Utilities@.
 
-h3. Backup and remove existing keys
+h2. Backup and remove existing keys
 
 Unless this is your first time setting up ssh or git on your computer, you should doublecheck that keys do not already exist.  If they do you can either use the existing key(s) or remove them.  In either case, you should make a backup of the keys.
 
@@ -23,7 +23,7 @@ $ rm .ssh/id_rsa*</pre>
 
 Here we have an existing keypair, @id_rsa@ and @id_rsa.pub@, which we've copied into @~/ssh_key_backup@ before removing.  By default, ssh will use keys in @~/.ssh@ that are named @id_rsa@, @id_dsa@ or @identity@.
 
-h3. Generating a key
+h2. Generating a key
 
 p(. _If you have an existing keypair you wish to use, you can skip this step._
 
@@ -53,7 +53,7 @@ The key's randomart image is:
 
 At each prompt we just hit enter.  This will generate the key with the default name and no passphrase.  If you want to add a passphrase to your key you can do so later.  You will be prompted for the passphrase every time you push or pull from GitHub, so you might not want to use one unless you are using a shared computer.
 
-h3. Adding the key to your GitHub account
+h2. Adding the key to your GitHub account
 
 Now launch your browser and open the "account page":https://github.com/account.  In the "SSH Public Keys" section click "add another public key", then paste your public key into the "key" field.  If you leave the title blank the key comment (your email) will be used for the title.
 
@@ -61,7 +61,7 @@ Make sure you use the public key (@id_rsa.pub@ in our example), and do not add a
 
 !/images/add_key.png!
 
-h3. Testing things out
+h2. Testing things out
 
 Testing if our new key works is simple:
 

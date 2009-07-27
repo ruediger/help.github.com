@@ -8,7 +8,7 @@ categories: setup
 
 Most git installations will install man files for help, but not the HTML help files (the same files seen on git's "online documentation":http://www.kernel.org/pub/software/scm/git-core/docs/).  Installing these help files is a fairly simple process.
 
-h3. OSX
+h2. OSX
 
 The following commands were run on an installation of the "git-osx-installer":http://code.google.com/p/git-osx-installer/.  Your documentation path may be different, pay attention to the output of @git help --web commit@ for where your git is set to look for the HTML files.
 
@@ -44,6 +44,6 @@ $ git help --web commit
 
 $ git config --global help.format web</pre>
 
-h3. Windows
+h2. Windows
 
 "Msysgit":http://code.google.com/p/msysgit/ installs and sets the HTML help files as the default automatically.  You don't need to do anything!

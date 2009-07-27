@@ -12,15 +12,15 @@ Hi username! You've successfully authenticated, but GitHub does not provide shel
 
 If this step fails, try running <code>ssh -v git@github.com</code>.  This will print out debug info on what ssh is trying to do.  In this output you should check that ssh is connecting to the correct server, on the correct port (22).  Many firewalls and proxies will block this connection.  Also ensure that ssh is reading the correct key files, these are at ~/.ssh/id_rsa, id_dsa and identity by default.  If your key is not at this location, you should move it or create an override (see the "SSH config" section below).
 
-h3. Permission to user/repo2 denied to user/repo1
+h2. Permission to user/repo2 denied to user/repo1
 
 This error occurs when you attach your key as a deploy key on repo1.  You can push and pull from that repo without issue, but you won't have access to any other repo with your key.  To solve this, remove the key from repo1's deploy keys and attach it on your "account page":https://github.com/account instead.  This key will now have access to all repos your account has access to.
 
-h3. Permission denied (publickey)
+h2. Permission denied (publickey)
 
 This is usually caused when ssh cannot find your keys.  Make sure your key is in the default location, @~/.ssh@. If you run @ssh-keygen@ again and just press enter at all 3 prompts it will be placed here automatically. Then you can add the contents of id_rsa.pub to "my github keys":https://github.com/account. If id_rsa.pub doesn't work try id_dsa.pub. You might need to generate a new dsa key with @ssh-keygen -t dsa@ if you just have an rsa key.
 
-h3. Issues when using sudo
+h2. Issues when using sudo
 
 p((. _You shouldn't run @sudo git@ unless you have a very good reason.  If you don't know if you have a good reason to use sudo, it's likely that you do not have one._
 
@@ -28,7 +28,7 @@ If you are using sudo with git commands (e.g. using <code>sudo git clone</code> 
 
 Simply put, if you are using <code>sudo git</code>, then also use <code>sudo ssh-keygen</code>.
 
-h3. SSH config
+h2. SSH config
 
 If your github authentication information is different from your machine account information, you'll need to modify your ssh configuration file.
 
@@ -45,7 +45,7 @@ You may also need to update the permissions on your .ssh folder and its contents
 <pre>$ chmod 700 ~/.ssh
 $ chmod 600 ~/.ssh/*</pre>
 
-h3. No supported authentication methods available
+h2. No supported authentication methods available
 
 You should be aware of the environment variable GIT_SSH, which is used by git to find your ssh-speaking client, if ssh doesn't work for you.  The git install may be using plink.exe (via GIT_SSH) to perform the authentication.  If so, make sure you have pageant.exe running, and the key you created for github loaded into it.  This provides the key to plink.exe; without it, the above error will occur.
 
@@ -67,6 +67,6 @@ p(. I did not have luck with this approach; GIT_SSH was set to plink.exe already
 
 p(. I couldn't get the latest versions of plink and pageant (as of 2008-Nov-15) to talk, and I'm not running Cygwin. The only solution was to revert to using open-ssh by setting @GIT_SSH@ to @C:\Program Files\prg\Git\bin\ssh.exe@. -- "dandv":http://github.com/dandv
 
-h3. On Windows, you can't type "y" to confirm the "Store [server's host] key in cache?" prompt
+h2. On Windows, you can't type "y" to confirm the "Store [server's host] key in cache?" prompt
 
 This happens because git eats up the ssh client's STDIN output. To work around that, launch @ssh github.com@ or @plink.exe -agent github.com@ standalone and press "y" at the prompt.
