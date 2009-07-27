@@ -1,28 +1,33 @@
 ---
 layout: default
 title: Welcome to the GitHub Help site
-index_cats:
-- setup
-- mac
-- repos
-- windows
-- collaborating
 ---
 
-Here we have compiled many guides to help you set up and use GitHub.  Be aware that these guides generally only cover GitHub-specific topics, for help learning how to use Git, please check out "Learn.GitHub":http://learn.github.com/
+Here we have compiled many guides to help you set up and use git and GitHub.
 
-This site is a work in progress.
+_This site is a work in progress._
 
-{% for cat in (page.index_cats) %}
-  <div class="category_index">
-    <h2>{{ cat | capitalize }}</h2>
-    <dl>
-      {% for post in site.posts reversed %}{% if post.categories contains cat %}
-        <dt><a href="{{ post.url }}">{{ post.title }}</a></dt>
-        <dd>{{ post.description }}</dd>
-      {% endif %}{% endfor %}
-    </dl>
-  </div>
-{% endfor %}
+h2. Guides
 
-<div class="clear"></div>
+Use the sidebar on the right side of this site to access our guides!
+
+If you would like to submit your own guides, please fork "our repo":http://github.com/help/help.github.com/ and send pull requests to "tekkub":http://github.com/tekkub
+
+h2. Getting help
+
+There are a number of resources available to help you learn git or fix issues with GitHub:
+
+h3. GitHub
+
+* "GitHub Support":http://support.github.com -- Resolve issues with GitHub or get help with basic git issues.
+* "Contact GitHub":http://github.com/contact -- Don't feel like making an account on support.github.com?  This is your direct line to us.
+* "GitHub Google Group":http://groups.google.com/group/github/ -- Ask the community for help
+* "GitHub Status":http://twitter.com/github -- Is GitHub down, or is it just me?
+
+h3. Git
+
+* "git-scm":http://git-scm.com/
+* "git man pages":http://www.kernel.org/pub/software/scm/git/docs/ -- In-depth documentation for every git command.
+* "git user's manual":http://www.kernel.org/pub/software/scm/git/docs/user-manual.html
+* "Learn.GitHub":http://learn.github.com -- Git tutorials for beginners and experts.
+* "git ready":http://www.gitready.com/ -- Little tips and hints for using git.
