@@ -12,7 +12,7 @@ h2. OSX
 
 The following commands were run on an installation of the "git-osx-installer":http://code.google.com/p/git-osx-installer/.  Your documentation path may be different, pay attention to the output of @git help --web commit@ for where your git is set to look for the HTML files.
 
-<pre>$ git help --web commit
+<pre class="terminal">$ git help --web commit
 fatal: '/usr/local/git/share/doc/git-doc': not a documentation directory.
 
 $ git clone git://git.kernel.org/pub/scm/git/git.git

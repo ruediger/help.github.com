@@ -13,7 +13,7 @@ h2. Backup and remove existing keys
 
 Unless this is your first time installing msys on your computer, you should doublecheck that keys do not already exist.  If they do you can either use the existing key(s) or remove them.  In either case, you should make a backup of the keys.
 
-<pre>$ cd ~/.ssh
+<pre class="terminal">$ cd ~/.ssh
 $ ls
 config  id_rsa  id_rsa.pub  known_hosts
 $ cd ..
@@ -29,7 +29,7 @@ p(. _If you have an existing keypair you wish to use, you can skip this step._
 
 Now that we're certain ssh won't use an existing key, it's time to generate a new keypair.  Lets make an RSA keypair:
 
-<pre>$ ssh-keygen -t rsa -c "tekkub@gmail.com"
+<pre class="terminal">$ ssh-keygen -t rsa -c "tekkub@gmail.com"
 Generating public/private rsa key pair.
 Enter file in which to save the key (/c/Users/Tekkub/.ssh/id_rsa):
 Enter passphrase (empty for no passphrase):
@@ -53,7 +53,7 @@ h2. Testing things out
 
 Testing if our new key works is simple:
 
-<pre>$ ssh git@github.com
+<pre class="terminal">$ ssh git@github.com
 Hi tekkub! You've successfully authenticated, but GitHub does not provide shell access.
 Connection to github.com closed.</pre>
 

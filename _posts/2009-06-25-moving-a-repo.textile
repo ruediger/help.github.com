@@ -16,7 +16,7 @@ p(. _If you forked this step is not necessary, but you may still do it for good 
 
 To create a complete mirror that includes all branches and tags, you need to do a bare-clone followed by a mirror-push:
 
-<pre>git clone --bare git@github.com:myaccount/my-old-repo.git
+<pre class="terminal">git clone --bare git@github.com:myaccount/my-old-repo.git
 cd my-old-repo
 git push --mirror git@github.com:mycompany/our-new-repo.git
 cd ..

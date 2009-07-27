@@ -17,7 +17,7 @@ h2. MacPorts
 # Make sure your ports are up to date.
 # Install Git _(You may want to include Subversion support if you want to import SVN repositories)_
 
-<pre>$ sudo port selfupdate
+<pre class="terminal">$ sudo port selfupdate
 
 MacPorts base version 1.600 installed
 Downloaded MacPorts base version 1.600

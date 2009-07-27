@@ -15,10 +15,10 @@ h2. Setting up
 Naturally, the first thing you must do is create your fork.  To do this, you simply click the !http://github.com/images/modules/repos/fork_button.png! button on the project's page.  When the fork has completed, you will be presented with your new repo information.
 
 Now you need to clone the fork.  Make sure you use the "Your Clone URL" and *not* the "Public Clone URL"
-<pre>$ git clone git@github.com:billyanyteen/github-services.git</pre>
+<pre class="terminal">$ git clone git@github.com:billyanyteen/github-services.git</pre>
 
 Once the clone is complete your repo will have a remote named "origin" that points to your fork on github.  Don't let the name confuse you, this *does not* point to the original repo you forked from.  To help you keep track of that repo we will add another remote named "upstream"
-<pre>$ cd github-services
+<pre class="terminal">$ cd github-services
 $ git remote add upstream git://github.com/pjhyett/github-services.git
 $ git fetch upstream</pre>
 
@@ -27,7 +27,7 @@ Note that we used the public clone URL for upstream, so we can't push changes di
 h2. Pushing your changes
 
 Now that we've got our fork, we need to make a few changes and commit them locally.  Once you've done this, it's time to push your updated branch.
-<pre>$ git push origin master</pre>
+<pre class="terminal">$ git push origin master</pre>
 
 After you've pushed your commit(s) you need to inform the project owner of the changes so they can pull them into their repo.  From your project's page, click the !http://github.com/images/modules/repos/pull_request_button.png! button.  Fill in a note and pick who to send the request to.  In large projects it is important that you *do not* send the request to every person who's touched the project.  Make sure you're only sending to the people who care, the user(s) that manage the core project repo.
 
@@ -36,10 +36,10 @@ _Note that some projects do not accept pull requests.  Make sure you submit your
 h2. Pulling in upstream changes
 
 Some time has passed, the upstream repo has changed and you want to update your fork before you submit a new patch.  There are two ways to do this:
-<pre>$ git fetch upstream master
+<pre class="terminal">$ git fetch upstream master
 $ git merge upstream/master</pre>
 
-<pre>$ git pull upstream master</pre>
+<pre class="terminal">$ git pull upstream master</pre>
 
 @git pull@ is a more direct way, but the merge it performs can be confusing if the user doesn't expect it and a merge conflict results.  @git fetch@ will also grab all branches, where @git pull@ will only grab the one specified.
 

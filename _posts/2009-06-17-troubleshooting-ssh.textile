@@ -7,7 +7,7 @@ categories: setup
 ---
 
 The first step to testing your connection is to run <code>ssh git@github.com</code>.  If your key works, you should get a success message:
-<pre>$ ssh git@github.com
+<pre class="terminal">$ ssh git@github.com
 Hi username! You've successfully authenticated, but GitHub does not provide shell access.</pre>
 
 If this step fails, try running <code>ssh -v git@github.com</code>.  This will print out debug info on what ssh is trying to do.  In this output you should check that ssh is connecting to the correct server, on the correct port (22).  Many firewalls and proxies will block this connection.  Also ensure that ssh is reading the correct key files, these are at ~/.ssh/id_rsa, id_dsa and identity by default.  If your key is not at this location, you should move it or create an override (see the "SSH config" section below).
@@ -42,7 +42,7 @@ Create or open the file at <code>~/.ssh/config</code> Add the following lines:
 
 You may also need to update the permissions on your .ssh folder and its contents. The SSH application will ignore secret files that are too permissive.
 
-<pre>$ chmod 700 ~/.ssh
+<pre class="terminal">$ chmod 700 ~/.ssh
 $ chmod 600 ~/.ssh/*</pre>
 
 h2. No supported authentication methods available
@@ -53,11 +53,11 @@ See "this post":http://groups.google.com/group/github/browse_thread/thread/21fd0
 
 Especially with cygwin-git+pageant+putty/plink, you might want to set GIT_SSH to your plink.exe location -- unless that doesn't work for you. In certain circumstances (perhaps after a service pack installation), you will find git network operations failing with
 this is because plink.exe running from your (cygwin-provided) git command "*can't talk with pageant to get its keys*":http://www.chiark.greenend.org.uk/~sgtatham/putty/wishlist/cygwin-clobbers-pageant.html . A solution is to set up a script that has:
-<pre>/cygdrive/c/ntnot/plink.exe -i "c:\users\you\.ssh\key-file-for-github.ppk" $1 $2</pre>
+<pre class="terminal">/cygdrive/c/ntnot/plink.exe -i "c:\users\you\.ssh\key-file-for-github.ppk" $1 $2</pre>
 
 and set GIT_SSH to point to this:
 
-<pre>declare -x GIT_SSH="c:\path\to\script"</pre>
+<pre class="terminal">declare -x GIT_SSH="c:\path\to\script"</pre>
 
 This explicitly provides the key for plink to use, rather than have it talk with pageant.
 

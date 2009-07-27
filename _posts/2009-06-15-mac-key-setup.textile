@@ -13,7 +13,7 @@ h2. Backup and remove existing keys
 
 Unless this is your first time setting up ssh or git on your computer, you should doublecheck that keys do not already exist.  If they do you can either use the existing key(s) or remove them.  In either case, you should make a backup of the keys.
 
-<pre>$ cd ~/.ssh
+<pre class="terminal">$ cd ~/.ssh
 $ ls
 config  id_rsa  id_rsa.pub  known_hosts
 $ cd ..
@@ -29,7 +29,7 @@ p(. _If you have an existing keypair you wish to use, you can skip this step._
 
 Now that we're certain ssh won't use an existing key, it's time to generate a new keypair.  Lets make an RSA keypair:
 
-<pre>$ ssh-keygen -t rsa -c "tekkub@gmail.com"
+<pre class="terminal">$ ssh-keygen -t rsa -c "tekkub@gmail.com"
 Generating public/private rsa key pair.
 Enter file in which to save the key (/Users/tekkub/.ssh/id_rsa):
 Enter passphrase (empty for no passphrase):
@@ -57,7 +57,7 @@ h2. Adding the key to your GitHub account
 
 Now launch your browser and open the "account page":https://github.com/account.  In the "SSH Public Keys" section click "add another public key", then paste your public key into the "key" field.  If you leave the title blank the key comment (your email) will be used for the title.
 
-Make sure you use the public key (@id_rsa.pub@ in our example), and do not add any newlines or whitespace inside the key.  To ensure you copy the key correctly, you can copy the key directly into the clipboard from Terminal.app: <pre>$ cat ~/id_rsa.pub | pbcopy</pre>
+Make sure you use the public key (@id_rsa.pub@ in our example), and do not add any newlines or whitespace inside the key.  To ensure you copy the key correctly, you can copy the key directly into the clipboard from Terminal.app: <pre class="terminal">$ cat ~/id_rsa.pub | pbcopy</pre>
 
 !/images/add_key.png!
 
@@ -65,7 +65,7 @@ h2. Testing things out
 
 Testing if our new key works is simple:
 
-<pre>$ ssh git@github.com
+<pre class="terminal">$ ssh git@github.com
 Hi tekkub! You've successfully authenticated, but GitHub does not provide shell access.
 Connection to github.com closed.</pre>
 
