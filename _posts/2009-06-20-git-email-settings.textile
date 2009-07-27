@@ -1,10 +1,11 @@
 ---
-layout: guide
+layout: default
 title: Setting user name, email and GitHub token
-subtitle: This guide covers basic git settings you should set before making any commits
 description: Configure your local git installation so that commits are linked to your GitHub account
 categories: setup
 ---
+
+This guide covers basic git settings you should set before making any commits
 
 h2. Setting user name and email globally in git
 

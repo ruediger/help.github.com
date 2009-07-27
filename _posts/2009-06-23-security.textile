@@ -1,7 +1,6 @@
 ---
-layout: guide
+layout: default
 title: GitHub security
-subtitle: This guide details GitHub's server security design and practices.
 ---
 
 h2. Engine Yard security

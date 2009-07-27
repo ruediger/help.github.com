@@ -1,10 +1,11 @@
 ---
-layout: guide
+layout: default
 title: Troubleshooting SSH issues
-subtitle: This guide contains the solutions to the most common SSH connection issues encountered on GitHub
 description: Solutions to common SSH issues
 categories: setup
 ---
+
+This guide contains the solutions to the most common SSH connection issues encountered on GitHub
 
 The first step to testing your connection is to run <code>ssh git@github.com</code>.  If your key works, you should get a success message:
 <pre class="terminal">$ ssh git@github.com

@@ -1,10 +1,11 @@
 ---
-layout: guide
+layout: default
 title: Moving a repo
-subtitle: This guide details the process of moving a repo to another account and transferring the network of forked repos.
 description: How to move a repo from one account to another
 categories: repos
 ---
+
+This guide details the process of moving a repo to another account and transferring the network of forked repos.
 
 h2. Creating a new repo
 

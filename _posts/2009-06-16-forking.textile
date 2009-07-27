@@ -1,10 +1,11 @@
 ---
-layout: guide
+layout: default
 title: Forking a project
-subtitle: This guide will step you through the process of forking, pushing you changes, and pulling in changes from the upstream repo.
 description: How to fork a project, submit changes, and pull from other repos in the fork network
 categories: collaborating
 ---
+
+This guide will step you through the process of forking, pushing you changes, and pulling in changes from the upstream repo.
 
 In this guide, we will use "github-services":http://github.com/pjhyett/github-services as an example to fork, submit a change, and re-sync with the forked repo.  All the examples on this page assume you're working in the "master" branch.
 
