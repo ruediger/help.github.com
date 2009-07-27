@@ -25,6 +25,10 @@ sidebar_cats:
   <body>
     {% if page.main_category %}
       <script type="text/javascript">var main_category = "{{ page.main_category }}"</script>
+    {% else %}
+      {% if page.categories %}
+        <script type="text/javascript">var main_category = "{{ page.categories }}"</script>
+      {% endif %}
     {% endif %}
     <div id="main">
       <div id="header" class="basic">

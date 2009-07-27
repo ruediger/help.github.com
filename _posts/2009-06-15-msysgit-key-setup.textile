@@ -4,6 +4,7 @@ title: Generating SSH keys (Windows/msysgit)
 subtitle: This guide will step you through the process of generating a keypair in msysgit and uploading it to GitHub
 description: Setting up SSH keys with msysgit on Windows
 categories: windows setup
+main_category: setup
 ---
 
 Generating an SSH key with msysgit is a fairly straightforward process.  First and foremost, make sure you're working in the Git Bash console, not cmd (the default Windows command line).  You can find Git Bash under the git folder in your start menu, or by right clicking on a folder and selecting "Git Bash Here" if you choose to install context menu items during the msysgit installation.

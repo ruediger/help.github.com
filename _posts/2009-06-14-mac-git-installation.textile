@@ -4,6 +4,7 @@ title: Installing git (OSX)
 subtitle: There are a number of methods to install git on OSX.  This guide details the most common methods.
 description: How to install git on OSX
 categories: mac setup
+main_category: setup
 ---
 
 h3. Pre-compiled Installer
