@@ -19,7 +19,7 @@ There are a number of resources available to help you learn git or fix issues wi
 
 h3. GitHub
 
-* "GitHub Support":http://support.github.com -- Resolve issues with GitHub or get help with basic git issues.
+* <a href="#" class="support_toggle">GitHub Support</a> -- Resolve issues with GitHub or get help with basic git issues.
 * "Contact GitHub":http://github.com/contact -- Don't feel like making an account on support.github.com?  This is your direct line to us.
 * "GitHub Google Group":http://groups.google.com/group/github/ -- Ask the community for help
 * "GitHub Status":http://twitter.com/github -- Is GitHub down, or is it just me?
