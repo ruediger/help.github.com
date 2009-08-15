@@ -1,0 +1,14 @@
+---
+layout: default
+title: Generating SSH keys
+---
+
+Attempting to redirect to the guide for your OS.  If the redirect fails, pick your OS:
+
+* "Mac":msysgit-key-setup
+* "Windows":mac-key-setup
+
+<script type="text/javascript">
+  if (navigator.appVersion.indexOf("Win") != -1) {window.location = 'http://help.github.com/msysgit-key-setup/'}
+  else if (navigator.appVersion.indexOf("Mac") != -1) {window.location = 'http://help.github.com/mac-key-setup/'}
+</script>
