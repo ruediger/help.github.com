@@ -5,7 +5,9 @@ description: Configure your local git installation so that commits are linked to
 categories: setup
 ---
 
-This guide covers basic git settings you should set before making any commits
+This guide covers basic git settings you should set before making any commits.
+
+Please note that config changes will only affect future commits.  Existing commits will retain the info they were committed with.  Also, the environment variables @GIT_COMMITTER_NAME@, @GIT_COMMITTER_EMAIL@, @GIT_AUTHOR_NAME@ and @GIT_AUTHOR_EMAIL@ will override git-config settings if they are defined.
 
 h2. Setting user name and email globally in git
 
@@ -19,8 +21,6 @@ $ git config --global user.email "tekkub@gmail.com"</pre>
 h2. Overriding settings for individual repos
 
 If you do not want commits to be "blamed" on your global email setting, you can override these settings on a per-repo basis.
-
-p(. _This change will only affect future commits.  Existing commits will retain the info they were committed with._
 
 <pre class="terminal">$ cd my_other_repo
 $ git config user.name "Not Tekkub"
