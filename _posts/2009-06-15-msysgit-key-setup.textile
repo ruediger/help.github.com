@@ -12,7 +12,7 @@ Generating an SSH key with msysgit is a fairly straightforward process.  First a
 
 h2. Backup and remove existing keys
 
-Unless this is your first time installing msys on your computer, you should doublecheck that keys do not already exist.  If they do you can either use the existing key(s) or remove them.  In either case, you should make a backup of the keys.
+Unless this is your first time installing msys on your computer, you should double check that keys do not already exist.  If they do you can either use the existing key(s) or remove them.  In either case, you should make a backup of the keys.
 
 <pre class="terminal">$ cd ~/.ssh
 $ ls
