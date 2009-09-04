@@ -19,8 +19,7 @@ We do not encrypt repositories on disk because it would not be any more secure: 
 
 Our database and your repositories are backed up nightly off-site.  We do not retroactively remove repositories from backups when deleted by the user, as we may need to restore the repo for the user if it was removed accidentally.
 
-h2. Employee access
-
+h2. Employee access 
 No GitHub employees ever access private repositories unless required to for support reasons.  Staff working directly in the file store access the compressed Git database, your code is never present as plaintext files like it would be in a local clone.  Support staff may log into your account to access settings related to your support issue.  In rare cases staff may need to pull a clone of your code, this will only be done with your consent.  Support staff does not have direct access to clone any repo, he will need to temporarily attach his SSH key to your account to pull a clone.  When working a support issue we do our best to respect your privacy as much as possible, we only access the files and settings needed to resolve your issue.  All cloned repos are deleted as soon as the support issue has been resolved.
 
 h2. Maintaining security
@@ -30,3 +29,7 @@ We protect your login from brute force attacks with rate limiting.  All password
 We keep a security consultant on retainer to help identify and prevent new attack vectors.  We always test new features in order to cut out potential attacks, such as XSS-protecting wikis, and ensuring that Pages cannot access cookies.
 
 We're extremely concerned and active about security, but we're aware that many companies are not comfortable hosting code outside their firewall. For these companies we offer our "Firewall Install":http://fi.github.com/, a version of GitHub that can be installed to a server within the company's network.
+
+h2. Contact
+
+Have a question, concern, or comment about GitHub security? Please email "support@github.com":mailto:support@github.com for general inquiries and "security@github.com":mailto:security@github.com for emergencies.
