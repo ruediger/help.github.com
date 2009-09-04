@@ -9,7 +9,7 @@ Attempting to redirect to the guide for your OS.  If the redirect fails, pick yo
 
 * "Windows":msysgit-key-setup
 * "Mac":mac-key-setup
-* "Linux":mac-key-setup
+* "Linux":linux-key-setup
 
 <script type="text/javascript">
   if (navigator.appVersion.indexOf("Win") != -1) {window.location = 'http://help.github.com/msysgit-key-setup/'}
