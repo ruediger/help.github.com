@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Generating SSH keys
+description: How to generate SSH keys and add them to GitHub
+categories: setup
 ---
 
 Attempting to redirect to the guide for your OS.  If the redirect fails, pick your OS:
@@ -12,5 +14,5 @@ Attempting to redirect to the guide for your OS.  If the redirect fails, pick yo
 <script type="text/javascript">
   if (navigator.appVersion.indexOf("Win") != -1) {window.location = 'http://help.github.com/msysgit-key-setup/'}
   else if (navigator.appVersion.indexOf("Mac") != -1) {window.location = 'http://help.github.com/mac-key-setup/'}
-  else if (navigator.appVersion.indexOf("X11") != -1 || navigator.appVersion.indexOf("Linux") != -1) {window.location = 'http://help.github.com/linux-key-setup/"}
+  else if (navigator.appVersion.indexOf("X11") != -1 || navigator.appVersion.indexOf("Linux") != -1) {window.location = 'http://help.github.com/linux-key-setup/'}
 </script>
