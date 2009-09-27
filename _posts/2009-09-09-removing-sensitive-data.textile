@@ -60,6 +60,10 @@ h2. Cached data on GitHub
 
 Be warned that force-pushing does not erase commits on the remote repo, it simply introduces new ones and moves the branch pointer to point to them.  If you are worried about users accessing the bad commits directly via SHA1, you will have to delete the repo and recreate it.  If the commits were viewed online the pages may also be cached.  Check for cached pages after you recreate the repo, if you find any open a ticket on "GitHub Support":http://support.github.com and provide links so staff can purge them from the cache.
 
+h2. Avoiding accidental commits in the future
+
+There are a few simple tricks to avoid committing things you don't want committed.  The first, and simplest, is to use a visual tool like git-gui or "gitx":http://gitx.frim.nl/ to make your commits.  This lets you see exactly what you're committing, and ensure that only the files you want are added to the repo.  If you're working form the command line, avoid the catch-all commands `git add .` and `git commit -a`, instead use `git add filename` and `git rm filename` to individually stage files.  You can also use `git add --interactive` to review each changed file and stage it, or part of it, for commit.
+
 h2. Other reading
 
 * "git-filter-branch documentation":http://www.kernel.org/pub/software/scm/git/docs/git-filter-branch.html
