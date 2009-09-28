@@ -60,7 +60,7 @@ h2. Adding the key to your GitHub account
 
 Now launch your browser and open the "account page":https://github.com/account.  In the "SSH Public Keys" section click "add another public key", then paste your public key into the "key" field.  If you leave the title blank the key comment (your email) will be used for the title.
 
-Make sure you use the public key (@id_rsa.pub@ in our example), and do not add any newlines or whitespace inside the key.  To ensure you copy the key correctly, you can copy the key directly into the clipboard from Terminal.app: <pre class="terminal">$ cat ~/id_rsa.pub | pbcopy</pre>
+Make sure you use the public key (@id_rsa.pub@ in our example), and do not add any newlines or whitespace inside the key.  To ensure you copy the key correctly, you can copy the key directly into the clipboard from Terminal.app: <pre class="terminal">$ cat ~/.ssh/id_rsa.pub | pbcopy</pre>
 
 !/images/add_key.png!
 
