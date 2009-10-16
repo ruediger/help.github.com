@@ -5,25 +5,30 @@
 .category_index dt { margin-left: 0.5em !important; }
 .category_index dd { margin-left: 1.5em !important; }
 
+
+/*********************/
+/*      Sidebar      */
+/*********************/
+
 #guides .guide .sidebar h3 {
-  color: black;
+  padding: 4px 4px 4px 14px;
+  background: white url(/images/expand.png) -2px 6px no-repeat;
+  margin: .2em 0;
   cursor: pointer;
 }
-#guides .guide .sidebar ul { margin-left: 0; }
-#guides .guide .sidebar ul li {
-  padding-left: 14px;
-  background: white url(/images/expand.png) -2px 2px no-repeat;
-  margin: .2em 0;
-}
-#guides .guide .sidebar ul li.expanded { background: white url(/images/collapse.png) -2px 2px no-repeat; }
+#guides .guide .sidebar h3.ui-state-active { background: white url(/images/collapse.png) -2px 6px no-repeat; }
+#guides .guide .sidebar h3:focus { outline: none; }
 
-.sidebar dl {
-  display: none;
-  margin-bottom: 1em;
+.sidebar dl { padding: 0 0.5em 0.5em 0.5em; }
+.sidebar dt {
+  font-weight: bold;
+  margin-top: 0.5em;
 }
 
-.sidebar dt { font-weight: bold; }
-.sidebar dd { margin-bottom: 0.5em; }
+
+/**********************/
+/*      Pre/code      */
+/**********************/
 
 pre.terminal {
   padding: 1em !important;
