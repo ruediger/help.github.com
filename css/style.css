@@ -11,12 +11,10 @@
 /*********************/
 
 #guides .guide .sidebar h3 {
-  padding: 4px 4px 4px 14px;
-  background: white url(/images/expand.png) -2px 6px no-repeat;
+  padding: 4px;
   margin: .2em 0;
   cursor: pointer;
 }
-#guides .guide .sidebar h3.ui-state-active { background: white url(/images/collapse.png) -2px 6px no-repeat; }
 #guides .guide .sidebar h3:focus { outline: none; }
 
 .sidebar dl { padding: 0 0.5em 0.5em 0.5em; }
@@ -24,6 +22,17 @@
   font-weight: bold;
   margin-top: 0.5em;
 }
+
+.ui-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  background-position: -2px 2px;
+  background-repeat: no-repeat;
+}
+.ui-icon-triangle-expand { background-image: url(/images/expand.png); }
+.ui-icon-triangle-collapse { background-image: url(/images/collapse.png); }
 
 
 /**********************/
