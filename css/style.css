@@ -47,3 +47,10 @@ pre.terminal {
 }
 
 code {white-space: nowrap;}
+
+
+/********************/
+/*      Images      */
+/********************/
+
+.wikistyle img {max-width: 690px;}
