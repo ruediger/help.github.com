@@ -64,7 +64,7 @@ This explicitly provides the key for plink to use, rather than have it talk with
 
 This problem occured for me when I used the executable with pageant that came with WinSCP, but a version of plink in a different directory. I have not found the exact cause yet. All versions were plink/pageant 0.60. (Not running under Cygwin)
 
-p(. I did not have luck with this approach; GIT_SSH was set to plink.exe already; when I tried to create this script and reset the GIT_SSH I got a "could not fork" error back from git even though the script would run happily on it's own - elijahsmith 9/11/08
+p(. I did not have luck with this approach; GIT_SSH was set to plink.exe already; when I tried to create this script and reset the GIT_SSH I got a "could not fork" error back from git even though the script would run happily on its own - elijahsmith 9/11/08
 
 p(. I couldn't get the latest versions of plink and pageant (as of 2008-Nov-15) to talk, and I'm not running Cygwin. The only solution was to revert to using open-ssh by setting @GIT_SSH@ to @C:\Program Files\prg\Git\bin\ssh.exe@. -- "dandv":http://github.com/dandv
 
