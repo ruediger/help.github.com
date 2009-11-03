@@ -52,6 +52,21 @@ Total 1058 (delta 590), reused 602 (delta 378)
 To git@github.com:defunkt/github-gem.git
  + 48dc599...051452f master -> master (forced update)</pre>
 
+h3. Cleanup and reclaiming space
+
+While @git filter-branch@ rewrites the history for you, the objects will remain in your local repo until they've been dereferenced and garbage collected.  If you are working in your main repo you might want to force these objects to be purged.
+
+<pre class="terminal">[tekkub@tekBook: ~/tmp/github-gem master] $ rm -rf .git/refs/original/
+[tekkub@tekBook: ~/tmp/github-gem master] $ git reflog expire --all
+[tekkub@tekBook: ~/tmp/github-gem master] $ git gc --aggressive --prune
+Counting objects: 1746, done.
+Delta compression using 2 threads.
+Compressing objects: 100% (1736/1736), done.
+Writing objects: 100% (1746/1746), done.
+Total 1746 (delta 993), reused 0 (delta 0)</pre>
+
+Note that pushing the branch to a new or empty GitHub repo and then making a fresh clone from GitHub will have the same effect.
+
 h2. Dealing with collaborators
 
 You may have collaborators that pulled your tainted branch and created their own branches off of it.  After they fetch your new branch, they will need to use @git rebase@ on their own branches to rebase them on top of the new one.  The collab should also ensure that their branch doesn't reintroduce the file, as this will override the @.gitignore@ file.  *Make sure your collab uses rebase and not merge,* otherwise he will just reintroduce the file and the entire tainted history... and likely encounter some merge conflicts.
