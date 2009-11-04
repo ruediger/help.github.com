@@ -16,6 +16,7 @@ h2. GitHub
 * "GitHubbub":http://github.com/stephencelis/githubbub - Growl notifications for the dashboard events
 * "Dashboard twitter status":http://gist.github.com/225512 - Adds the two most recent, non-reply tweets from @github to your dashboard
 * "Augment GitHub":http://github.com/nakajima/augment-github - Bookmarklet that adds follower, fork, and issue counts to your repos on your dashboard
+* "User profile gist links":http://gist.github.com/225593 - Adds a link to user profile pages linking to that user's gists
 
 h2. Gist
 
