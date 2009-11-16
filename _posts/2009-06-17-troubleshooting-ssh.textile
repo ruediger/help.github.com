@@ -2,7 +2,8 @@
 layout: default
 title: Troubleshooting SSH issues
 description: Solutions to common SSH issues
-categories: setup
+categories: setup troubleshooting
+main_category: troubleshooting
 ---
 
 This guide contains the solutions to the most common SSH connection issues encountered on GitHub
