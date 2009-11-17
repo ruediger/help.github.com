@@ -23,7 +23,11 @@ Re-pushing is a simple matter of deleting the remote branch and then pushing it 
 <pre class="terminal">$ git push origin :master
 $ git push origin master</pre>
 
-You may need to do this for many branches if the remote repo has more than one branch that was pushed by egit.  After you've pushed, testing the repo repo is just a matter of cloning it:
+You may need to do this for many branches if the remote repo has more than one branch that was pushed by egit.  If one of the branches that was re-pushed was the default branch (usually master), you'll need to re-establish that default:
+
+<pre class="terminal">$ git remote set-head origin master</pre>
+
+After you've pushed and reset HEAD, testing the repo repo is just a matter of cloning it:
 
 <pre class="terminal">[tekkub@tekBook: ~/tmp] $ git clone git://github.com/tekkub/test.git
 Initialized empty Git repository in /Users/tekkub/tmp/test/.git/
