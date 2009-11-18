@@ -5,6 +5,8 @@ description: Working with GitHub's post-receive web hooks.
 categories: collaborating
 ---
 
+p(. _For help testing webhooks, see "this guide":/testing-webhooks_
+
 If you supply a post-receive URL, GitHub will POST to that URL when someone uses <code>git push</code> on that repository.
 
 <img src="http://img.skitch.com/20090814-ksn6tk94h8is3ddgsxmsmuxk4s.jpg"/>
