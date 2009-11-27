@@ -72,7 +72,7 @@ Run 'git help git' to display the help index.
 Run 'git help <command>' to display help for specific commands.
 [Tekkub@KAKU: ~ master]$</pre>
 
-The process will continue to run until you log out, shutdown or kill ssh-agent.  To kill the process, find it's PID with @ps@ then call @kill <PID>@:
+The process will continue to run until you log out, shutdown or kill ssh-agent.  To kill the process, find its PID with @ps@ then call @kill <PID>@:
 
 <pre class="terminal">[Tekkub@KAKU: ~ master]$ ps
         PID    PPID    PGID     WINPID  TTY  UID    STIME COMMAND

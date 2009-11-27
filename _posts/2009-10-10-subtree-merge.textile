@@ -65,7 +65,7 @@ Automatic merge went well; stopped before committing as requested
 
 h2. Pulling in changes
 
-If the merged repo changes in the future, you can pull in it's changes by simply using the @-s subtree@ flag:
+If the merged repo changes in the future, you can pull in its changes by simply using the @-s subtree@ flag:
 
 <pre class="terminal">[tekkub@tekBook: ~/tmp/test master] $ git pull -s subtree panda master</pre>
 
