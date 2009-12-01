@@ -22,6 +22,26 @@ h2. Permission denied (publickey)
 
 This is usually caused when ssh cannot find your keys.  Make sure your key is in the default location, @~/.ssh@. If you run @ssh-keygen@ again and just press enter at all 3 prompts it will be placed here automatically. Then you can add the contents of id_rsa.pub to "my github keys":https://github.com/account. If id_rsa.pub doesn't work try id_dsa.pub. You might need to generate a new dsa key with @ssh-keygen -t dsa@ if you just have an rsa key.
 
+h3. Finding out what keys ssh is using
+
+Finding what keys ssh is offering to the server is fairly simple.  Run <code>ssh -v git@github.com</code> and look at the output:
+
+<pre class="terminal">debug1: Next authentication method: publickey
+debug1: Trying private key: /Users/tekkub/.ssh/identity
+debug1: Trying private key: /Users/tekkub/.ssh/id_rsa
+debug1: Trying private key: /Users/tekkub/.ssh/id_dsa
+debug1: No more authentication methods to try.</pre>
+
+In this example, SSH could not find any keys ("Trying" means ssh is trying to find the key on disk).  We should either rename our keypair to use a default name, or run @ssh add path/to/key@ to make SSH aware of the key's existence.
+
+<pre class="terminal">debug1: Next authentication method: publickey
+debug1: Offering public key: /Users/tekkub/.ssh/id_rsa
+debug1: Remote: Forced command: gerve tekkub
+...
+ERROR: Hi tekkub! You've successfully authenticated, but GitHub does not provide shell access</pre>
+
+Here we've renamed our keypair to @~/.ssh/id_rsa@.  SSH finds the key and offers it to the server.  This key works and we authenticate as user "tekkub".
+
 h2. Issues when using sudo
 
 p((. _You shouldn't run @sudo git@ unless you have a very good reason.  If you don't know if you have a good reason to use sudo, it's likely that you do not have one._
