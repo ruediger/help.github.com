@@ -32,7 +32,7 @@ debug1: Trying private key: /Users/tekkub/.ssh/id_rsa
 debug1: Trying private key: /Users/tekkub/.ssh/id_dsa
 debug1: No more authentication methods to try.</pre>
 
-In this example, SSH could not find any keys ("Trying" means ssh is trying to find the key on disk).  We should either rename our keypair to use a default name, or run @ssh add path/to/key@ to make SSH aware of the key's existence.
+In this example, SSH could not find any keys ("Trying" means ssh is trying to find the key on disk).  We should either rename our keypair to use a default name, or run @ssh-add path/to/key@ to make SSH aware of the key's existence.
 
 <pre class="terminal">debug1: Next authentication method: publickey
 debug1: Offering public key: /Users/tekkub/.ssh/id_rsa
