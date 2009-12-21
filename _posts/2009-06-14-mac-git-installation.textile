@@ -20,11 +20,11 @@ h2. Homebrew
 <pre class="terminal">$ brew install git
 ==> Downloading http://kernel.org/pub/software/scm/git/git-1.6.5.7.tar.bz2
 ######################################################################## 100.0%
-==> ./configure --prefix=/opt/local/Cellar/git/1.6.5.7
+==> ./configure --prefix=/usr/local/Cellar/git/1.6.5.7
 ==> make install
 ==> Downloading http://kernel.org/pub/software/scm/git/git-manpages-1.6.5.7.tar.bz2
 ######################################################################## 100.0%
-/opt/local/Cellar/git/1.6.5.7: 383 files, 16M, built in 74 seconds
+/usr/local/Cellar/git/1.6.5.7: 383 files, 16M, built in 74 seconds
 </pre>
 
 h2. MacPorts
