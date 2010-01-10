@@ -9,6 +9,6 @@ p(. _Deleting a private repo will delete all forks of the repo.  Deleting a publ
 
 Go to the repository homepage &rarr; Admin &rarr; Delete this repository
 
-!http://img.skitch.com/20090514-epgh6iw49i676nu83mc2fg7ce6.jpg!
+!http://img.skitch.com/20100110-jps511wbqpmjpgp16m8g17iiut.jpg!
 
 !http://img.skitch.com/20090514-ni7rk2rkrtbiwstqfjc5a4smbu.jpg!
