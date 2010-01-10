@@ -33,11 +33,11 @@ Now that we're certain ssh won't use an existing key, it's time to generate a ne
 
 <pre class="terminal">$ ssh-keygen -t rsa -C "tekkub@gmail.com"
 Generating public/private rsa key pair.
-Enter file in which to save the key (/Users/tekkub/.ssh/id_rsa):
+Enter file in which to save the key (/home/tekkub/.ssh/id_rsa):
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
-Your identification has been saved in /Users/tekkub/.ssh/id_rsa.
-Your public key has been saved in /Users/tekkub/.ssh/id_rsa.pub.
+Your identification has been saved in /home/tekkub/.ssh/id_rsa.
+Your public key has been saved in /home/tekkub/.ssh/id_rsa.pub.
 The key fingerprint is:
 01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db tekkub@gmail.com</pre>
 
