@@ -52,7 +52,7 @@ Now launch your browser and open the "account page":https://github.com/account. 
 Make sure you use the public key (@id_rsa.pub@ in our example), and do not add any newlines or whitespace inside the key.  To ensure you copy the key correctly, you can copy the key directly into the clipboard from the terminal using "xclip":http://www.cyberciti.biz/faq/xclip-linux-insert-files-command-output-intoclipboard/:
 
 <pre class="terminal">$ sudo apt-get install xclip
-$ cat ~/id_rsa.pub | xclip -sel clip</pre>
+$ cat ~/.ssh/id_rsa.pub | xclip -sel clip</pre>
 
 !/images/add_key.png!
 
