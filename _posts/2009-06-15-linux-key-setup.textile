@@ -16,8 +16,8 @@ Unless this is your first time setting up ssh or git on your computer, you shoul
 
 <pre class="terminal">$ cd ~/.ssh
 $ ls
-config                id_dsa.pub
-id_dsa                known_hosts
+config                id_rsa.pub
+id_rsa                known_hosts
 $ cd ..
 $ mkdir ssh_key_backup
 $ cp .ssh/id_rsa* ssh_key_backup
