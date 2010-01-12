@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Welcome to the GitHub Help site
+title: Welcome
 ---
 
-Here we have compiled many guides to help you set up and use git and GitHub.
+Welcome to the GitHub Help site. Here we have compiled many guides to help you set up and use git and GitHub.
 
 _This site is a work in progress._
 
