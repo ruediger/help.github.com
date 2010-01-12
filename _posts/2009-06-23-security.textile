@@ -1,11 +1,17 @@
 ---
 layout: default
-title: GitHub security
+title: GitHub Security
 ---
 
-h2. Engine Yard security
+We know your code is extremely important to you and your business and we're very protective of it. After all, GitHub's code is hosted on GitHub, too!
 
-Our host, Engine Yard, has a PDF available on their security practices "here":http://www.engineyard.com/docs/EY_Security_WP.pdf.
+h2. Physical security measures
+
+GitHub's infrastructure is hosted on "Rackspace":http://rackspace.com, a publicly-traded company that's committed to keeping your data secure. They provide us with state-of-the-art servers protected by biometric locks and round-the-clock interior and exterior surveillance monitoring. Only authorized personnel have access to the data center. 24/7/365 onsite staff also provides additional protection against unauthorized entry and security breaches.
+
+h2. Software security measures
+
+In addition to Rackspace's system monitoring, we also employ a team of 24/7/365 server specialists at "Anchor Hosting":http://www.anchor.com.au/dedicated-hosting/dedicated-support.py to keep our software and its dependencies up to date eliminating potential security vulnerabilities. They have also setup a wide range of monitoring solutions for preventing and eliminating attacks to the site.
 
 h2. Communications
 
@@ -15,9 +21,9 @@ The SSH login credentials used to push and pull can not be used to access a shel
 
 h2. File system and backups
 
-We do not encrypt repositories on disk because it would not be any more secure: the website and git back-end would need to decrypt the repositories on demand, slowing down response times.  Any user with shell access to the file system would have access to the decryption routine, thus negating any security it provides. Therefore, we focus on making our machines and network as secure as possible.
+Every piece of hardware we use has an identical copy ready and waiting for an immediate hot-swap in case of hardware or software failure. Every line of code we store is saved on a minimum of three different servers, including an off-site backup just in case a meteor ever hits the Rackspace datacenter (we'll keep our fingers crossed that doesn't happen). We do not retroactively remove repositories from backups when deleted by the user, as we may need to restore the repo for the user if it was removed accidentally.
 
-Our database and your repositories are backed up nightly off-site.  We do not retroactively remove repositories from backups when deleted by the user, as we may need to restore the repo for the user if it was removed accidentally.
+We do not encrypt repositories on disk because it would not be any more secure: the website and git back-end would need to decrypt the repositories on demand, slowing down response times.  Any user with shell access to the file system would have access to the decryption routine, thus negating any security it provides. Therefore, we focus on making our machines and network as secure as possible.
 
 h2. Employee access 
 
@@ -31,6 +37,14 @@ We keep a security consultant on retainer to help identify and prevent new attac
 
 We're extremely concerned and active about security, but we're aware that many companies are not comfortable hosting code outside their firewall. For these companies we offer our "Firewall Install":http://fi.github.com/, a version of GitHub that can be installed to a server within the company's network.
 
-h2. Contact
+h2. Credit card safety
+
+When you sign up for a paid account on GitHub, we do not store any of your card information on our servers. It's handed off to "Braintree Payment Solutions":http://braintreepaymentsolutions.com, a company dedicated to storing your sensitive data on "PCI-Compliant":http://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard servers.
+
+h2. Contact Us
 
 Have a question, concern, or comment about GitHub security? Please email "support@github.com":mailto:support@github.com for general inquiries and "security@github.com":mailto:security@github.com for emergencies.
+
+h2. Need to report something?
+
+Please email us immediately at "security@github.com":mailto:security@github.com, this will go directly to one or more of the GitHub founders and will receive our full attention. If we don't respond immediately, there's a good chance we're trying to fix it first.
