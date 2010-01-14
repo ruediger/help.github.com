@@ -1,0 +1,60 @@
+---
+layout: default
+title: GitHub Security
+categories: "Site Policy"
+---
+
+We know your code is extremely important to you and your business and we're very protective of it. After all, GitHub's code is hosted on GitHub, too!
+
+Physical security measures
+--------------------------
+
+GitHub's infrastructure is hosted on [Rackspace](http://rackspace.com), a publicly-traded company that's committed to keeping your data secure. They provide us with state-of-the-art servers protected by biometric locks and round-the-clock interior and exterior surveillance monitoring. Only authorized personnel have access to the data center. 24/7/365 onsite staff also provides additional protection against unauthorized entry and security breaches.
+
+Software security measures
+--------------------------
+
+In addition to Rackspace's system monitoring, we also employ a team of 24/7/365 server specialists at [Anchor Hosting](http://www.anchor.com.au/dedicated-hosting/dedicated-support.py) to keep our software and its dependencies up to date eliminating potential security vulnerabilities. They have also setup a wide range of monitoring solutions for preventing and eliminating attacks to the site.
+
+Communications
+--------------
+
+All private data exchanged with GitHub is always transmitted over SSL (which is why your dashboard is served over HTTPS, for instance). All pushing and pulling of private data is done over SSH authenticated with keys, not passwords.
+
+The SSH login credentials used to push and pull can not be used to access a shell or the filesystem. All users are virtual (meaning they have no user account on our machines) and are access controlled through the peer reviewed, open source git-shell.
+
+File system and backups
+-----------------------
+
+Every piece of hardware we use has an identical copy ready and waiting for an immediate hot-swap in case of hardware or software failure. Every line of code we store is saved on a minimum of three different servers, including an off-site backup just in case a meteor ever hits the Rackspace datacenter (we'll keep our fingers crossed that doesn't happen). We do not retroactively remove repositories from backups when deleted by the user, as we may need to restore the repo for the user if it was removed accidentally.
+
+We do not encrypt repositories on disk because it would not be any more secure: the website and git back-end would need to decrypt the repositories on demand, slowing down response times.  Any user with shell access to the file system would have access to the decryption routine, thus negating any security it provides. Therefore, we focus on making our machines and network as secure as possible.
+
+Employee access
+---------------
+
+No GitHub employees ever access private repositories unless required to for support reasons.  Staff working directly in the file store access the compressed Git database, your code is never present as plaintext files like it would be in a local clone.  Support staff may log into your account to access settings related to your support issue.  In rare cases staff may need to pull a clone of your code, this will only be done with your consent.  Support staff does not have direct access to clone any repo, he will need to temporarily attach his SSH key to your account to pull a clone.  When working a support issue we do our best to respect your privacy as much as possible, we only access the files and settings needed to resolve your issue.  All cloned repos are deleted as soon as the support issue has been resolved.
+
+Maintaining security
+--------------------
+
+We protect your login from brute force attacks with rate limiting.  All passwords are filtered from all our logs and encrypted.  Login information is always sent over SSL.
+
+We keep a security consultant on retainer to help identify and prevent new attack vectors.  We always test new features in order to cut out potential attacks, such as XSS-protecting wikis, and ensuring that Pages cannot access cookies.
+
+We're extremely concerned and active about security, but we're aware that many companies are not comfortable hosting code outside their firewall. For these companies we offer our [Firewall Install](http://fi.github.com/), a version of GitHub that can be installed to a server within the company's network.
+
+Credit card safety
+------------------
+
+When you sign up for a paid account on GitHub, we do not store any of your card information on our servers. It's handed off to [Braintree Payment Solutions](http://braintreepaymentsolutions.com), a company dedicated to storing your sensitive data on [PCI-Compliant](http://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard) servers.
+
+Contact Us
+----------
+
+Have a question, concern, or comment about GitHub security? Please email <support@github.com> for general inquiries and <security@github.com> for emergencies.
+
+Need to report something?
+-------------------------
+
+Please email us immediately at <security@github.com>, this will go directly to one or more of the GitHub founders and will receive our full attention. If we don't respond immediately, there's a good chance we're trying to fix it first.

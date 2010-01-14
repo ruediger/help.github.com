@@ -8,6 +8,7 @@ sidebar_cats:
 - windows
 - linux
 - other
+- "Site Policy"
 ---
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -15,7 +16,7 @@ sidebar_cats:
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
   	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Help.GitHub</title>
+    <title>Help.GitHub - {{ page.title }}</title>
 
     <link href="http://github.com/stylesheets/bundle_common.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="http://github.com/stylesheets/bundle_github.css" media="screen" rel="stylesheet" type="text/css" />
@@ -96,11 +97,11 @@ sidebar_cats:
             <a href="http://github.wordpress.com">Status</a>
           </div>
           <div class="company">
-            &copy;
-            2010
+           &copy;
+            {{ site.time | date: "%Y" }}
             GitHub Inc.
             All rights reserved.
-            | <a href="http://github.com/site/terms">Terms of Service</a> | <a href="http://github.com/site/privacy">Privacy Policy</a>
+           | <a href="http://github.com/site/terms">Terms of Service</a> | <a href="http://github.com/site/privacy">Privacy Policy</a>
           </div>
         </div>
       </div>
