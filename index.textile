@@ -5,8 +5,6 @@ title: Welcome
 
 Welcome to the GitHub Help site. Here we have compiled many guides to help you set up and use git and GitHub.
 
-_This site is a work in progress._
-
 h2. Guides
 
 Use the sidebar on the right side of this site to access our guides!
