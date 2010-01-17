@@ -1,0 +1,69 @@
+---
+layout: default
+title: GitHub API
+categories: other
+---
+
+__This page is for version 1 of the API.  While this API still works, it has been replaced.  We highly recommend you use the [new version](http://develop.github.com/).__
+
+The API
+=======
+
+Request will follow a common URL pattern:
+
+    http://github.com/api/v1/:format/:username/:repository/:type/:object
+
+* Acceptable formats: json, xml, yaml
+
+* Acceptable types: commits, commit
+
+Grabbing all recent commits:
+
+    $ curl -i http://github.com/api/v1/xml/caged/gitnub/commits/master | less
+
+Grabbing a single commit:
+
+    $ curl -i http://github.com/api/v1/json/defunkt/github-gem/commit/c26d4ce9807ecf57d3f9eefe19ae64e75bcaaa8b | less
+
+Repository search:
+
+    $ curl -i http://github.com/api/v1/xml/search/merb | less
+
+You can also grab a user's info, including a list of his repositories (Using [token authentication](http://github.com/blog/170-token-authentication) will enable listing of private repositories.):
+
+    $ curl -i http://github.com/api/v1/json/defunkt | less
+
+With JSON requests, you can have the result passed to a callback method of your choice:
+
+    $ curl -i http://github.com/api/v1/json/defunkt?callback=myCallbackMethod | less
+
+Projects using the API
+======================
+
+* [GitHub Badge](http://drnicjavascript.rubyforge.org/github_badge/)  (see also [initial blog post](http://drnicwilliams.com/2008/05/03/github-badge-for-your-blog/))
+
+* [Badjo](http://github.com/zmack/badjo/tree/master)
+
+* [YAGHB](http://github.com/schleyfox/yaghb/tree/master) - Yet another github badge
+
+* [textmate gem](http://github.com/wycats/textmate/) -- Command-line package manager for textmate
+
+* [github commit badge](https://github.com/heipei/github-commit-badge/tree) - GitHub commit badge, showing the most recent commits of chosen repos
+
+* ['gadgets' project and 'demo generator'](http://github.com/andyatkinson/gadgets/tree/master) (see also [initial blog post](http://webandy.com/2008/11/15/gadgets-and-demo-generator))
+
+* [GitHub Projects Wordpress Plug-in](http://github.com/tristandunn/wp-github-projects/tree/master) - Also at the official Wordpress [plug-in directory](http://wordpress.org/extend/plugins/github-projects/)
+
+* [github-repos](http://github.com/johnbender/github-repos/tree/master) - [Tutorial and Example](http://nickelcode.com/2008/11/27/github-repo-information-in-your-webpages/)
+
+* [github-terminal](http://github.com/prtksxna/github-terminal/tree/master), working example at [Github Terminal](http://prtksxna.github.com/github-terminal/)
+
+* [git-trip](http://github.com/Oshuma/git-trip/tree) - Visualize git repositories.
+
+* [github-social-badge](http://github.com/kentbrew/github-social-badge) - Social badge: visualize projects and followers.  [Working example](http://kentbrew.github.com)
+
+* [codeigniter-github](http://github.com/philsturgeon/codeigniter-github/tree/master) - CodeIgniter / PHP wrapper library.
+
+* [github user page bookmarklet](http://tagaholic.me/2009/04/06/github-bookmarklet-for-user-pages.html) - adds additional repo stats to github user pages and provides repository sorting.
+
+* [RefactorMe](http://www.refactorme.com) - Site posts daily code snippets from open source projects. All code is powered by Github Gists' and the site will also create the gist for users if they do not want to create it themselves.

@@ -28,7 +28,9 @@ $ git config user.email "not@tekkub.net"</pre>
 
 h2. GitHub token config
 
-Some tools connect to GitHub without SSH, for these tools you need to set your "local GitHub config":http://github.com/blog/180-local-github-config.  You can find your token at the top of the "account page":https://github.com/account
+Some tools connect to GitHub without SSH, for these tools you need to set your "local GitHub config":http://github.com/blog/180-local-github-config.  You can find your token on the "account page":https://github.com/account
+
+!http://img.skitch.com/20091209-k5x2xa1rrc889deqmp53464m8n.png!
 
 <pre class="terminal">$ git config --global github.user tekkub
 $ git config --global github.token 0123456789abcdef0123456789abcdef</pre>
