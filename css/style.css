@@ -46,6 +46,7 @@ pre.terminal {
   font-size: 0.9em !important;
 }
 
+pre.terminal span.comment {color: #aaa;}
 code {white-space: nowrap;}
 
 
