@@ -32,7 +32,7 @@ h2. Pushing your changes
 Now that we've got our fork, we need to make a few changes and commit them locally.  Once you've done this, it's time to push your updated branch.
 <pre class="terminal">$ git push origin master</pre>
 
-After you've pushed your commit(s) you need to inform the project owner of the changes so they can pull them into their repo.  From your project's page, click the !http://github.com/images/modules/repos/pull_request_button.png! button.  Fill in a note and pick who to send the request to.  In large projects it is important that you *do not* send the request to every person who's touched the project.  Make sure you're only sending to the people who care, the user(s) that manage the core project repo.
+After you've pushed your commit(s) you need to inform the project owner of the changes so they can pull them into their repo.  From your project's page, click the "pull request" button.  Fill in a note and pick who to send the request to.  In large projects it is important that you *do not* send the request to every person who's touched the project.  Make sure you're only sending to the people who care, the user(s) that manage the core project repo.
 
 _Note that some projects do not accept pull requests.  Make sure you submit your request to the place they want it, or you will probably just be ignored._
 
