@@ -13,7 +13,9 @@ Note that this works for pulling from a forked repository to the original, as we
 
 h2. Setting up
 
-Naturally, the first thing you must do is create your fork.  To do this, you simply click the !http://github.com/images/modules/repos/fork_button.png! button on the project's page.  When the fork has completed, you will be presented with your new repo information.
+Naturally, the first thing you must do is create your fork.  To do this, you simply click the "fork" button on the project's page.  When the fork has completed, you will be presented with your new repo information.
+
+!http://img.skitch.com/20100125-8tykuy41tn39emcbsrxy545e9f.jpg!
 
 Now you need to clone the fork.  Make sure you use the "Your Clone URL" and *not* the "Public Clone URL"
 <pre class="terminal">$ git clone git@github.com:billyanyteen/github-services.git</pre>
