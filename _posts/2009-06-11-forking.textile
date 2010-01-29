@@ -2,7 +2,8 @@
 layout: default
 title: Forking a project
 description: How to fork a project, submit changes, and pull from other repos in the fork network
-categories: collaborating
+categories: collaborating popular
+main_category: collaborating
 ---
 
 This guide will step you through the process of forking, pushing you changes, and pulling in changes from the upstream repo.

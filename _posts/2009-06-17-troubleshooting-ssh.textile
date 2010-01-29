@@ -2,7 +2,7 @@
 layout: default
 title: Troubleshooting SSH issues
 description: Solutions to common SSH issues
-categories: setup troubleshooting
+categories: setup troubleshooting popular
 main_category: troubleshooting
 ---
 

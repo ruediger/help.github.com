@@ -13,6 +13,15 @@ If you would like to submit your own guides, please fork "our repo":http://githu
 
 <em>We are in the process of moving guides over from the "old wiki":http://github.com/guides/home.</em>
 
+h3. Popular guides
+
+<dl>
+  {% for post in site.posts reversed %}{% if post.categories contains "popular" %}
+    <dt><a href="{{ post.url }}" id="{{ cat }}">{{ post.title }}</a></dt>
+    <dd>{{ post.description }}</dd>
+  {% endif %}{% endfor %}
+</dl>
+
 h2. Getting help
 
 There are a number of resources available to help you learn git or fix issues with GitHub:

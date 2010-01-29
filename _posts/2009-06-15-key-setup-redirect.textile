@@ -2,7 +2,8 @@
 layout: default
 title: Generating SSH keys
 description: How to generate SSH keys and add them to GitHub
-categories: setup
+categories: setup popular
+main_category: setup
 ---
 
 Attempting to redirect to the guide for your OS.  If the redirect fails, pick your OS:
