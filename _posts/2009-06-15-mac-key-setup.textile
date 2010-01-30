@@ -12,17 +12,18 @@ Generating an SSH key on OSX is a fairly straightforward process.  First and for
 
 h2. Backup and remove existing keys
 
+p(. _If you have an existing keypair you wish to use, you can skip this step._
+
 Unless this is your first time setting up ssh or git on your computer, you should double check that keys do not already exist.  If they do you can either use the existing key(s) or remove them.  In either case, you should make a backup of the keys.
 
 <pre class="terminal">$ cd ~/.ssh
 $ ls
 config  id_rsa  id_rsa.pub  known_hosts
-$ cd ..
-$ mkdir ssh_key_backup
-$ cp .ssh/id_rsa* ssh_key_backup
-$ rm .ssh/id_rsa*</pre>
+$ mkdir key_backup
+$ cp id_rsa* key_backup
+$ rm id_rsa*</pre>
 
-Here we have an existing keypair, @id_rsa@ and @id_rsa.pub@, which we've copied into @~/ssh_key_backup@ before removing.  By default, ssh will use keys in @~/.ssh@ that are named @id_rsa@, @id_dsa@ or @identity@.
+Here we have an existing keypair, @id_rsa@ and @id_rsa.pub@, which we've copied into @~/.ssh/key_backup@ before removing.  By default, ssh will use keys in @~/.ssh@ that are named @id_rsa@, @id_dsa@ or @identity@.
 
 h2. Generating a key
 
