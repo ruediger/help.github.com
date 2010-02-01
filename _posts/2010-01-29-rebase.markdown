@@ -13,7 +13,7 @@ So, you've cloned a repository, and hacked away at it; separated it into logical
 
 So you send your patch series, or publish your branch, and ask for a pull, but a quick review reveals that there are some errors in these patches!
 
-Now, the maintainer may send these patches back to you, and ask you to fix these, this guide shows several ways on how this can be accomplished[1].
+Now, the maintainer may send these patches back to you, and ask you to fix these, this guide shows several ways on how this can be accomplished.
 
 Before you start, make sure you have a clean working tree (i.e. no modified files).
 
