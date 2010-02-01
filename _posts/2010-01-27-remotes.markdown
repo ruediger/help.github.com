@@ -1,0 +1,98 @@
+---
+layout: default
+title: Working with remotes
+description: Pushing, fetching, merging and deleting remote branches
+categories: "Everyday git"
+---
+
+This guide will cover all the basic day-to-day commends you will use with git to interact with remote repos.  For push operations you can only interact with repos you own or are a collaborator on.  To gain access to a public repo, check out the [forking guide](/forking).
+
+Managing remotes
+----------------
+
+Before you can perform any remote operations it is usually best to set up remotes in your repo.  If you cloned a repo git will create a remote named "origin" automatically.  There are a few commands to help you manage these remotes:
+
+### add
+
+This one is pretty straightforward, `git remote add test git://github.com/user/test.git` will create a new remote named "test" pointing to `git://github.com/user/test.git`.  If we add a `-f` flag on the end, git will also fetch the remote for us.
+
+### rename
+
+Rename a remote and its remote-tracking branches... `git remote rename test example` will rename the "test" remote to "example".
+
+### rm
+
+Another basic command, `git remote rm example` will delete the "example" remote and any remote-tracking branches we've fetched.
+
+### Changing a remote's URL
+
+There is no direct command to change a remote's URL, so you will usually run `git remote rm` followed by `git remote add` to change a URL.  You can also edit the repo's `.git/config` file directly to change the URL without re-fetching the remote.
+
+Fetching
+--------
+
+When working with other users' repos there are four basic commands you will need, `git clone`, `git fetch`, `git pull` and `git remote prune`.
+
+### clone
+
+To grab a full copy of another user's repo when you do not have a local repo already, you will use `git clone URL`.  For public repos, the URL can be a read-only URL like `git://github.com/user/repo.git` or an HTTP read-only URL like `http://github.com/user/repo.git`.  For public repos you own or are a collaborator on, and all private repos, you must use a private ssh url like `git@github.com:user/repo.git`.  You can find each of the URLs available to you in the header of the repo page:
+
+![header](http://img.skitch.com/20100201-e6dmj54pgmw6wq7314jtbej31k.jpg)
+
+Running `git clone URL` will automatically create a new subfolder, fetch the contents of the repo into this subfolder, then create and checkout the default branch (usually "master").  If there are other branches on the remote you will need to create a local branch to work in, for example `git checkout -b fix_stuff origin/fix_stuff`
+
+### fetch
+
+If you already have a local repo with a remote set up, you can grab all branches and tags for the remote using `git fetch REMOTENAME`.  By default, `git clone` will make a remote named "origin" pointing to the URL you cloned from.  Fetch does not make any changes to local branches, so you will need to merge remote branches to bring those changes in.
+
+### pull
+
+Similar to `git fetch`, you can use `git pull REMOTENAME BRANCHNAME` to fetch a specific branch and merge it into your current local branch.  For on-time pulls from other users' repos you can use a URL instead of a remote name.  This will pull from that URL without adding a remote.
+
+Because pull performs a merge you should ensure that your working tree and index are clean before running the command.  If you run into a merge conflict you cannot resolve or decide to abort the merge, you can use `git reset ORIG_HEAD --hard` to take the branch back to the commit it was on before you pulled.
+
+### prune
+
+Sometimes branches are deleted from a remote repo.  By default, `git fetch` will not remove any remote-tracking branches that have been deleted on the remote repo.  Running `git remote prune REMOTENAME` will delete these tracking branches.
+
+Pushing
+-------
+
+At some point you're going to want to publish commits from your repo into a remote for other users to fetch.  This process is fairly straightforward.  First you need a repo on github you can push to.  Either create a new repo, gain collaborator permissions on someone else's repo, or [fork](/forking) someone else's repo.  You can only push to an ssh URL like `git@github.com:user/repo.git`.  If you cloned another repo with a read-only URL you can add a second remote for your URL or remove or rename the existing remote.  See the [git remote manpage](http://www.kernel.org/pub/software/scm/git/docs/git-remote.html) for more information on changing remotes.
+
+### Pushing a branch
+
+To push a local branch to an established remote, you simply need to use `git push REMOTENAME BRANCHNAME`  If you don't want to use the same name on the remote branch you can use `git push REMOTENAME LOCALBRANCHNAME:REMOTEBRANCHNAME`.
+
+#### Dealing with "non-fast-forward" errors
+
+From time to time you may encounter this error while pushing:
+
+<pre class="terminal">
+$ git push origin master
+To ../remote/
+ ! [rejected]        master -> master (non-fast forward)
+error: failed to push some refs to '../remote/'
+To prevent you from losing history, non-fast-forward updates were rejected
+Merge the remote changes before pushing again.  See the 'non-fast forward'
+section of 'git push --help' for details.
+</pre>
+
+This error can be a bit overwhelming at first, do not fear.  Simply put, git cannot make the change on the remote without losing commits, so it refuses the push.  Usually this is caused by another user pushing to the same branch.  You can remedy this by fetching and merging the remote branch, or using pull to perform both at once.
+
+In other cases this error is a result of destructive changes made locally by using commands like `git commit --amend` or `git rebase`.  While you can override the remote by adding `--force` to the push command, you should only do so if you are absolutely certain this is what you want to do.  Force-pushes can cause issues for other users that have fetched the remote branch, and is considered bad practice.  When in doubt, don't force-push.
+
+### Pushing tags
+
+By default, push will only send the ref you specify.  To push a single tag you can simply use `git push REMOTENAME TAGNAME`.  To push all tags while pushing another branch, you can use `git push REMOTENAME BRANCHNAME --tags`.
+
+### Deleting a remote branch or tag
+
+This command is a bit arcane at first glance... `git push REMOTENAME :BRANCHNAME`.  If you look at the advanced push syntax above it should make a bit more sense.  You are literally telling git "push _nothing_ into BRANCHNAME on REMOTENAME".
+
+Links
+-----
+
+* [Pro Git](http://progit.org/book/ch2-5.html)
+* [git remote man page](http://www.kernel.org/pub/software/scm/git/docs/git-remote.html)
+* [Git user's manual](http://www.kernel.org/pub/software/scm/git/docs/user-manual.html#sharing-development)
