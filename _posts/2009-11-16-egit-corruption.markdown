@@ -49,7 +49,7 @@ remote: Total 1815 (delta 1139), reused 1552 (delta 961)
 Receiving objects: 100% (1815/1815), 537.69 KiB | 549 KiB/s, done.
 Resolving deltas: 100% (1139/1139), done.</pre>
 
-If you have re-pushed all branches in your repo and cloning still fails, please "contact support":http://support.github.com and open a ticket.  Be sure to include a link to your repo and mention that you've already performed the steps on this page.
+If you have re-pushed all branches in your repo and cloning still fails, please [contact support](http://support.github.com) and open a ticket.  Be sure to include a link to your repo and mention that you've already performed the steps on this page.
 
 Avoiding future corruption
 --------------------------
