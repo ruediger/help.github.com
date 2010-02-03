@@ -21,16 +21,20 @@ Correcting the remote repo
 
 To correct the remote repo the missing objects need to be re-pushed from an uncorrupted repo.  This should be done from the command line, not from egit.  To start, run `git fsck` on your local repo to ensure it has not been corrupted.  If you do not receive any errors about broken links or missing objects, you're clear to continue.
 
-Re-pushing is a simple matter of deleting the remote branch and then pushing it again.  If the branch being deleted is the default branch on the remote you'll need to replace it temporarily.  We'll use the first commit in the branch so that we can ensure all the other commits are re-pushed.
+Re-pushing is a simple matter of deleting the remote branch and then pushing it again.  We'll use the first commit in the branch so that we can ensure all the other commits are re-pushed.
+
+If the branch being deleted is the default branch on the remote you'll need to replace it temporarily.  You can do this in the repo's admin page:
+
+![default](http://img.skitch.com/20100203-jm7pty6kf1c72yfksunyf5g5n9.jpg)
 
 <pre class="terminal">$ git log --pretty=oneline | tail -n 1 <span class="comment"># Find the first commit</span>
 3b70d98cb968fc35f0c99acfe4d5dfa976ed2536 Initial commit
 $ git branch temp_default 3b70d98cb968fc35f0c99acfe4d5dfa976ed2536
 $ git push origin temp_default
-$ git remote set-head origin temp_default <span class="comment"># Change the remote default branch</span>
+<span class="comment"># Change the remote default branch to temp_default</span>
 $ git push origin :master
 $ git push origin master
-$ git remote set-head origin master <span class="comment"># Set things back to master</span>
+<span class="comment"># Set the remote default back to master</span>
 $ git push origin :temp_default</pre>
 
 You may need to do this for many branches if the remote repo has more than one branch that was pushed by egit.  You can skip `git remote set-head` for these other branches.
