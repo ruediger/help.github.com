@@ -21,7 +21,7 @@ $ ls
 config                id_rsa.pub
 id_rsa                known_hosts
 $ mkdir key_backup
-$ cp id_rsa* ssh_key_backup
+$ cp id_rsa* key_backup
 $ rm id_rsa*</pre>
 
 Here we have an existing keypair, @id_rsa@ and @id_rsa.pub@, which we've copied into @~/.ssh/key_backup@ before removing.  By default, ssh will use keys in @~/.ssh@ that are named @id_rsa@, @id_dsa@ or @identity@.
