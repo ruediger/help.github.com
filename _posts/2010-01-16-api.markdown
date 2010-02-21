@@ -50,7 +50,7 @@ Projects using the API
 
 * [github commit badge](https://github.com/heipei/github-commit-badge/tree) - GitHub commit badge, showing the most recent commits of chosen repos
 
-* [GitHub Projects Wordpress Plug-in](http://github.com/tristandunn/wp-github-projects/tree/master) - Also at the official Wordpress [plug-in directory](http://wordpress.org/extend/plugins/github-projects/)
+* GitHub Projects Wordpress Plug-in - Available at the official Wordpress [plug-in directory](http://wordpress.org/extend/plugins/github-projects/)
 
 * [github-repos](http://github.com/johnbender/github-repos/tree/master) - [Tutorial and Example](http://nickelcode.com/2008/11/27/github-repo-information-in-your-webpages/)
 
