@@ -55,7 +55,7 @@ You may wish to do the fetch and merge manually, instead of letting git-pull do 
 
 h2. Deleting the forked repository
 
-To remove the fork, just delete it like any repo: click the "Edit" button next to "pull request", then at the bottom of the page there will be a "Delete This Repository…" link.
+To remove the fork, just delete it like any repo: click the "Admin" button next to "Unwatch", then at the bottom of the page there will be a "Delete This Repository…" link.
 
 h2. Additional resources
 
