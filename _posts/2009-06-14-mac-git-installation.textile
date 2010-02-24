@@ -2,11 +2,12 @@
 layout: default
 title: Installing git (OSX)
 description: How to install git on OSX
-categories: mac setup
-main_category: setup
+categories: mac
 ---
 
 There are a number of methods to install git on OSX.  This guide details the most common methods, in order of ease of install.
+
+After you have completed installation you will need to "generate an SSH keypair":/mac-key-setup and "set your local git config":/git-email-settings.
 
 h2. Pre-compiled Installer
 
