@@ -3,6 +3,7 @@ layout: default
 title: Installing git (Win/msysgit)
 description: How to install git on Windows
 categories: windows
+main_category: setup
 ---
 
 Installing git on windows is a fairly straightforward process.  To begin, download the latest version of [msysgit](http://code.google.com/p/msysgit/).

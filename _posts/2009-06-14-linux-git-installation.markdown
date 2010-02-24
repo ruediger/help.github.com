@@ -3,6 +3,7 @@ layout: default
 title: Installing git (Linux)
 description: How to install git on Linux
 categories: linux
+main_category: setup
 ---
 
 Ubuntu
