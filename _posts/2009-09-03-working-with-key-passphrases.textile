@@ -16,7 +16,7 @@ But using a key without a passphrase is basically the same as writing down that 
 
 h3. But I don't want to enter a long passphrase every time I use the key!
 
-Neither do I!  Thankfully, there's a nifty little tool called @ssh-agent@ that can save your passphrase securely so you don't have to re-enter it.  If you're on OSX Leopard or later your keys can be saved in the system's keychain to make your life even easier.
+Neither do I!  Thankfully, there's a nifty little tool called @ssh-agent@ that can save your passphrase securely so you don't have to re-enter it.  If you're on OSX Leopard or later your keys can be saved in the system's keychain to make your life even easier.  Most linux installations will automatically start @ssh-agent@ for you when you log in.
 
 h2. Adding or changing a passphrase
 
