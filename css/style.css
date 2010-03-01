@@ -57,10 +57,6 @@ code {white-space: nowrap;}
 .wikistyle img {max-width: 690px;}
 
 
-/* Tender widget fix */
-#tender_window {position: fixed !important;}
-
-
 /****************************/
 /*      Forking ribbon      */
 /****************************/
