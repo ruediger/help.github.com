@@ -14,6 +14,12 @@ h2. Backup and remove existing keys
 
 Unless this is your first time installing msys on your computer, you should double check that keys do not already exist.  If they do you can either use the existing key(s) or remove them.  In either case, you should make a backup of the keys.
 
+First check to see if a ssh key directory exists.
+<pre class="terminal">$ $ cd ~/.ssh
+</pre>
+
+If you get a "No such file or directory" error, you can skip the following step to back up the SSH key before generating a new keypair.
+
 <pre class="terminal">$ cd ~/.ssh
 $ ls
 config  id_rsa  id_rsa.pub  known_hosts
@@ -54,7 +60,17 @@ h2. Testing things out
 Testing if our new key works is simple:
 
 <pre class="terminal">$ ssh git@github.com
-Hi tekkub! You've successfully authenticated, but GitHub does not provide shell access.
-Connection to github.com closed.</pre>
+The authenticity of host 'github.com (207.97.227.239)' can't be established.
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)?
+</pre>
+
+Respond with yes to confirm the first-time ssh connection to github:
+<pre class="terminal">yes
+Warning: Permanently added 'github.com,207.97.227.239' (RSA) to the list of known hosts.
+Enter passphrase for key '/c/Users/tekkub/.ssh/id_rsa':
+ERROR: Hi tekkub! You've successfully authenticated, but GitHub does not provide shell access
+Connection to github.com closed.
+</pre>
 
 If you do not get the "successfully authenticated" message, check out the "troubleshooting guide":http://github.com/guides/addressing-authentication-problems-with-ssh.
