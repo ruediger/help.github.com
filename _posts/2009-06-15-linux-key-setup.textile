@@ -16,8 +16,13 @@ p(. _If you have an existing keypair you wish to use, you can skip this step._
 
 Unless this is your first time setting up ssh or git on your computer, you should double check that keys do not already exist.  If they do you can either use the existing key(s) or remove them.  In either case, you should make a backup of the keys.
 
-<pre class="terminal">$ cd ~/.ssh
-$ ls
+First check to see if a ssh key directory exists.
+
+<pre class="terminal">$ cd ~/.ssh</pre>
+
+If you get a "No such file or directory" error, you can skip to "Generating a key".
+
+<pre class="terminal">$ ls
 config                id_rsa.pub
 id_rsa                known_hosts
 $ mkdir key_backup
@@ -59,10 +64,15 @@ $ cat ~/.ssh/id_rsa.pub | xclip -sel clip</pre>
 
 h2. Testing things out
 
-Testing if our new key works is simple:
+Testing if our new key works is simple, we just ssh to github.  If this is the first time you're connecting you'll have to save the server's key.  You can confirm the fingerprint on the SSH keys tab of the "account settings page":https://github.com/account
 
 <pre class="terminal">$ ssh git@github.com
-Hi tekkub! You've successfully authenticated, but GitHub does not provide shell access.
-Connection to github.com closed.</pre>
+The authenticity of host 'github.com (207.97.227.239)' can't be established.
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,207.97.227.239' (RSA) to the list of known hosts.
+ERROR: Hi tekkub! You've successfully authenticated, but GitHub does not provide shell access
+Connection to github.com closed.
+</pre>
 
 If you do not get the "successfully authenticated" message, check out the "troubleshooting guide":http://github.com/guides/addressing-authentication-problems-with-ssh.
