@@ -26,7 +26,7 @@ Once the clone is complete your repo will have a remote named "origin" that poin
 $ git remote add upstream git://github.com/pjhyett/github-services.git
 $ git fetch upstream</pre>
 
-Note that we used the public clone URL for upstream, so we can't push changes directly to it.  We probably don't have permission to do that anyway, which is why we're creating a fork in the first place.
+Note that we used the public clone URL for upstream, so we can't push changes directly to it.  We probably don't have permission to do that anyway, which is why we're creating a fork in the first place.  If the upstream repo is private, you must use its private URL.
 
 h2. Pushing your changes
 
@@ -40,7 +40,7 @@ _Note that some projects do not accept pull requests.  Make sure you submit your
 h2. Pulling in upstream changes
 
 Some time has passed, the upstream repo has changed and you want to update your fork before you submit a new patch.  There are two ways to do this:
-<pre class="terminal">$ git fetch upstream master
+<pre class="terminal">$ git fetch upstream
 $ git merge upstream/master</pre>
 
 <pre class="terminal">$ git pull upstream master</pre>
