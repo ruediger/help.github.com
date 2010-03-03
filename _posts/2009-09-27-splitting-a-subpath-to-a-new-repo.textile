@@ -2,7 +2,7 @@
 layout: default
 title: Splitting a subpath out into a new repo
 description: How to generate a new repo from a subpath, retaining history.
-categories: repos
+categories: "Git ninjutsu"
 ---
 
 From time to time you may find that you want to make a new repo from a subpath of an existing repo.  Perhaps you're moving some code out into a library or just want to have a common submodule across projects.  Thanks to git, it's easy to do this without losing the history of that subpath in the process.
