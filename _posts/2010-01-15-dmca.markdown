@@ -35,10 +35,10 @@ To expedite our handling of your notice, please use the following format or refe
 
 Send the written notification via regular postal mail to the following:
 
-> Github, Inc <br>
+> GitHub Inc <br>
 > Attn: DMCA takedown <br>
-> P.O. Box 14335 <br>
-> San Francisco, CA. 94114
+> 589 Howard St., 4th Floor <br>
+> San Francisco, CA. 94105
 
 or email notification to <copyright@github.com>
 
