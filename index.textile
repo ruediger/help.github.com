@@ -9,7 +9,7 @@ h2. Guides
 
 Use the sidebar on the right side of this site to access our guides!
 
-If you would like to submit your own guides, please fork "our repo":http://github.com/help/help.github.com/ and send pull requests to "tekkub":http://github.com/tekkub
+If you would like to submit your own guides, please fork "our repo":http://github.com/github/help.github.com/ and send pull requests to "tekkub":http://github.com/tekkub
 
 <em>We are in the process of moving guides over from the "old wiki":http://github.com/guides/home.</em>
 
