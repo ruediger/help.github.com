@@ -19,7 +19,7 @@ Getting up and running from scratch is easy:
 1. [Install Git](git-installation-redirect)
 2. [Generate a keypair](key-setup-redirect) -- *[If you have troubles](troubleshooting-ssh)*
 3. [Set your user and email in git](git-email-settings)
-4. [Create a repo](creating-a-repo) or "fork an existing repo](forking)
+4. [Create a repo](creating-a-repo) or [fork an existing repo](forking)
 
 After you've created a repo you will presented with the commands necessary to create a new empty repo locally, push an existing local repo, or import an SVN repo.
 
