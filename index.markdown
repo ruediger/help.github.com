@@ -9,7 +9,6 @@ Use the sidebar on the right side of this site to access our guides!
 
 If you would like to submit your own guides, please fork [our repo](http://github.com/github/help.github.com/) and send pull requests to [tekkub](http://github.com/tekkub)
 
-*We are in the process of moving guides over from the [old wiki](http://github.com/guides/home).*
 
 Getting started with Git and GitHub
 -----------------------------------
@@ -45,15 +44,15 @@ There are a number of resources available to help you learn git or fix issues wi
 ### GitHub
 
 * [GitHub Support](http://support.github.com) -- Resolve issues with GitHub or get help with basic git issues.
-* [Contact GitHub](http://github.com/contact) -- Don't feel like making an account on support.github.com?  This is your direct line to us.
+* [Contact GitHub](http://github.com/contact) -- This is your direct line to us.
 * [GitHub Google Group](http://groups.google.com/group/github/) -- Ask the community for help
-* [GitHub Status](http://twitter.com/github) -- Is GitHub down, or is it just me?
+* [GitHub Status](http://status.github.com) -- Is GitHub down, or is it just me?
 
 ### Git
 
-* [Pro Git](http://progit.org/)
-* [git-scm](http://git-scm.com/)
+* [Pro Git](http://progit.org/) -- The greatest book on git, by GitHub's very own Scott Chacon. Available online for free.
+* [git-scm](http://git-scm.com/) -- The official git website.
 * [git man pages](http://www.kernel.org/pub/software/scm/git/docs/) -- In-depth documentation for every git command.
-* [git user's manual](http://www.kernel.org/pub/software/scm/git/docs/user-manual.html)
+* [git user's manual](http://www.kernel.org/pub/software/scm/git/docs/user-manual.html) -- Concepts and workflows.
 * [Learn.GitHub](http://learn.github.com) -- Git tutorials for beginners and experts.
-* [git ready](http://www.gitready.com/) -- Little tips and hints for using git.
+* [git ready](http://www.gitready.com/) -- Tips and hints for using git.
