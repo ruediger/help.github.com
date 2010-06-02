@@ -13,7 +13,6 @@
 #guides .guide .sidebar h3 {
   padding: 4px;
   margin: .2em 0;
-  cursor: pointer;
 }
 #guides .guide .sidebar h3:focus { outline: none; }
 
