@@ -60,4 +60,4 @@ $ sudo port install git-core +svn
 
 h2. Compiling git manually
 
-See "compiling and installing git on mac os x":http://github.com/guides/compiling-and-installing-git-on-mac-os-x.
+See "this guide":http://gist.github.com/423308.
