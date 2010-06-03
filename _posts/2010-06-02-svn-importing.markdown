@@ -23,7 +23,7 @@ Manual import
 
 First, be sure to [create your repository on GitHub](http://github.com/repositories/new)
 
-<pre class="console">$ git svn clone -s SVN_REPO_URL LOCAL_DIR
+<pre class="terminal">$ git svn clone -s SVN_REPO_URL LOCAL_DIR
 $ cd LOCAL_DIR
 $ git remote add origin git@github.com:GITHUB_USERNAME/REPO_NAME.git
 $ git push origin master</pre>
@@ -44,7 +44,7 @@ The format is `svnuser = gituser_name <gituser_email>`.  To automatically genera
 
 Once your authors file is complete, clone the subversion repository with the authors file:
 
-<pre class="console">$ git svn --authors-file=path/to/authors_file clone SVN_REPO_URL LOCAL_DIR</pre>
+<pre class="terminal">$ git svn --authors-file=path/to/authors_file clone SVN_REPO_URL LOCAL_DIR</pre>
 
 Other guides
 ------------
