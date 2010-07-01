@@ -7,6 +7,11 @@ categories: repos
 
 This guide details the process of moving a repo to another account.  There are two ways to do this: manually cloning and pushing to a new repo, or forking the repo and changing the network's root.
 
+Organizations
+-------------
+
+If you wish to move a repo from a user to an organization, please [contact support](http://support.github.com/) with details.
+
 Forking and Rooting
 -------------------
 
