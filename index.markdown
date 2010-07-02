@@ -15,16 +15,17 @@ Getting started with Git and GitHub
 
 Getting up and running from scratch is easy:
 
-1. [Install Git](git-installation-redirect)
-2. [Generate a keypair](key-setup-redirect) -- *[If you have troubles](troubleshooting-ssh)*
-3. [Set your user and email in git](git-email-settings)
-4. [Create a repo](creating-a-repo) or [fork an existing repo](forking)
+1. Take a quick [crash course](http://gitref.org/) on git
+2. [Install Git](git-installation-redirect)
+3. [Generate a keypair](key-setup-redirect) -- *[If you have troubles](troubleshooting-ssh)*
+4. [Set your user and email in git](git-email-settings)
+5. [Create a repo](creating-a-repo) or [fork an existing repo](forking)
 
 After you've created a repo you will presented with the commands necessary to create a new empty repo locally, push an existing local repo, or import an SVN repo.
 
 If you are collaborating on someone else's repo, you can clone the repo using the command `git clone git@github.com:username/reponame.git`.  You can find this clone URL in the repo's header when viewing its source page.
 
-To learn more about git's commands, we highly recommend you check out the [Pro Git book](http://progit.org/) and the [git man pages](http://www.kernel.org/pub/software/scm/git/docs/).  If you need help or have any questions, feel free to [contact support](http://support.github.com) or [ask the community](http://groups.google.com/group/github/).
+To learn more about git's commands, we highly recommend you check out [GitRef](http://gitref.org/), the [Pro Git book](http://progit.org/) and the [git man pages](http://www.kernel.org/pub/software/scm/git/docs/).  If you need help or have any questions, feel free to [contact support](http://support.github.com) or [ask the community](http://groups.google.com/group/github/).
 
 Popular guides
 --------------
