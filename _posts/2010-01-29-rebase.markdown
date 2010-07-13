@@ -2,7 +2,7 @@
 layout: default
 title: All your rebase
 description: Using git rebase to restructure a branch
-categories: "Everyday git"
+categories: everyday_git
 ---
 
 One often overlooked feature of git is the `git rebase` command.  Rebase allows you to easily change a series of commits, reordering, editing, or squashing commits together into a single commit.

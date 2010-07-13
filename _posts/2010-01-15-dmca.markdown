@@ -1,7 +1,7 @@
 ---
 layout: default
 title: DMCA Takedown
-categories: "Site Policy"
+categories: site_policy
 ---
 
 GitHub, Inc. ("GitHub") supports the protection of intellectual property and asks the users of the website GitHub.com to do the same. It is the policy of GitHub to respond to all notices of alleged copyright infringement.

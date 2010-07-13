@@ -3,15 +3,15 @@ sidebar_cats:
 - setup
 - troubleshooting
 - repos
-- "Everyday git"
-- "Git ninjutsu"
+- everyday_git
+- git_ninjutsu
 - collaborating
 - deploying
 - mac
 - windows
 - linux
 - other
-- "Site Policy"
+- site_policy
 ---
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -65,7 +65,7 @@ sidebar_cats:
             <div class="sidebar">
 
               {% for cat in (page.sidebar_cats) %}
-                <h3>{{ cat | capitalize }}</h3>
+                <h3>{{ cat | replace:'_',' ' | capitalize }}</h3>
                   <ul id="categories">
                     {% for post in site.posts reversed %}{% if post.categories contains cat %}
                       {% if page.title == post.title %}

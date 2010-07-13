@@ -2,7 +2,7 @@
 layout: default
 title: Ignoring files
 description: How to tell git to ignore files
-categories: "Everyday git"
+categories: everyday_git
 ---
 
 From time to time there are files you don't want git to track.  There are a few methods of telling git what files to ignore.

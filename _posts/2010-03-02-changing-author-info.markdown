@@ -2,7 +2,7 @@
 layout: default
 title: Changing author info
 description: How to modify author info in your repo's history
-categories: "Git ninjutsu"
+categories: git_ninjutsu
 ---
 
 If you need to modify the author info in your repo's history, you can do so with this script.
