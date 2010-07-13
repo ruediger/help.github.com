@@ -2,7 +2,7 @@
 layout: default
 title: Removing sensitive data
 description: Dealing with accidentally committed passwords or other sensitive information
-categories: popular, git_ninjutsu
+categories: popular git_ninjutsu
 ---
 
 From time to time users accidentally commit data like passwords or keys into a git repo.  While you can use @git rm@ to remove the file, it will still be in the repo's history.  Fortunately, git makes it fairly simple to remove the file from the entire repo history.

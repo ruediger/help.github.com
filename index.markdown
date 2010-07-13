@@ -31,10 +31,10 @@ Popular guides
 --------------
 
 <dl>
-  {% for post in site.posts reversed %}{% if post.categories contains "popular" %}
+  {% for post in site.categories.popular reversed %}
     <dt><a href="{{ post.url }}" id="{{ cat }}">{{ post.title }}</a></dt>
     <dd>{{ post.description }}</dd>
-  {% endif %}{% endfor %}
+  {% endfor %}
 </dl>
 
 Getting help
