@@ -17,19 +17,19 @@ What we'll send is JSON containing information about the push and the commits in
 
 Here's the template we use in Ruby to generate the JSON:
 
-<script src="http://gist.github.com/212213.js"></script>
+<script src="http://gist.github.com/212213.js"> </script>
 
 This is sent as a POST with a single parameter: 'payload'
 
 So, for example, you'd do something like this in a [Sinatra](http://sinatra.rubyforge.org/) server:
 
-<script src="http://gist.github.com/212212.js"></script>
+<script src="http://gist.github.com/212212.js"> </script>
 
 The `commits` array is ordered with the most recent commit as the first element.  The last element, therefor, is the oldest commit.
 
 Here's an example payload:
 
-<script src="http://gist.github.com/212211.js"></script>
+<script src="http://gist.github.com/212211.js"> </script>
 
 For more information on this technique, see the [Web Hooks Wiki](http://webhooks.pbwiki.com/).
 

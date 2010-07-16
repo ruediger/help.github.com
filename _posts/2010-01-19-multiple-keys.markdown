@@ -21,7 +21,7 @@ Configuring SSH
 
 Once SSH has access to both keys, you need to tell it which key to use for which server.  In most cases you can assume that SSH will fall back to `~/.ssh/id_rsa` by default, but we're going to force it anyway.  To begin, open `~/.ssh/config` in your favorite editor.
 
-<script src="http://gist.github.com/281414.js?file=config"></script>
+<script src="http://gist.github.com/281414.js?file=config"> </script>
 
 In short what this does is tells SSH to use the client key when connecting to the server github-client, which is really github.com.
 
