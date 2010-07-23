@@ -5,7 +5,7 @@ description: How to move a repo from one account to another
 categories: repos
 ---
 
-This guide details the process of moving a repo to another account.  There are two ways to do this: manually cloning and pushing to a new repo, or forking the repo and changing the network's root.
+This guide details the process of moving a repo to another account.
 
 Organizations
 -------------
