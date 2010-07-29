@@ -67,6 +67,8 @@ We protect your login from brute force attacks with rate limiting.  All password
 
 We keep a security consultant on retainer to help identify and prevent new attack vectors.  We always test new features in order to cut out potential attacks, such as XSS-protecting wikis, and ensuring that Pages cannot access cookies.
 
+In July 2010 we contracted [nGenuity Information Security](http://www.ngenuity-is.com/), an acclaimed security firm, to perform a week long penetration test of GitHub. We are committed to ongoing audits from reputable third parties such as nGenuity.
+
 We're extremely concerned and active about security, but we're aware that many companies are not comfortable hosting code outside their firewall. For these companies we offer our [Firewall Install](http://fi.github.com/), a version of GitHub that can be installed to a server within the company's network.
 
 Credit card safety
