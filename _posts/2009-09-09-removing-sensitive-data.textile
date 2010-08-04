@@ -77,7 +77,7 @@ Be warned that force-pushing does not erase commits on the remote repo, it simpl
 
 h2. Avoiding accidental commits in the future
 
-There are a few simple tricks to avoid committing things you don't want committed.  The first, and simplest, is to use a visual tool like git-gui or "gitx":http://gitx.frim.nl/ to make your commits.  This lets you see exactly what you're committing, and ensure that only the files you want are added to the repo.  If you're working form the command line, avoid the catch-all commands `git add .` and `git commit -a`, instead use `git add filename` and `git rm filename` to individually stage files.  You can also use `git add --interactive` to review each changed file and stage it, or part of it, for commit.
+There are a few simple tricks to avoid committing things you don't want committed.  The first, and simplest, is to use a visual tool like git-gui or "gitx":http://gitx.frim.nl/ to make your commits.  This lets you see exactly what you're committing, and ensure that only the files you want are added to the repo.  If you're working form the command line, avoid the catch-all commands `git add .` and `git commit -a`, instead use `git add filename` and `git rm filename` to individually stage files.  You can also use `git add --interactive` to review each changed file and stage it, or part of it, for commit. If you're working from the command line, you can also use `git diff --cached` to see what changes you have staged for commit.  This is the exact diff that your commit will have as long as you commit without the `-a` flag.
 
 h2. Other reading
 
