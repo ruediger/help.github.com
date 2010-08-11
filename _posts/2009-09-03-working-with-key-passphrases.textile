@@ -35,27 +35,30 @@ h2. Auto-launching ssh-agent on msysgit
 
 You can run @ssh-agent@ automatically when you open bash by adding the following to your @~/.profile@ or @~/.bashrc@ file:
 
-<pre>SSH_ENV="$HOME/.ssh/environment"
-
+<pre>
+SSH_ENV="$HOME/.ssh/environment"
+# automatically start the ssh-agent
 function start_agent {
-  echo "Initializing new SSH agent..."
-  /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
-  echo succeeded
-  chmod 600 "${SSH_ENV}"
-  . "${SSH_ENV}" > /dev/null
-  /usr/bin/ssh-add;
-}
+    echo "Initializing new SSH agent..."
+    ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+    echo succeeded
+    chmod 600 "${SSH_ENV}"
+    . "${SSH_ENV}" > /dev/null
+    ssh-add
+}   
 
-# Source SSH settings, if applicable
-if [ -f "${SSH_ENV}" ]; then
-  . "${SSH_ENV}" > /dev/null
-  #ps ${SSH_AGENT_PID} doesn't work under cywgin
-  ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-    start_agent;
-  }
+# check for running ssh-agent 
+if [ ${SSH_AGENT_PID} ]; then
+    # test whether standard identities have been added to
+    # the agent already
+    ssh-add -l | grep "agent has no identities"
+    if [ $? -eq 0 ]; then
+        ssh-add
+    fi 
 else
-  start_agent;
-fi</pre>
+    start_agent
+fi  
+</pre>
 
 p(. *Note:* If you don't use the default key names, or store your keys in a different path, you will need to add the path to the @/usr/bin/ssh-add@ line so that ssh knows where to find your key.
 
