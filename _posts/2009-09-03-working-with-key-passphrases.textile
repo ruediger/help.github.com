@@ -36,31 +36,49 @@ h2. Auto-launching ssh-agent on msysgit
 You can run @ssh-agent@ automatically when you open bash by adding the following to your @~/.profile@ or @~/.bashrc@ file:
 
 <pre>
-# automatically start the ssh-agent
+SSH_ENV="$HOME/.ssh/environment"
+
+# start the ssh-agent
 function start_agent {
     echo "Initializing new SSH agent..."
     # spawn ssh-agent
-    eval `ssh-agent` > /dev/null
+    ssh-agent | sed 's/^echo/#echo/' > $SSH_ENV
     echo succeeded
+    chmod 600 $SSH_ENV
+    . $SSH_ENV > /dev/null
     ssh-add
 }   
 
 # check for running ssh-agent with proper $SSH_AGENT_PID
 ps -ef | grep $SSH_AGENT_PID | grep -v grep > /dev/null
 if [ $? -eq 0 ]; then
-# test whether standard identities have been added to the agent already
+    # test whether standard identities have been added to the agent already
     ssh-add -l | grep "The agent has no identities" > /dev/null
     if [ $? -eq 0 ]; then
         ssh-add
         # $SSH_AUTH_SOCK broken so we start a new proper agent
-        if [ $? -ne 0 ];then
+        if [ $? -eq 2 ];then
             start_agent
         fi
     fi 
-# if $SSH_AGENT_PID is not properly set, the socket is probably neither better
-# to start a new agent
+# if $SSH_AGENT_PID is not properly set, we might be able to load one from
+# $SSH_ENV
 else
-    start_agent
+    . $SSH_ENV > /dev/null
+    ps -ef | grep $SSH_AGENT_PID | grep -v grep > /dev/null
+    if [ $? -eq 0 ]; then
+        # test whether standard identities have been added to the agent already
+        ssh-add -l | grep "The agent has no identities" > /dev/null
+        if [ $? -eq 0 ]; then
+            ssh-add
+            # $SSH_AUTH_SOCK broken so we start a new proper agent
+            if [ $? -eq 2 ];then
+                start_agent
+            fi
+    fi 
+    else
+        start_agent
+    fi
 fi
 </pre>
 
