@@ -55,5 +55,4 @@ There are a number of resources available to help you learn git or fix issues wi
 * [git-scm](http://git-scm.com/) -- The official git website.
 * [git man pages](http://www.kernel.org/pub/software/scm/git/docs/) -- In-depth documentation for every git command.
 * [git user's manual](http://www.kernel.org/pub/software/scm/git/docs/user-manual.html) -- Concepts and workflows.
-* [Learn.GitHub](http://learn.github.com) -- Git tutorials for beginners and experts.
 * [git ready](http://www.gitready.com/) -- Tips and hints for using git.
