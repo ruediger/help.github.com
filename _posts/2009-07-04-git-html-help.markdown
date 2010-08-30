@@ -2,7 +2,7 @@
 layout: default
 title: Installing Git HTML help
 description: How to install the local git HTML help files
-categories: setup
+categories: other
 ---
 
 This guide will help you install the local git HTML help files and set git to use them by default instead of the man pages.
