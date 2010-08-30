@@ -13,14 +13,11 @@ sidebar_cats:
 - other
 - site_policy
 ---
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Help.GitHub - {{ page.title }}</title>
-
     <link href="http://github.com/stylesheets/bundle_common.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="http://github.com/stylesheets/bundle_github.css" media="screen" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen" charset="utf-8"/>
@@ -37,7 +34,6 @@ sidebar_cats:
     {% endif %}
     <div id="main">
       <div id="header" class="basic">
-
         <div class="site">
           <div class="logo boring">
             <a href="/"><img src="/images/help.github.png" alt="github learn logo" /></a>
@@ -65,7 +61,6 @@ sidebar_cats:
             </div>
 
             <div class="sidebar">
-
               {% for cat in (page.sidebar_cats) %}
                 <h3>{{ cat | replace:'_',' ' | capitalize }}</h3>
                   <ul id="categories">
