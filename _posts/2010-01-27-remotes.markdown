@@ -5,7 +5,7 @@ description: Pushing, fetching, merging and deleting remote branches
 categories: everyday_git
 ---
 
-This guide will cover all the basic day-to-day commends you will use with git to interact with remote repos.  For push operations you can only interact with repos you own or are a collaborator on.  To gain access to a public repo, check out the [forking guide](/forking).
+This guide will cover all the basic day-to-day commands you will use with git to interact with remote repos.  For push operations you can only interact with repos you own or are a collaborator on.  To gain access to a public repo, check out the [forking guide](/forking).
 
 Managing remotes
 ----------------
