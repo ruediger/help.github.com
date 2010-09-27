@@ -22,3 +22,4 @@ h2. Gist
 
 * "Replace page title with filename":http://gist.github.com/93187
 * "Diff for gist":http://gist.github.com/105913
+* "Add top pagination to My Gists":http://gist.github.com/339147 - Adds pagination to the top of the "My Gists" page.
