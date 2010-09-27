@@ -22,3 +22,4 @@ h2. Gist
 
 * "Replace page title with filename":http://gist.github.com/93187
 * "Diff for gist":http://gist.github.com/105913
+* "Bespin for gist":http://gist.github.com/463054 - Allows users to quickly replace any textarea you encounter on gist.github.com with a Bespin editor.
