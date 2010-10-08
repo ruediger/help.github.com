@@ -58,7 +58,7 @@ While @git filter-branch@ rewrites the history for you, the objects will remain 
 
 <pre class="terminal">[tekkub@tekBook: ~/tmp/github-gem master] $ rm -rf .git/refs/original/
 [tekkub@tekBook: ~/tmp/github-gem master] $ git reflog expire --all
-[tekkub@tekBook: ~/tmp/github-gem master] $ git gc --aggressive --prune
+[tekkub@tekBook: ~/tmp/github-gem master] $ git gc --aggressive --prune=1.minute
 Counting objects: 1746, done.
 Delta compression using 2 threads.
 Compressing objects: 100% (1736/1736), done.
