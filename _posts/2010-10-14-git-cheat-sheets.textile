@@ -5,55 +5,18 @@ description: Quick-reference guides to git
 categories: everyday_git
 ---
 
-h3. Git principles
+h3. Cheat sheets
 
-"Git for computer scientists. (lots of pictures)":http://eagain.net/articles/git-for-computer-scientists/
-
-"Git user's manual":http://www.kernel.org/pub/software/scm/git/docs/user-manual.html
-
-"Git Magic":http://www-cs-students.stanford.edu/~blynn/gitmagic/
-
-"Git Cheat Sheets Collection":http://devcheatsheet.com/tag/git/ on DevCheatSheet.com
-
-h3. Zach Rusin's "Git Cheat Sheet":http://zrusin.blogspot.com/2007/09/git-cheat-sheet.html
-
-The SVG is at:
-* "http://ktown.kde.org/~zrusin/git/git-cheat-sheet.svg":http://ktown.kde.org/~zrusin/git/git-cheat-sheet.svg
-
-Sample png's are here:
-* "http://ktown.kde.org/<span>~</span>zrusin/git/git-cheat-sheet-medium.png":http://ktown.kde.org/~zrusin/git/git-cheat-sheet-medium.png
-* "http://ktown.kde.org/<span>~</span>zrusin/git/git-cheat-sheet-large.png":http://ktown.kde.org/~zrusin/git/git-cheat-sheet-large.png
-
-h3. cheat.errtheblog.com
-
+* Alexander Zeitler's "Git Cheat Sheet":http://github.com/AlexZeitler/gitcheatsheet
+* Zach Rusin's "Git Cheat Sheet":http://zrusin.blogspot.com/2007/09/git-cheat-sheet.html
 * "http://cheat.errtheblog.com/s/git/":http://cheat.errtheblog.com/s/git/
-* "http://cheat.errtheblog.com/s/git_usage/":http://cheat.errtheblog.com/s/git_usage/
-* "http://cheat.errtheblog.com/s/gitsvn/":http://cheat.errtheblog.com/s/gitsvn/
+* Nate Murray's "Git Cheat Sheet":http://www.xcombinator.com/2010/09/01/git-cheat-sheet-and-class-notes/
 
-h3. Pierre-Alexandre St-Jean's "Git Cheat Sheet":http://github.com/pastjean/git-cheat-sheet
+h3. A practical git guide
 
-You have the choice of svg or pdf:
-* "http://github.com/downloads/pastjean/git-cheat-sheet/git-cheat-sheet.png":http://github.com/downloads/pastjean/git-cheat-sheet/git-cheat-sheet.png
-* "http://github.com/downloads/pastjean/git-cheat-sheet/git-cheat-sheet.pdf":http://github.com/downloads/pastjean/git-cheat-sheet/git-cheat-sheet.pdf
-* in french : "http://github.com/pastjean/git-cheat-sheet/raw/master/git-cheat-sheet-fr.svg":http://github.com/pastjean/git-cheat-sheet/raw/master/git-cheat-sheet-fr.svg
+_Notes extracted from git screencast at http://www.peepcode.com._
 
-h3. Alexander Zeitler's "Git Cheat Sheet":http://github.com/AlexZeitler/gitcheatsheet
-
-You can download PDF or Powerpoint:
-* "http://github.com/downloads/AlexZeitler/gitcheatsheet/gitcheatsheet.pdf":http://github.com/downloads/AlexZeitler/gitcheatsheet/gitcheatsheet.pdf
-* "http://github.com/downloads/AlexZeitler/gitcheatsheet/gitcheatsheet.pptx":http://github.com/downloads/AlexZeitler/gitcheatsheet/gitcheatsheet.pptx
-
-h3. Nate Murray's "Git Cheat Sheet":http://www.xcombinator.com/2010/09/01/git-cheat-sheet-and-class-notes/
-
-You can download PDF or LaTeX source:
-* "http://www.xcombinator.com/wp-content/uploads/2010/09/git-class-cheat-sheet.pdf":http://www.xcombinator.com/wp-content/uploads/2010/09/git-class-cheat-sheet.pdf
-* "http://github.com/jashmenn/talks/raw/master/git/cheat-sheet/git-class-cheat-sheet.tex":http://github.com/jashmenn/talks/raw/master/git/cheat-sheet/git-class-cheat-sheet.tex
-
-h2. A Practical Git Guide
-
-(credit: notes extracted from GIT screencast at http://www.peepcode.com.)
-
-h3. Configuration
+h4. Configuration
 
 identify yourself to git: email and your name
 
@@ -354,3 +317,10 @@ NOTE: make sure you have your perl bindings to your local svn installation.
 h4. I screwed up, how do I reset my checkout?
 
 @git checkout -f@
+
+h3. See also
+
+* "Git for computer scientists. (lots of pictures)":http://eagain.net/articles/git-for-computer-scientists/
+* "Git user's manual":http://www.kernel.org/pub/software/scm/git/docs/user-manual.html
+* "Git Magic":http://www-cs-students.stanford.edu/~blynn/gitmagic/
+* "Git Cheat Sheets Collection":http://devcheatsheet.com/tag/git/ on DevCheatSheet.com
