@@ -1,0 +1,365 @@
+---
+layout: default
+title: Git cheat sheets
+description: Quick-reference guides to git
+categories: everyday_git
+---
+
+h3. Git principles
+
+"Git for computer scientists. (lots of pictures)":http://eagain.net/articles/git-for-computer-scientists/
+
+"Git user's manual":http://www.kernel.org/pub/software/scm/git/docs/user-manual.html
+
+"Git Magic":http://www-cs-students.stanford.edu/~blynn/gitmagic/
+
+"Git Cheat Sheets Collection":http://devcheatsheet.com/tag/git/ on DevCheatSheet.com
+
+h3. Zach Rusin's "Git Cheat Sheet":http://zrusin.blogspot.com/2007/09/git-cheat-sheet.html
+
+The SVG is at:
+* "http://ktown.kde.org/~zrusin/git/git-cheat-sheet.svg":http://ktown.kde.org/~zrusin/git/git-cheat-sheet.svg
+
+Sample png's are here:
+* "http://ktown.kde.org/<span>~</span>zrusin/git/git-cheat-sheet-medium.png":http://ktown.kde.org/~zrusin/git/git-cheat-sheet-medium.png
+* "http://ktown.kde.org/<span>~</span>zrusin/git/git-cheat-sheet-large.png":http://ktown.kde.org/~zrusin/git/git-cheat-sheet-large.png
+
+h3. cheat.errtheblog.com
+
+* "http://cheat.errtheblog.com/s/git/":http://cheat.errtheblog.com/s/git/
+* "http://cheat.errtheblog.com/s/git_usage/":http://cheat.errtheblog.com/s/git_usage/
+* "http://cheat.errtheblog.com/s/gitsvn/":http://cheat.errtheblog.com/s/gitsvn/
+
+h3. Pierre-Alexandre St-Jean's "Git Cheat Sheet":http://github.com/pastjean/git-cheat-sheet
+
+You have the choice of svg or pdf:
+* "http://github.com/downloads/pastjean/git-cheat-sheet/git-cheat-sheet.png":http://github.com/downloads/pastjean/git-cheat-sheet/git-cheat-sheet.png
+* "http://github.com/downloads/pastjean/git-cheat-sheet/git-cheat-sheet.pdf":http://github.com/downloads/pastjean/git-cheat-sheet/git-cheat-sheet.pdf
+* in french : "http://github.com/pastjean/git-cheat-sheet/raw/master/git-cheat-sheet-fr.svg":http://github.com/pastjean/git-cheat-sheet/raw/master/git-cheat-sheet-fr.svg
+
+h3. Alexander Zeitler's "Git Cheat Sheet":http://github.com/AlexZeitler/gitcheatsheet
+
+You can download PDF or Powerpoint:
+* "http://github.com/downloads/AlexZeitler/gitcheatsheet/gitcheatsheet.pdf":http://github.com/downloads/AlexZeitler/gitcheatsheet/gitcheatsheet.pdf
+* "http://github.com/downloads/AlexZeitler/gitcheatsheet/gitcheatsheet.pptx":http://github.com/downloads/AlexZeitler/gitcheatsheet/gitcheatsheet.pptx
+
+h3. Nate Murray's "Git Cheat Sheet":http://www.xcombinator.com/2010/09/01/git-cheat-sheet-and-class-notes/
+
+You can download PDF or LaTeX source:
+* "http://www.xcombinator.com/wp-content/uploads/2010/09/git-class-cheat-sheet.pdf":http://www.xcombinator.com/wp-content/uploads/2010/09/git-class-cheat-sheet.pdf
+* "http://github.com/jashmenn/talks/raw/master/git/cheat-sheet/git-class-cheat-sheet.tex":http://github.com/jashmenn/talks/raw/master/git/cheat-sheet/git-class-cheat-sheet.tex
+
+h2. A Practical Git GUIDE
+
+(credit: notes extracted from GIT screencast at http://www.peepcode.com.)
+
+h3. CONFIGURE
+
+identify yourself to git: email and your name
+
+@git config --global user.name "David Beckwith"@
+
+@git config --global user.email "dbitsolutions@@@gmail.com"@
+
+To view all options:
+
+@git config --list@
+
+OR
+
+@cat .git/config@
+
+h4. SET UP ALIASES
+
+@git config --global alias.co checkout@
+
+h4. VIEW YOUR CONFIGURATION
+
+@cat .gitconfig@
+
+h4. TO IGNORE WHITESPACE (Ruby is whitespace insensitive)
+
+@git config --global apply.whitespace nowarn@
+
+Some nice aliases:
+
+gb = git branch
+gba = git branch -a
+gc = git commit -v
+gd = git diff | mate
+gl = git pull
+gp = git push
+gst = git status
+
+h3. START USING GIT
+
+@git init@
+
+h4. TO IGNORE SOME FILES 
+
+Add a file in the root directory called .gitignore and add some files to it: (comments begin with hash)
+
+ *.log
+ db/schema.rb
+ db/schema.sql
+
+Git automatically ignores empty directories. If you want to have a @log/@ directory, but want to ignore all the files in it, add the following lines to the root @.gitignore@: (lines beginning with '!' are exceptions)
+
+@log/*@
+@!.gitignore@
+
+Then add an empty @.gitignore@ in the empty directory:
+
+@touch log/.gitignore@
+
+h4. TO SCHEDULE THE ADDITION OF ALL FILES TO THE NEXT COMMIT
+
+@git add .@
+
+h4. TO SEE THE STATUS
+
+@git status@ 
+
+h4. TO COMMIT
+
+@git commit -m "First import"@
+
+h4. TO SEE WHAT HAS BEEN COMMITTED
+
+@git ls-files@
+
+h4. TO SCHEDULE DELETION OF A FILE
+
+@git rm [file name]@
+
+h4. TO COMMIT ALL CHANGES IN FILES IN THE CURRENT REPOSITORY
+
+@git commit -a@
+
+h4. TO SCHEDULE THE ADDITION OF AN INDIVIDUAL FILE TO THE NEXT COMMIT
+
+@git add [file name]@
+
+h4. TO VIEW THE DIFFERENCE AS YOU COMMIT USE THE -v OPTION
+
+@git commit -v@
+
+h4. TO COMMIT AND TYPE THE MESSAGE ON THE COMMAND LINE USE THE -m OPTION
+
+@git commit -m "This is the message describing the commit"@
+
+h4. TO COMMIT AND GET AUTOMATICALLY ANY CHANGES FROM OTHER PEOPLE USE THE -a OPTION
+
+@git commit -a@
+
+h4. THE NORMAL COMMIT COMMAND:
+
+@git commit -a -v@
+
+h4. TO VIEW A LOG OF YOUR COMMITS
+
+@git log@
+
+h4. TO VIEW A LOG OF YOUR COMMITS WITH A GRAPH TO SHOW THE EXTENT OF THE CHANGES 
+
+@git log --stat@
+
+h4. TO HAVE PAGINATION WHEN VIEWING THE LOG FILE USE THE -v OPTION
+
+@git log -v@
+
+h4. TO VISUALIZE YOUR CHANGES
+
+@gitk --all@
+
+h4. TO CREATE A NEW TAG AND PUSH IT ON THE REMOTE BRANCH
+
+@git tag "v1.3"@
+@git push --tags@
+
+h4. TO CREATE A NEW BRANCH
+
+@git branch [name of your new branch]@
+
+h4. TO PUSH THE NEW BRANCH TO A REMOTE REPOSITORY
+
+@git push origin [new-remote]@
+
+h4. TO PULL A NEW BRANCH FROM A REMOTE REPOSITORY
+
+@git fetch origin [remote-branch]:[new-local-branch]@
+
+h4. TO VIEW ALL OF THE EXISTING BRANCHES
+
+@git branch@
+
+h4. TO VIEW A LIST OF ALL BRANCHES
+
+@git branch -a@
+
+h4. TO SWITCH TO ANOTHER BRANCH
+
+The state of your file system will change after executing this command.
+
+@git checkout [name of the branch you want to switch to]@
+
+OR 
+
+@git co [name of the branch you want to switch to]@
+
+h4. TO MAKE SURE THAT YOUR NEW BRANCH GETS CHANGES FROM THE MASTER BRANCH (WHERE EVERYBODY ELSE IS WORKING) USE THE REBASE COMMAND
+
+@git rebase master@
+
+h4. TO MERGE YOUR NEW BRANCH INTO THE MASTER BRANCH
+
+First, switch back to the master branch:
+
+@git co master@
+
+Check to see what changes you're about to merge together, compare the two branches:
+
+@git diff master xyz@
+
+If you're in a branch that's not the @xyz@ branch and want to merge the @xyz@ branch into it:
+
+@git merge xyz@
+
+h4. TO REVERT YOUR CHANGES to before the merge.
+
+@git reset --hard ORIG_HEAD@
+
+h4. TO RESOLVE CONFLICTS just edit your file.  
+
+Remove the markings, add the file, then commit.
+
+h4. TO CREATE A BRANCH AND SWITCH TO THE BRANCH IN ONE MOVE:
+
+@git checkout -b [name of new branch]@
+
+h4. TO CREATE A "CLIPBOARD" or "STASH" OF CHANGES THAT ARE NOT YET COMMITED (SO THAT YOU CAN SWITCH TO ANOTHER BRANCH IN THE MIDDLE OF YOUR CHANGES.), CREATE A STASH.
+
+@git stash save "Put a message here to remind you of what you're saving to the clipboard"@
+
+h4. TO SWITCH AWAY FROM THE CURRENT BRANCH
+
+@git co [branch you want to switch to]@
+
+Do whatever
+Then switch back to the stashed branch
+
+@git co [the stashed branch]@
+
+h4. TO VIEW THE LIST OF STASHES
+
+@git stash list@
+
+h4. TO LOAD BACK THE "CLIPBOARD" OR "STASH"
+
+@git stash apply@
+
+Now you can continue to work where you were previously.
+
+h4. TO DELETE A BRANCH THAT IS NOT USED ANYMORE, but already merged into the current branch.  (TO CLEAN UP)
+
+@git branch -d [name of branch you want to delete]@
+
+h4. TO DELETE AN UNMERGED BRANCH 
+
+@git branch -D [name of branch you want to delete]@
+
+h4. TO DELETE THE STASH.  (ERASE THE "CLIPBOARD" FROM MEMORY)
+
+@git stash clear@
+
+h4. TO SET UP YOUR REPOSITORY FOR SHARING ON A CENTRAL SERVER
+
+Copy up your repository. e.g.:
+
+@scp -r my_project deploy@@@yourbox.com:my_project@
+
+Move your files on the remote server to @/var/git/my_project@
+For security make the owner of this project git
+On the repository server:
+
+@sudo chown -R git:git my_project@
+
+Then (for security) restrict the "deploy" user to doing git-related things in @/etc/passwd@ with a @git-shell@.
+
+h4. TO CHECK OUT THE GIT REPOSITORY TO YOUR LOCALHOST.  ON YOUR LOCAL HOST DO THIS:
+
+ @git clone git@@@yourbox.com:/var/git/my_project@
+
+h4. TO SEE SOME INFO ABOUT THE REPOSITORY THAT WILL TELL YOU WHICH REPOSITORY IS THE MASTER AND WHICH IS THE SLAVE:
+
+@cat .git/config@
+
+By virtue of having cloned the remote repository, your local repository becomes the slave and will track and synchronize with the remote master branch.
+
+h4. TO UPDATE YOUR LOCAL BRANCH FROM THE REMOTE SERVER:
+
+@git pull@
+
+h4. TO GET A COPY OF THE ENTIRE REMOTE REPOSITORY (e.g. a repository named "laptop") WITHOUT MERGING THEM INTO YOUR LOCAL BRANCHES USE FETCH
+
+@git fetch laptop@
+
+h4. TO MERGE TWO LOCAL BRANCHES (ie. your local xyz branch with your local master branch) USE MERGE
+
+@git merge laptop/xyz@
+
+This merged the (already copied laptop repository's xyz branch) with the current branch you're sitting in.
+
+
+h4. TO MERGE THE REMOTE BRANCH WITH YOUR LOCAL BRANCH THAT YOU ARE SITTING IN USE PULL
+
+h4. TO ADD LOCAL KNOWLEDGE (TO YOUR LOCAL REPOSITORY) OF A 2ND REMOTE REPOSITORY, LIKE YOUR LAPTOP
+
+@git remote add laptop duo2book.local:repos/m_project@
+
+where '''laptop''" is the name of the remote repository and  "''duo2book.local''" is the name of the remote machine.
+
+h4. TO VIEW META INFORMATION ABOUT THAT REMOTE REPOSITORY
+
+@git remote show laptop@
+
+h4. TO PUSH A COMMITTED LOCAL CHANGE OF THE xyz BRANCH TO THE REMOTE laptop BRANCH
+
+@git push laptop xyz@
+
+h4. TO CREATE A TRACKING BRANCH (A SLAVE BRANCH).  Ie. to link a local branch to a remote branch:
+
+@git branch --track local_branch remote_branch@
+
+h4. NOW IF YOU'RE SITTING IN THE LOCAL TRACKING BRANCH, TO PULL YOU DON'T NEED TO SPECIFY THE REMOTE TRACKING BRANCH:
+
+@git pull@
+
+Note: You can track(link) different local branches to different remote machines.  For example, you can track your friend's "upgrade" branch with your "bobs_upgrade" branch, and simultaneously you can track the origin's "master" branch (of your main webserver) with your local "master" branch.
+
+By convention, 'origin' is the local name given to the remote centralized server which is the way SVN is usually set up on a remote server.
+
+h4. TO SEE WHICH LOCAL BRANCHES ARE TRACKING A REMOTE BRANCH:
+
+@git remote show origin@
+
+h4. TO WORK WITH AN SVN REPOSITORY BUT WORK WITH GIT LOCALLY:
+
+@git-svn clone [http location of an svn repository]@
+
+Now you can work with the checked out directory as though it was a git repository.  (cuz it is)
+
+
+h4. TO PUSH (COMMIT) CHANGES TO THE REMOTE SERVER
+
+@git-svn dcommit@
+
+h4. TO UPDATE YOUR LOCAL REPOSITORY FROM THE SVN REPOSITORY
+
+@git-svn rebase@
+
+NOTE: make sure you have your perl bindings to your local svn installation.
+
+h4. I screwed up, how do I reset my checkout?
+
+@git checkout -f@
