@@ -53,15 +53,22 @@
 /*      Pre/code      */
 /**********************/
 
-pre.terminal {
+.wikistyle pre {
   padding: 1em !important;
   background: #444 !important;
   color: white !important;
   font-size: 0.9em !important;
 }
 
-pre.terminal span.comment {color: #aaa;}
+.wikistyle pre span.comment {color: #aaa;}
+
 code {white-space: nowrap;}
+
+.wikistyle pre code {
+  white-space: pre;
+  background: none !important;
+  color: white !important;
+}
 
 
 /********************/
