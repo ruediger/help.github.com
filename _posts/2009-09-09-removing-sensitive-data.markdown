@@ -31,7 +31,7 @@ Now that the password is changed, you want to remove the file from history and a
     $ cd github-gem/
 
     tekkub@iSenberg ~/tmp/github-gem master
-    $ git filter-branch --index-filter 'git update-index --remove Rakefile' master
+    $ git filter-branch --index-filter 'git rm --cached --ignore-unmatch Rakefile' HEAD
     Rewrite 48dc599c80e20527ed902928085e7861e6b3cbe6 (266/266)
     Ref 'refs/heads/master' was rewritten
 
@@ -70,15 +70,23 @@ While `git filter-branch` rewrites the history for you, the objects will remain 
     $ rm -rf .git/refs/original/
 
     tekkub@iSenberg ~/tmp/github-gem master
-    $ git reflog expire --all
+    $ git reflog expire --expire=now --all
 
     tekkub@iSenberg ~/tmp/github-gem master
-    $ git gc --aggressive --prune=1.minute
-    Counting objects: 1746, done.
-    Delta compression using 2 threads.
-    Compressing objects: 100% (1736/1736), done.
-    Writing objects: 100% (1746/1746), done.
-    Total 1746 (delta 993), reused 0 (delta 0)
+    $ git gc --prune=now
+    Counting objects: 2437, done.
+    Delta compression using up to 4 threads.
+    Compressing objects: 100% (1378/1378), done.
+    Writing objects: 100% (2437/2437), done.
+    Total 2437 (delta 1461), reused 1802 (delta 1048)
+
+    tekkub@iSenberg ~/tmp/github-gem master
+    $ git gc --aggressive --prune=now
+    Counting objects: 2437, done.
+    Delta compression using up to 4 threads.
+    Compressing objects: 100% (2426/2426), done.
+    Writing objects: 100% (2437/2437), done.
+    Total 2437 (delta 1483), reused 0 (delta 0)
 
 Note that pushing the branch to a new or empty GitHub repo and then making a fresh clone from GitHub will have the same effect.
 
