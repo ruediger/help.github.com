@@ -16,7 +16,7 @@ This step should be blatantly obvious, but some users still skip it.  If you com
 Purge the file from your repo
 -----------------------------
 
-Now that the password is changed, you want to remove the file from history and add it to the `.gitignore` to ensure it is not accidentally re-committed.  For our examples, we're going to remove `Rakefile` from the "GitHub gem":http://github.com/defunkt/github-gem repo.
+Now that the password is changed, you want to remove the file from history and add it to the `.gitignore` to ensure it is not accidentally re-committed.  For our examples, we're going to remove `Rakefile` from the [GitHub gem](http://github.com/defunkt/github-gem) repo.
 
     tekkub@iSenberg ~/tmp master*
     $ git clone git@github.com:defunkt/github-gem.git
@@ -90,15 +90,15 @@ You may have collaborators that pulled your tainted branch and created their own
 Cached data on GitHub
 ---------------------
 
-Be warned that force-pushing does not erase commits on the remote repo, it simply introduces new ones and moves the branch pointer to point to them.  If you are worried about users accessing the bad commits directly via SHA1, you will have to delete the repo and recreate it.  If the commits were viewed online the pages may also be cached.  Check for cached pages after you recreate the repo, if you find any open a ticket on "GitHub Support":http://support.github.com and provide links so staff can purge them from the cache.
+Be warned that force-pushing does not erase commits on the remote repo, it simply introduces new ones and moves the branch pointer to point to them.  If you are worried about users accessing the bad commits directly via SHA1, you will have to delete the repo and recreate it.  If the commits were viewed online the pages may also be cached.  Check for cached pages after you recreate the repo, if you find any open a ticket on [GitHub Support](http://support.github.com) and provide links so staff can purge them from the cache.
 
 Avoiding accidental commits in the future
 -----------------------------------------
 
-There are a few simple tricks to avoid committing things you don't want committed.  The first, and simplest, is to use a visual tool like git-gui or "gitx":http://gitx.frim.nl/ to make your commits.  This lets you see exactly what you're committing, and ensure that only the files you want are added to the repo.  If you're working form the command line, avoid the catch-all commands `git add .` and `git commit -a`, instead use `git add filename` and `git rm filename` to individually stage files.  You can also use `git add --interactive` to review each changed file and stage it, or part of it, for commit. If you're working from the command line, you can also use `git diff --cached` to see what changes you have staged for commit.  This is the exact diff that your commit will have as long as you commit without the `-a` flag.
+There are a few simple tricks to avoid committing things you don't want committed.  The first, and simplest, is to use a visual tool like git-gui or [gitx](http://gitx.frim.nl/) to make your commits.  This lets you see exactly what you're committing, and ensure that only the files you want are added to the repo.  If you're working form the command line, avoid the catch-all commands `git add .` and `git commit -a`, instead use `git add filename` and `git rm filename` to individually stage files.  You can also use `git add --interactive` to review each changed file and stage it, or part of it, for commit. If you're working from the command line, you can also use `git diff --cached` to see what changes you have staged for commit.  This is the exact diff that your commit will have as long as you commit without the `-a` flag.
 
 Other reading
 -------------
 
-* "git-filter-branch documentation":http://www.kernel.org/pub/software/scm/git/docs/git-filter-branch.html
-* "Git user manual - Cleaning up history":http://www.kernel.org/pub/software/scm/git/docs/user-manual.html#cleaning-up-history
+* [git-filter-branch documentation](http://www.kernel.org/pub/software/scm/git/docs/git-filter-branch.html)
+* [Git user manual - Cleaning up history](http://www.kernel.org/pub/software/scm/git/docs/user-manual.html#cleaning-up-history)
