@@ -70,6 +70,8 @@ code {white-space: nowrap;}
   color: white !important;
 }
 
+.highlight pre code {white-space: pre;}
+
 
 /********************/
 /*      Images      */
