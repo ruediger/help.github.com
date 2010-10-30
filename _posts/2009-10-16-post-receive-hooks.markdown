@@ -17,19 +17,98 @@ What we'll send is JSON containing information about the push and the commits in
 
 Here's the template we use in Ruby to generate the JSON:
 
-<script src="http://gist.github.com/212213.js"> </script>
+{% highlight ruby %}
+{
+  :before     => before,
+  :after      => after,
+  :ref        => ref,
+  :commits    => [{
+    :id        => commit.id,
+    :message   => commit.message,
+    :timestamp => commit.committed_date.xmlschema,
+    :url       => commit_url,
+    :added     => array_of_added_paths,
+    :removed   => array_of_removed_paths,
+    :modified  => array_of_modified_paths,
+    :author    => {
+      :name  => commit.author.name,
+      :email => commit.author.email
+    }
+  }],
+  :repository => {
+    :name        => repository.name,
+    :url         => repo_url,
+    :pledgie     => repository.pledgie.id,
+    :description => repository.description,
+    :homepage    => repository.homepage,
+    :watchers    => repository.watchers.size,
+    :forks       => repository.forks.size,
+    :private     => repository.private?,
+    :owner => {
+      :name  => repository.owner.login,
+      :email => repository.owner.email
+    }
+  }
+}
+{% endhighlight %}
 
 This is sent as a POST with a single parameter: 'payload'
 
 So, for example, you'd do something like this in a [Sinatra](http://sinatra.rubyforge.org/) server:
 
-<script src="http://gist.github.com/212212.js"> </script>
+{% highlight ruby %}
+post '/' do
+  push = JSON.parse(params[:payload])
+  "I got some JSON: #{push.inspect}"
+end
+{% endhighlight %}
 
 The `commits` array is ordered with the most recent commit as the first element.  The last element, therefor, is the oldest commit.
 
 Here's an example payload:
 
-<script src="http://gist.github.com/212211.js"> </script>
+{% highlight javascript %}
+{
+  "before": "5aef35982fb2d34e9d9d4502f6ede1072793222d",
+  "repository": {
+    "url": "http://github.com/defunkt/github",
+    "name": "github",
+    "description": "You're lookin' at it.",
+    "watchers": 5,
+    "forks": 2,
+    "private": 1,
+    "owner": {
+      "email": "chris@ozmm.org",
+      "name": "defunkt"
+    }
+  },
+  "commits": [
+    {
+      "id": "41a212ee83ca127e3c8cf465891ab7216a705f59",
+      "url": "http://github.com/defunkt/github/commit/41a212ee83ca127e3c8cf465891ab7216a705f59",
+      "author": {
+        "email": "chris@ozmm.org",
+        "name": "Chris Wanstrath"
+      },
+      "message": "okay i give in",
+      "timestamp": "2008-02-15T14:57:17-08:00",
+      "added": ["filepath.rb"]
+    },
+    {
+      "id": "de8251ff97ee194a289832576287d6f8ad74e3d0",
+      "url": "http://github.com/defunkt/github/commit/de8251ff97ee194a289832576287d6f8ad74e3d0",
+      "author": {
+        "email": "chris@ozmm.org",
+        "name": "Chris Wanstrath"
+      },
+      "message": "update pricing a tad",
+      "timestamp": "2008-02-15T14:36:34-08:00"
+    }
+  ],
+  "after": "de8251ff97ee194a289832576287d6f8ad74e3d0",
+  "ref": "refs/heads/master"
+}
+{% endhighlight %}
 
 For more information on this technique, see the [Web Hooks Wiki](http://webhooks.pbwiki.com/).
 
