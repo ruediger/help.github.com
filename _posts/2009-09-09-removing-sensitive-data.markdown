@@ -62,7 +62,7 @@ This would be a good time to double-check that you've removed everything that yo
     To git@github.com:defunkt/github-gem.git
      + 48dc599...051452f master -> master (forced update)
 
-h3. Cleanup and reclaiming space
+### Cleanup and reclaiming space
 
 While `git filter-branch` rewrites the history for you, the objects will remain in your local repo until they've been dereferenced and garbage collected.  If you are working in your main repo you might want to force these objects to be purged.
 
