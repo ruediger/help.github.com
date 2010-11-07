@@ -12,19 +12,30 @@ Setting up and doing the first merge
 
 For this example, we'll make an empty "parent" repo and merge two other repos into it as subpaths.
 
-    [tekkub@tekBook: ~/tmp master*] $ mkdir test
-    [tekkub@tekBook: ~/tmp master*] $ cd test
-    [tekkub@tekBook: ~/tmp/test master*] $ git init
+    [tekkub@tekBook: ~/tmp master*]
+    $ mkdir test
+
+    [tekkub@tekBook: ~/tmp master*]
+    $ cd test
+
+    [tekkub@tekBook: ~/tmp/test master*]
+    $ git init
     Initialized empty Git repository in /Users/tekkub/tmp/test/.git/
 
-    [tekkub@tekBook: ~/tmp/test master#] $ touch .gitignore
-    [tekkub@tekBook: ~/tmp/test master#] $ git add .gitignore
-    [tekkub@tekBook: ~/tmp/test master#] $ git commit -m "initial commit"
+    [tekkub@tekBook: ~/tmp/test master#]
+    $ touch .gitignore
+
+    [tekkub@tekBook: ~/tmp/test master#]
+    $ git add .gitignore
+
+    [tekkub@tekBook: ~/tmp/test master#]
+    $ git commit -m "initial commit"
     [master (root-commit) 3146c2a] initial commit
      0 files changed, 0 insertions(+), 0 deletions(-)
      create mode 100644 .gitignore
 
-    [tekkub@tekBook: ~/tmp/test master] $ git remote add -f cork git://github.com/tekkub/cork.git
+    [tekkub@tekBook: ~/tmp/test master ]
+    $ git remote add -f cork git://github.com/tekkub/cork.git
     Updating cork
     warning: no common commits
     remote: Counting objects: 1732, done.
@@ -38,14 +49,20 @@ For this example, we'll make an empty "parent" repo and merge two other repos in
      * [new branch]      master     -> cork/master
      * [new branch]      nothing_to_see_here -> cork/nothing_to_see_here
 
-    [tekkub@tekBook: ~/tmp/test master] $ git merge -s ours --no-commit cork/master
+    [tekkub@tekBook: ~/tmp/test master]
+    $ git merge -s ours --no-commit cork/master
     Automatic merge went well; stopped before committing as requested
 
-    [tekkub@tekBook: ~/tmp/test master|MERGING] $ git read-tree --prefix=cork/ -u cork/master
-    [tekkub@tekBook: ~/tmp/test master+|MERGING] $ git commit -m "Subtree merge in cork"
+    [tekkub@tekBook: ~/tmp/test master|MERGING]
+    $ git read-tree --prefix=cork/ -u cork/master
+
+    [tekkub@tekBook: ~/tmp/test master+|MERGING]
+    $ git commit -m "Subtree merge in cork"
+
     [master fe0ca25] Subtree merge in cork
 
-    [tekkub@tekBook: ~/tmp/test master] $ git remote add -f panda git://github.com/tekkub/panda.git
+    [tekkub@tekBook: ~/tmp/test master]
+    $ git remote add -f panda git://github.com/tekkub/panda.git
     Updating panda
     warning: no common commits
     remote: Counting objects: 974, done.
@@ -57,11 +74,15 @@ For this example, we'll make an empty "parent" repo and merge two other repos in
      * [new branch]      master     -> panda/master
      * [new branch]      transmute  -> panda/transmute
 
-    [tekkub@tekBook: ~/tmp/test master] $ git merge -s ours --no-commit panda/master
+    [tekkub@tekBook: ~/tmp/test master]
+    $ git merge -s ours --no-commit panda/master
     Automatic merge went well; stopped before committing as requested
 
-    [tekkub@tekBook: ~/tmp/test master|MERGING] $ git read-tree --prefix=panda/ -u panda/master
-    [tekkub@tekBook: ~/tmp/test master+|MERGING] $ git commit -m "Subtree merge in panda"
+    [tekkub@tekBook: ~/tmp/test master|MERGING]
+    $ git read-tree --prefix=panda/ -u panda/master
+
+    [tekkub@tekBook: ~/tmp/test master+|MERGING]
+    $ git commit -m "Subtree merge in panda"
     [master 726a2cd] Subtree merge in panda
 
 Pulling in changes
@@ -69,7 +90,8 @@ Pulling in changes
 
 If the merged repo changes in the future, you can pull in its changes by simply using the `-s subtree` flag:
 
-    [tekkub@tekBook: ~/tmp/test master] $ git pull -s subtree panda master
+    [tekkub@tekBook: ~/tmp/test master]
+    $ git pull -s subtree panda master
 
 Resources
 ---------
