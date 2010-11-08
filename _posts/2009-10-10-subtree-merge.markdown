@@ -10,7 +10,9 @@ There are times when submodules are not adequate for the task at hand.  For exam
 Setting up and doing the first merge
 ------------------------------------
 
-For this example, we'll make an empty "parent" repo and merge two other repos into it as subpaths.
+For this example, we'll make an empty "parent" repo and some other repos into it as subpaths.
+
+First, set up an empty repo for our example:
 
     [tekkub@tekBook: ~/tmp master*]
     $ mkdir test
@@ -34,7 +36,9 @@ For this example, we'll make an empty "parent" repo and merge two other repos in
      0 files changed, 0 insertions(+), 0 deletions(-)
      create mode 100644 .gitignore
 
-    [tekkub@tekBook: ~/tmp/test master ]
+Now we'll subtree-merge the repo [tekkub/cork](https://github.com/tekkub/cork) into the repo at `cork/`
+
+    [tekkub@tekBook: ~/tmp/test master]
     $ git remote add -f cork git://github.com/tekkub/cork.git
     Updating cork
     warning: no common commits
@@ -57,9 +61,10 @@ For this example, we'll make an empty "parent" repo and merge two other repos in
     $ git read-tree --prefix=cork/ -u cork/master
 
     [tekkub@tekBook: ~/tmp/test master+|MERGING]
-    $ git commit -m "Subtree merge in cork"
+    $ git commit -m "Subtree merged in cork"
+    [master fe0ca25] Subtree merged in cork
 
-    [master fe0ca25] Subtree merge in cork
+Next, we'll merge in [tekkub/panda](https://github.com/tekkub/panda) into the path `panda/`
 
     [tekkub@tekBook: ~/tmp/test master]
     $ git remote add -f panda git://github.com/tekkub/panda.git
@@ -82,8 +87,21 @@ For this example, we'll make an empty "parent" repo and merge two other repos in
     $ git read-tree --prefix=panda/ -u panda/master
 
     [tekkub@tekBook: ~/tmp/test master+|MERGING]
-    $ git commit -m "Subtree merge in panda"
-    [master 726a2cd] Subtree merge in panda
+    $ git commit -m "Subtree merged in panda"
+    [master 726a2cd] Subtree merged in panda
+
+Finally, we're going to merge the subpath `modules/` from tekkub/cork into `cork2/`
+
+    tekkub@iSenberg ~/tmp/test master
+    $ git merge -s ours --no-commit cork/master
+    Automatic merge went well; stopped before committing as requested
+
+    tekkub@iSenberg ~/tmp/test master|MERGING
+    $ git read-tree --prefix=cork2/ -u cork/master:modules
+
+    tekkub@iSenberg ~/tmp/test master+|MERGING
+    $ git commit -m "Subtree merged in cork/modules"
+    [master f240057] Subtree merged in cork/modules
 
 Pulling in changes
 ------------------
