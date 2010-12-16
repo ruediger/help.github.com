@@ -7,6 +7,13 @@ categories: deploying
 
 Deploy keys are a handy yet misunderstood feature here on github.  This guide will explain when and how to use them instead of normal user keys.
 
+Do you even need a deploy key?
+==============================
+
+If your deploy process involves sshing into the server you are deploying to, you probably **do not** need to use deploy keys.  Instead, you should use ssh-agent forwarding to temporarily allow the server to use your local ssh keys.  Not only is this method easier to maintain, since you don't have any extra keys, but it's also more secure as the server never has keys saved to disk in case of a compromise.  As always, you should use a [strong passphrase](/working-with-key-passphrases/) on your keys and let ssh-agent manage them for you.
+
+If your deploy process is remotly triggered and you do not log in to the deploying server via ssh, then you might need deploy keys.  Read on to find out if you do.
+
 What are deploy keys?
 =====================
 
