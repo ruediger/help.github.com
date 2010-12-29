@@ -18,8 +18,9 @@ Download and run [git-osx-installer](http://code.google.com/p/git-osx-installer/
 Homebrew
 --------
 
-1.  Install "Homebrew":http://github.com/mxcl/homebrew if you haven't already done so.
-2.  Install Git *(You may want to include Subversion support if you want to import SVN repositories. Snow Leopard already contains a copy of SVN)*
+Install [Homebrew](http://github.com/mxcl/homebrew) if you haven't already done so.
+
+Install Git *(You may want to include Subversion support if you want to import SVN repositories. Snow Leopard already contains a copy of SVN)*
 
     $ brew install git
     ==> Downloading http://kernel.org/pub/software/scm/git/git-1.6.5.7.tar.bz2
