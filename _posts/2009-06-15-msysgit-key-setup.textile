@@ -32,7 +32,7 @@ h2. Generating a key
 
 p(. _If you have an existing keypair you wish to use, you can skip this step._
 
-Now that we're certain ssh won't use an existing key, it's time to generate a new keypair.  Lets make an RSA keypair:
+Now that we're certain ssh won't use an existing key, it's time to generate a new keypair.  Let's make an RSA keypair:
 
 <pre class="terminal">$ ssh-keygen -t rsa -C "tekkub@gmail.com"
 Generating public/private rsa key pair.
