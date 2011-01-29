@@ -64,3 +64,8 @@ Upon receipt of a Counter Notification containing the information as outlined in
 * GitHub shall replace the removed material or cease disabling access to the material within ten (10) to fourteen (14) business days following receipt of the Counter Notification, provided GitHub’s Designated Agent has not received notice from the Complaining Party that an action has been filed seeking a court order to restrain Subscriber from engaging in infringing activity relating to the material on GitHub's system.
 
 Finally Notices and Counter-Notices with respect to this website must meet then current statutory requirements imposed by the DMCA; see <http://www.copyright.gov> for details.
+
+C. Disclosure
+=============
+
+Please note that in addition to being forwarded to the person who provided the allegedly infringing content, a copy of this legal notice (with your personal information removed) will be published at <http://github.com/github/dmca>.  You can see an example of such a publication at <https://github.com/github/dmca/blob/master/2011-01-27-sony.markdown>.  A link to your published letter may be displayed in place of the removed content.
