@@ -11,6 +11,7 @@ h3. Cheat sheets
 * Zach Rusin's "Git Cheat Sheet":http://zrusin.blogspot.com/2007/09/git-cheat-sheet.html
 * "http://cheat.errtheblog.com/s/git/":http://cheat.errtheblog.com/s/git/
 * Nate Murray's "Git Cheat Sheet":http://www.xcombinator.com/2010/09/01/git-cheat-sheet-and-class-notes/
+* "Git - Der Spickzettel":https://github.com/esc/git-cheatsheet-de/ (in German)
 
 h3. A practical git guide
 
