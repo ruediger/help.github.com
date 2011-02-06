@@ -20,7 +20,7 @@ This error occurs when you attach your key as a deploy key on repo1.  You can pu
 
 h2. Permission denied (publickey)
 
-This is usually caused when ssh cannot find your keys.  Make sure your key is in the default location, @~/.ssh@. If you run @ssh-keygen@ again and just press enter at all 3 prompts it will be placed here automatically. Then you can add the contents of id_rsa.pub to "my github keys":https://github.com/account. If id_rsa.pub doesn't work try id_dsa.pub. You might need to generate a new dsa key with @ssh-keygen -t dsa@ if you just have an rsa key.
+This is usually caused when ssh cannot find your keys.  Make sure your key is in the default location, @~/.ssh@. If you run @ssh-keygen@ again and just press enter at all 3 prompts it will be placed here automatically. Then you can add the contents of id_rsa.pub to "your account":https://github.com/account#ssh_bucket. If id_rsa.pub doesn't work try id_dsa.pub. You might need to generate a new dsa key with @ssh-keygen -t dsa@ if you just have an rsa key.
 
 h3. Finding out what keys ssh is using
 
