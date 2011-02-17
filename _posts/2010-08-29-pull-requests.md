@@ -180,7 +180,7 @@ from there. Any of the following types of activity are captured as they happen:
  * Additional commits pushed to the pull request's branch.
  * File and line notes left on any of the commits included in the pull request's range.
 
-Pull request comments are Markdown compatibility, so you can embed images, use
+Pull request comments are Markdown compatible, so you can embed images, use
 preformatted text blocks, and other formatting supported by Markdown.
 
 ## Merging a Pull Request
