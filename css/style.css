@@ -2,6 +2,7 @@
   left:-25px;
   top:-3px;
 }
+
 #header {
   height:81px;
 }
@@ -12,7 +13,6 @@
   position:relative;
   top:9px;
 }
-
 
 .category_index { float: left; margin: 0.25em; width:19em; }
 .category_index h2 { background: #ddd; text-align: center; padding: 0.25em; margin-bottom: 0.5em; }
@@ -48,16 +48,23 @@
 .ui-icon-triangle-expand { background-image: url(/images/expand.png); }
 .ui-icon-triangle-collapse { background-image: url(/images/collapse.png); }
 
-
 /**********************/
 /*      Pre/code      */
 /**********************/
 
-.wikistyle > pre {
-  padding: 1em !important;
-  background: #444 !important;
-  color: white !important;
-  font-size: 0.9em !important;
+.wikistyle > pre, .wikistyle > .pre, pre {
+	background-color: #444 !important;
+	background-image: none;
+	color: #fff !important;
+	font:12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace !important;
+	display: block !important;
+	padding: 10px !important;
+	border: 2px solid #dedede !important;
+	-webkit-border-radius: 5px !important;
+	-moz-border-radius: 5px !important;
+	border-radius: 5px !important;
+	margin-left: 5px;
+	position: relative;
 }
 
 .wikistyle > pre span.comment {color: #aaa;}
@@ -72,12 +79,76 @@ code {white-space: nowrap;}
 
 .highlight pre code {white-space: pre;}
 
+.wikistyle code {
+	font:12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace !important;
+	-webkit-border-radius: 3px !important;
+	-moz-border-radius: 3px !important;
+	border-radius: 3px !important;
+	background: #f9f9f9 !important;
+	border: 1px solid #ccc !important;
+	display: inline-block !important;
+	font-size: 10px !important;
+	color: #52595d !important;
+	padding: 0 0.3em 0.05em !important;
+}
+
+pre .codeline {
+	display: block;
+	position: relative;
+}
+
+pre .codeline:hover {
+	background-color: #292929;
+	margin: 0px;
+	padding-left: 3px;
+	margin-left: -3px;
+	-webkit-border-radius: 3px !important;
+	-moz-border-radius: 3px !important;
+	border-radius: 3px !important;
+	color: #666666
+}
+
+pre .terminal-tooltip {
+	display: none;
+	font:12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace !important;
+	-webkit-border-radius: 3px !important;
+	-moz-border-radius: 3px !important;
+	border-radius: 3px !important;
+	background: #000 !important;
+	border: 1px solid #292929 !important;
+	font-size: 10px !important;
+	color: #fff !important;
+	padding: 0 0.3em 0.05em !important;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+pre .codeline:hover .terminal-tooltip {
+	display: inline-block !important;
+}
+
+pre.bootcamp {
+	white-space: normal !important;
+	margin-left: -10px !important;
+	background-image: none !important;
+}
+
+.terminal-output {
+	color: #63e463;
+}
 
 /********************/
 /*      Images      */
 /********************/
 
-.wikistyle img {max-width: 690px;}
+.wikistyle img {
+	max-width: 690px;
+	border: 1px solid #dddddd;
+	-webkit-box-shadow: 1px 1px 3px #ddd;
+	-moz-box-shadow: 1px 1px 3px #ddd;
+	box-shadow: 1px 1px 3px #ddd;
+}
 
 
 /****************************/
@@ -132,4 +203,179 @@ code {white-space: nowrap;}
 .myribbon a span {
   padding: 0.1em 3em;
   border: 1px solid #bf6060;
+}
+
+/****************************/
+/*      Explain Pop-up      */
+/****************************/
+
+.explain {
+	font-style: italic;
+	color: #4183C4;
+	cursor: default;
+	margin: 0px 0px 1em;
+	position: relative;
+	display: inline;
+}
+
+.explain-it-shell {
+	display: none;
+	position: absolute;
+	width: 667px;
+	padding: 0;
+	top: 2.2em;
+	font-style: normal;
+	color: #666666;
+	float:left;
+}
+
+.explain:hover .explain-it-shell {
+	display: block;
+	z-index: 100;
+}
+
+.explain-it-shell span.explain-it {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-color: #FFFFFF;
+	border: 3px solid #DDDDDD;
+	padding: 2em;
+	display: block;
+	-webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.explain-it-shell span.explain-it img {
+	border: 1px solid #DDDDDD;
+	margin: 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+
+.explain .triangle {
+	display: block;
+	width:31px;
+	height:15px;
+	position: absolute;
+	top:-12px;
+	left: 152px;
+	background-image: url('/images/bootcamp/explain_it_triangle.png');
+	background-repeat: no-repeat;
+	background-position: right 50%;
+}
+
+.explain .account-settings {
+	left: 70px;
+}
+.explain .ssh-public-keys {
+	left: 215px;
+}
+.explain .add-another-public-key {
+	left: 400px;
+}
+.explain .account-admin {
+	left: 220px;
+}
+
+/****************************/
+/*         Bootcamp         */
+/****************************/
+.short-bottom-marg {
+	margin-bottom: 5px;
+}
+p.next-step strong, .next-steps {
+	color: #666666;
+}
+.next-steps {
+	font-weight: bold;
+}
+.next-steps a {
+	background-image: url('/images/bootcamp/next_step_arrow.gif');
+	background-repeat: no-repeat;
+	background-position: right 50%;
+	padding-right: 15px;
+}
+.next-steps a:hover {
+	padding-right: 20px;
+	text-decoration:  none;
+}
+.intro {
+	color: #868686;
+}
+
+h2 span {
+	color: #666666;
+}
+
+.founders {
+	overflow: hidden;
+	margin: 0px;
+}
+
+.founder {
+	background:#f5f5f5;
+	filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fcfcfc',endColorstr='#ececec');
+	background:-webkit-gradient(linear,0% 0,0% 100%,from(#fcfcfc),to(#e8e8e8));
+	background:-moz-linear-gradient(270deg,#fcfcfc,#ececec);border-color:#eee;
+	border:1px solid #e9e9e9;
+	border-bottom-color:#f5f5f5;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	-webkit-box-shadow:0 1px 1px rgba(0,0,0,0.2);
+	-moz-box-shadow:0 1px 1px rgba(0,0,0,0.2);
+	box-shadow:0 1px 1px rgba(0,0,0,0.2);
+	display: block;
+	position: relative;
+	width: 250px;
+	padding: 5px;
+	overflow: hidden;
+	margin: 0px 5px 5px 0px;
+	float: left;
+	list-style-type: none;
+}
+
+.founder:hover {
+	text-decoration: none;
+	background:#e5e5e5;
+	filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ececec',endColorstr='#dcdcdc');
+	background:-webkit-gradient(linear,0% 0,0% 100%,from(#ececec),to(#d8d8d8));
+	background:-moz-linear-gradient(270deg,#ececec,#dcdcdc);border-color:#ddd;
+}
+
+.founder img {
+	float: left;
+	position: relative;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border:1px solid #e9e9e9;
+	margin-right: 1em;
+}
+.founder h4 {
+	position: relative;
+	font-size: 1.3em;
+	color: #000;
+	margin: .3em 0px 0px;
+}
+.founder p {
+	position: relative;
+	font-weight: bold;
+	margin:0px !important;
+	color: #666666;
+	margin: 0px;
+}
+
+.step-title {
+	font-weight: bold;
+}
+
+.step-title span {
+	font-weight: normal;
+	font-style: oblique;
+	color: #666666;
 }
