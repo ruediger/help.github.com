@@ -44,7 +44,7 @@ main_category: bootcamp
 	
 	<img src="/images/bootcamp/bootcamp_4_follow.jpg" width="558" height="151" alt="Click &ldquo;Follow"  />
 	
-	Congratulations! You are now following a friend. You will be notified about their activity on GitHub.
+	Congratulations! You are now following a friend. Their activity on GitHub will now show up on your dashboard.
 
 ##<span>Next:</span> Watch A Project
 
@@ -58,7 +58,7 @@ At some point you may want to stay up-to-date with a specific project. We&rsquo;
 	
 	<img src="/images/bootcamp/bootcamp_4_watch.jpg" width="558" height="151" alt="Click &ldquo;Watch" />
 	
-	Congratulations! You are now watching the the Hello World project. If the Octocat updates it, you will be notified.
+	Congratulations! You are now watching the the Hello World project. If the Octocat updates it, you will see what happened in your dashboard.
 
 ##<span>Lastly:</span> Celebrate
 

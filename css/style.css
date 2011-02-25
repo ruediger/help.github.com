@@ -105,10 +105,10 @@ pre .codeline:hover {
 	-webkit-border-radius: 3px !important;
 	-moz-border-radius: 3px !important;
 	border-radius: 3px !important;
-	color: #666666
+	color: #666666;
 }
 
-pre .terminal-tooltip {
+pre .codeline span {
 	display: none;
 	font:12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace !important;
 	-webkit-border-radius: 3px !important;
@@ -124,7 +124,7 @@ pre .terminal-tooltip {
 	top: 0px;
 }
 
-pre .codeline:hover .terminal-tooltip {
+pre .codeline:hover span {
 	display: inline-block !important;
 }
 
@@ -134,8 +134,18 @@ pre.bootcamp {
 	background-image: none !important;
 }
 
-.terminal-output {
+.bash-output {
 	color: #63e463;
+	display: block;
+	position: relative;
+}
+
+pre em {
+	color: #f9fe64;
+}
+
+pre .codeline:hover em {
+	color: #666666;
 }
 
 /********************/
@@ -208,25 +218,25 @@ pre.bootcamp {
 /****************************/
 /*      Explain Pop-up      */
 /****************************/
-
+/*
 .explain {
 	font-style: italic;
 	color: #4183C4;
 	cursor: default;
-	margin: 0px 0px 1em;
+	margin: 1em 0px 1em;
 	position: relative;
-	display: inline;
+	display: inline-block;
 }
 
 .explain-it-shell {
 	display: none;
 	position: absolute;
 	width: 667px;
-	padding: 0;
+	padding: 15px 0 0 0;
 	top: 2.2em;
 	font-style: normal;
 	color: #666666;
-	float:left;
+	margin: -15px 0 0 0;
 }
 
 .explain:hover .explain-it-shell {
@@ -240,7 +250,7 @@ pre.bootcamp {
 	border-radius: 3px;
 	background-color: #FFFFFF;
 	border: 3px solid #DDDDDD;
-	padding: 2em;
+	padding: 1em 2em;
 	display: block;
 	-webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 	-moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
@@ -261,8 +271,8 @@ pre.bootcamp {
 	width:31px;
 	height:15px;
 	position: absolute;
-	top:-12px;
-	left: 152px;
+	top: 3px;
+	left: 15px;
 	background-image: url('/images/bootcamp/explain_it_triangle.png');
 	background-repeat: no-repeat;
 	background-position: right 50%;
@@ -281,6 +291,14 @@ pre.bootcamp {
 	left: 220px;
 }
 
+.explain h4 {
+	margin-top: 1em;
+}
+
+.explain pre {
+	margin-left: 0px;
+}
+*/
 /****************************/
 /*         Bootcamp         */
 /****************************/
@@ -378,4 +396,53 @@ h2 span {
 	font-weight: normal;
 	font-style: oblique;
 	color: #666666;
+}
+
+/****************************/
+/*      Explain Pop-up      */
+/****************************/
+
+.more-info {
+	margin: 10px 0;
+}
+.more-info > h4 {
+	background-image: url('/images/bootcamp/dropdown_sprites.jpg');
+	background-repeat: no-repeat;
+	padding: .25em 0 .25em 33px;
+	cursor: pointer;
+	color: #4183C4;
+}
+.more-info h4.compressed {
+	background-position: 0 0;
+}
+.more-info:hover h4.compressed {
+	background-position: 0 -23px;
+}
+.more-info h4.expanded {
+	background-position: 0 -46px;
+}
+.more-info:hover h4.expanded {
+	background-position: 0 -69px;
+}
+
+.more-info .more-content {
+	display: none;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-color: #FFFFFF;
+	border: 3px solid #DDDDDD;
+	padding: 1em 2em;
+	-webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+	margin: 15px 0 30px;
+}
+
+.more-info .more-content h4 {
+	margin-top: 1em;
+}
+
+.more-info .more-content pre {
+	margin-left: 0px !important;
 }

@@ -13,7 +13,7 @@ Attempting to redirect to the guide for your OS.  If the redirect fails, pick yo
 * [Linux](linux-set-up-git)
 
 <script type="text/javascript">
-  if (navigator.appVersion.indexOf("Win") != -1) {window.location = 'http://help.github.com/win-set-up-git/'}
-  else if (navigator.appVersion.indexOf("Mac") != -1) {window.location = 'http://help.github.com/mac-set-up-git/'}
-  else if (navigator.appVersion.indexOf("X11") != -1 || navigator.appVersion.indexOf("Linux") != -1) {window.location = 'http://help.github.com/linux-set-up-git/'}
+  if (navigator.appVersion.indexOf("Win") != -1) {window.location = '/win-set-up-git'}
+  else if (navigator.appVersion.indexOf("Mac") != -1) {window.location = '/mac-set-up-git'}
+  else if (navigator.appVersion.indexOf("X11") != -1 || navigator.appVersion.indexOf("Linux") != -1) {window.location = '/linux-set-up-git'}
 </script>
