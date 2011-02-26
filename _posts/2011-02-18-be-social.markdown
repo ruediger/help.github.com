@@ -64,14 +64,24 @@ At some point you may want to stay up-to-date with a specific project. We&rsquo;
 
 You&rsquo;ve done some of the most basic social interaction GitHub has to offer, but don&rsquo;t stop there! Check out these other social features:
 
-- <span class="step-title">Pull requests</span>
+- <span class="step-title">Pull Requests</span>
 
-	If you are hoping to contribute back to the original fork, you can send the original author a [pull request](/pull-requests/).
+	<img src="/images/bootcamp/bootcamp_4_pull_requests.jpg" width="558" height="100" alt="Pull Requests" class="bootcamp top-margin"/>
+
+	You may find yourself wanting to contribute to someone else&rsquo;s project, whether to add features or to fix bugs. After making changes, you can let the original author know about them by sending a [pull request](/pull-requests/).
 	
 - <span class="step-title">Issues</span>
+	
+	<img src="/images/bootcamp/bootcamp_4_issues.jpg" width="558" height="131" alt="Issues" class="bootcamp top-margin"/>
 
 	When you are collaborating on a project with someone, you some times come across problems that need to be fixed. To help you keep track of these problems, each GitHub repo has a section called Issues. For an example, check out the [issues](https://github.com/octocat/Spoon-Knife/issues) for the Spoon-Knife repo.
+	
+- <span class="step-title">Organizations</span>
 
+	<img src="/images/bootcamp/bootcamp_4_org.jpg" width="558" height="200" alt="Organizations" class="bootcamp top-margin"/>
+	
+	Have you found yourself wishing you could collaborate with multiple developers on one project? You can manage everyone with Organizations! With an organization you can establish teams with special permissions, have a public organization profile, and keep track of activity within the organization.
+	
 ##<span>Lastly:</span> Celebrate
 
 Congratulations! You are quite the socialite. What do you want to do next?

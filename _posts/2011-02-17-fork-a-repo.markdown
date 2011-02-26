@@ -65,20 +65,20 @@ You&rsquo;ve successfully forked a repo, but get a load of these other cool thin
 		<h4 class="compressed">What is the difference between fetch and pull?</h4>
 		<div class="more-content">
 			<p>
-				There are two ways to get changes from a remote repo or branch: <code>fetch</code> and <code>pull</code>. While they might seem similar at first, there are distinct differences you should consider.
+				There are two ways to get commits from a remote repo or branch: <code>fetch</code> and <code>pull</code>. While they might seem similar at first, there are distinct differences you should consider.
 			</p>
 			<h4>Pull</h4>
 				<pre class="terminal bootcamp">
-					<span class="codeline">$ git pull upstream<span>Pulls changes from upstream and adds them to the local repo</span></span>
+					<span class="codeline">$ git pull upstream<span>Pulls commits from 'upstream' and adds them to the local repo</span></span>
 				</pre>
-			<p>When you use <code>pull</code>, Git tries to automatically do your work for you. It is context sensitive, so Git will apply any pulled changes to the branch you are currently working in. One thing to keep in mind is that <code>pull</code> automatically applies the changes without letting you review them first. If you don't closely manage your branches you may run into frequent conflicts.</p>
+			<p>When you use <code>pull</code>, Git tries to automatically do your work for you. It is context sensitive, so Git will merge any pulled commits into the branch you are currently working in. One thing to keep in mind is that <code>pull</code> automatically merges the commits without letting you review them first. If you don&rsquo;t closely manage your branches you may run into frequent conflicts.</p>
 			
 			<h4>Fetch/Merge</h4>
 				<pre class="terminal bootcamp">
-					<span class="codeline">$ git fetch upstream<span>Fetches any new changes from the original repo</span></span>
-					<span class="codeline">$ git merge upstream/master<span>Merges any changes fetched into your working files</span></span>
+					<span class="codeline">$ git fetch upstream<span>Fetches any new commits from the original repo</span></span>
+					<span class="codeline">$ git merge upstream/master<span>Merges any commits fetched into your working files</span></span>
 				</pre>
-			<p>When you <code>fetch</code>, Git downloads any changes from the specified branch, but does not apply them to your files. This is very useful if you need to keep your repo up to date but are working on something that might break if your files are updated. To apply the changes, you use <code>merge</code>. This combines the specified branches and prompts you if there are any conflicts.</p>
+			<p>When you <code>fetch</code>, Git gathers any commits from the target branch that do not exist in your current branch and stores them in your local repo. However, it does not merge them with your current branch. This is particularly useful if you need to keep your repo up to date but are working on something that might break if you update your files. To integrate the commits into your master branch, you use <code>merge</code>. This combines the specified branches and prompts you if there are any conflicts.</p>
 		</div>
 	</div>
 	
