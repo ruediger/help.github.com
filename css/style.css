@@ -131,6 +131,7 @@ pre .codeline:hover span {
 pre.bootcamp {
 	white-space: normal !important;
 	margin-left: -10px !important;
+	margin-bottom: 1.5em !important;
 	background-image: none !important;
 }
 
@@ -215,90 +216,6 @@ pre .codeline:hover em {
   border: 1px solid #bf6060;
 }
 
-/****************************/
-/*      Explain Pop-up      */
-/****************************/
-/*
-.explain {
-	font-style: italic;
-	color: #4183C4;
-	cursor: default;
-	margin: 1em 0px 1em;
-	position: relative;
-	display: inline-block;
-}
-
-.explain-it-shell {
-	display: none;
-	position: absolute;
-	width: 667px;
-	padding: 15px 0 0 0;
-	top: 2.2em;
-	font-style: normal;
-	color: #666666;
-	margin: -15px 0 0 0;
-}
-
-.explain:hover .explain-it-shell {
-	display: block;
-	z-index: 100;
-}
-
-.explain-it-shell span.explain-it {
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	background-color: #FFFFFF;
-	border: 3px solid #DDDDDD;
-	padding: 1em 2em;
-	display: block;
-	-webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-.explain-it-shell span.explain-it img {
-	border: 1px solid #DDDDDD;
-	margin: 0;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-}
-
-
-.explain .triangle {
-	display: block;
-	width:31px;
-	height:15px;
-	position: absolute;
-	top: 3px;
-	left: 15px;
-	background-image: url('/images/bootcamp/explain_it_triangle.png');
-	background-repeat: no-repeat;
-	background-position: right 50%;
-}
-
-.explain .account-settings {
-	left: 70px;
-}
-.explain .ssh-public-keys {
-	left: 215px;
-}
-.explain .add-another-public-key {
-	left: 400px;
-}
-.explain .account-admin {
-	left: 220px;
-}
-
-.explain h4 {
-	margin-top: 1em;
-}
-
-.explain pre {
-	margin-left: 0px;
-}
-*/
 /****************************/
 /*         Bootcamp         */
 /****************************/
@@ -404,13 +321,15 @@ h2 span {
 
 .more-info {
 	margin: 10px 0;
+	position: relative;
 }
 .more-info > h4 {
 	background-image: url('/images/bootcamp/dropdown_sprites.jpg');
 	background-repeat: no-repeat;
-	padding: .25em 0 .25em 33px;
+	padding: .25em 0 .25em 25px;
 	cursor: pointer;
 	color: #4183C4;
+	font-weight: normal;
 }
 .more-info h4.compressed {
 	background-position: 0 0;
@@ -446,3 +365,4 @@ h2 span {
 .more-info .more-content pre {
 	margin-left: 0px !important;
 }
+

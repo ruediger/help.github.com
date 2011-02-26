@@ -27,30 +27,30 @@ To make sure you generate a brand new key, you need to check if one already exis
 <div class="more-info">
 	<h4 class="compressed">Need a quick lesson about Terminal?</h4>
 	<div class="more-content">
-		<p>Code blocks like those on this page are part of a scripting language called Bash. To use Bash scripts, we need to use an application that comes with Linux called Terminal.</p>
+		<p>Code blocks like those on this page are part of a scripting language called Bash. To use Bash scripts, we need to use an application that comes with your Mac called Terminal.</p>
 		
 		<h4>Input</h4>
 		<pre class="terminal bootcamp">
 			<span class="codeline">$ echo 'This is input text'<span>This tooltip tells you what's going on.</span></span>
 		</pre>
 		
-		<p>A line that begins with the dollar sign ($) indicates a line of Bash script you need to type. To enter it, type the text that follows the $, hitting the return key at the end of each line. You can hover your mouse over each line to see what the script is doing</p>
+		<p>A line that begins with the dollar sign ($) indicates a line of Bash script you need to type. To enter it, type the text that follows the $, hitting the return key at the end of each line. You can hover your mouse over each line for an explanation of what the script is doing</p>
 		
 		<h4>Output</h4>
 		<pre class="terminal bootcamp">
 			<span class="bash-output">$ This is output text.</span>
 		</pre>
 		
-		<p>A line that does not begin with a $ is output text that is intended to give you information or tell you what to do next. We've colored output text green in these bootcamp tutorials.</p>
+		<p>A line that does not begin with a $ is output text that is intended to give you information or tell you what to do next. We&rsquo;ve colored output text green in these bootcamp tutorials.</p>
 		
 		<h4>User Specific Input</h4>
 		<pre class="terminal bootcamp">
 			<span class="codeline">$ echo '<em>username</em>'<span>Outputs the text in the quote marks.</span></span>
 		</pre>
 		
-		<p>Areas of yellow text represent your own personal info. If it is part of an input ($) line, you should replace your it with your own info when you type it. If it is part of output text, it is just for your reference. It will automatically show your own info in Terminal</p>
+		<p>Areas of yellow text represent your own personal info, repos, etc. If it is part of an input ($) line, you should replace your it with your own info when you type it. If it is part of output text, it is just for your reference. It will automatically show your own info in Terminal</p>
 		
-		<p><strong>Good to know</strong>: There will be times when you type code, hit return, and all you are given is another prompt. Some actions that you execute in the Terminal don&rsquo;t have any output. Don&rsquo;t worry, if there is ever a problem with your code, Terminal will let you know.</p>
+		<p><strong>Good to know</strong>: There will be times when you type code, hit return, and all you are given is another prompt. Some actions that you execute in Terminal don&rsquo;t have any output. Don&rsquo;t worry, if there is ever a problem with your code, Terminal will let you know.</p>
 	
 		<p><strong>Good to know</strong>: For security reasons, Terminal will not display what you type when entering passwords. Just type your password and hit the return key.</p>
 	</div>
@@ -61,7 +61,7 @@ To make sure you generate a brand new key, you need to check if one already exis
 	First, we need to check for existing ssh keys on your computer:
 	
 	<pre class="terminal bootcamp">
-	<span class="codeline">$ cd ~/.ssh<span>Checks to see if there is a folder named ".ssh" in you user directory</span></span>
+	<span class="codeline">$ cd ~/.ssh<span>Checks to see if there is a directory named ".ssh" in your user directory</span></span>
 	</pre>
 	
 	If it says &ldquo;No such file or directory&ldquo; skip to __step 3__. Otherwise continue to __step 2__.
@@ -73,9 +73,9 @@ To make sure you generate a brand new key, you need to check if one already exis
 	<pre class="terminal bootcamp">
 	<span class="codeline">$ ls<span>Lists all the subdirectories in the current directory</span></span>
 	<span class="bash-output">config  id_rsa  id_rsa.pub  known_hosts</span>
-	<span class="codeline">$ mkdir key_backup<span>Makes a folder called "key_backup" in the current directory</span></span>
-	<span class="codeline">$ cp id_rsa* key_backup<span>Copies the contents of the id_rsa folder into key_backup folder</span></span>
-	<span class="codeline">$ rm id_rsa*<span>Deletes the contents of the id_rsa folder</span></span>
+	<span class="codeline">$ mkdir key_backup<span>Makes a directory called "key_backup" in the current directory</span></span>
+	<span class="codeline">$ cp id_rsa* key_backup<span>Copies the contents of the id_rsa directory into key_backup  </span></span>
+	<span class="codeline">$ rm id_rsa*<span>Deletes the contents of the id_rsa directory</span></span>
 	</pre>
 
 3. <span class="step-title">Generate a new SSH key.</span>
@@ -123,7 +123,7 @@ To make sure you generate a brand new key, you need to check if one already exis
 	__It&rsquo;s important you copy your SSH key exactly as it is written without adding any newlines or whitespace.__ To ensure this, run the following code to copy the key to your clipboard.
 	
 	<pre class="terminal bootcamp">
-	<span class="codeline">$ cat ~/.ssh/id_rsa.pub | pbcopy<span>Copies the contents of the id_rsa.pub file to your clipboard</span></span>
+	<span class="codeline">$ pbcopy &lt; ~/.ssh/id_rsa.pub<span>Copies the contents of the id_rsa.pub file to your clipboard</span></span>
 	</pre>
 	
 	Now paste it into the &ldquo;Key&rdquo; field.
@@ -151,12 +151,13 @@ To make sure you generate a brand new key, you need to check if one already exis
 	Don&rsquo;t worry, this is supposed to happen. Type &ldquo;yes&rdquo;.
 	
 	<pre class="terminal bootcamp">
-	<span class="bash-output">Warning: Permanently added 'github.com,207.97.227.239' (RSA) to the list of known hosts.</span>
-	<span class="bash-output">ERROR: Hi <em>username</em>! You've successfully authenticated, but GitHub does not provide <br />shell access</span>
+	<span class="bash-output">PTY allocation request failed on channel 0</span>
+	<span class="bash-output">Hi <em>username</em>! You've successfully authenticated, but GitHub does not provide shell access.</span>
 	<span class="bash-output">Connection to github.com closed.</span>
+
 	</pre>
 
-	You don&rsquo;t worry, about the &ldquo;ERROR&rdquo;. You actually want to see that.
+	Don&rsquo;t worry, about the &ldquo;failed&rdquo; part. All you should about is that you see &ldquo;You&rsquo;ve successfully authenticated&rdquo;
 
 
 ##<span>Then: </span> Set Up Your Info

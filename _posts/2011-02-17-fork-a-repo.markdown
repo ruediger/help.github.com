@@ -27,7 +27,7 @@ You&rsquo;ve successfully forked the Spoon-Knife repo, but so far it only exists
 	Run the following code:
 	
 	<pre class="terminal bootcamp">
-	<span class="codeline">$ git clone git@github.com:<em>username</em>/Spoon-Knife.git<span>Clones your copy of the repo into the current folder in terminal</span></span>
+	<span class="codeline">$ git clone git@github.com:<em>username</em>/Spoon-Knife.git<span>Clones your copy of the repo into the current directory in terminal</span></span>
 	</pre>
 
 2. <span class="step-title">Configure remotes</span>
@@ -42,7 +42,7 @@ You&rsquo;ve successfully forked the Spoon-Knife repo, but so far it only exists
 
 ##<span>Then:</span> More Things You Can Do
 
-Congratulations, you&rsquo;ve successfully forked a repo, but get a load of these other cool things you can do:
+You&rsquo;ve successfully forked a repo, but get a load of these other cool things you can do:
 
 - <span class="step-title">Push commits</span>
 
@@ -89,23 +89,36 @@ Congratulations, you&rsquo;ve successfully forked a repo, but get a load of thes
 	<div class="more-info">
 		<h4 class="compressed">How do I use branches?</h4>
 		<div class="more-content">
-		
+			
 			<p>
 				Branches are pretty easy to work with and will save you a lot of headaches, especially when working with multiple people. To create a branch and begin working in it, use the following script:
 			</p>
 			
 			<pre class="terminal bootcamp">
-				<span class="codeline">$ git branch newbranch<span>Creates a new branch called "newbranch"</span></span>
-				<span class="codeline">$ git checkout newbranch<span>Makes "newbranch" the active branch</span></span>
+				<span class="codeline">$ git branch <em>mybranch</em><span>Creates a new branch called "mybranch"</span></span>
+				<span class="codeline">$ git checkout <em>mybranch</em><span>Makes "mybranch" the active branch</span></span>
 			</pre>
 			
 			<p>Alternatively, you can use the shortcut:</p>
 			
 			<pre class="terminal bootcamp">
-				<span class="codeline">$ git checkout -b newbranch<span>Creates a new branch called "newbranch"</span></span>
+				<span class="codeline">$ git checkout -b <em>mybranch</em><span>Creates a new branch called "mybranch" and makes it the active branch</span></span>
 			</pre>
 			
 			<p>To switch between branches, use <code>checkout</code>.</p>
+			
+			<pre class="terminal bootcamp">
+				<span class="codeline">$ git checkout master<span>Makes "master" the active branch</span></span>
+				<span class="codeline">$ git checkout <em>mybranch</em><span>Makes "mybranch" the active branch</span></span>
+			</pre>
+			
+			<p>Once you&rsquo;re finished working on your branch and are ready to combine it back into the <code>master</code> branch, use <code>merge</code>.</p>
+			
+			<pre class="terminal bootcamp">
+				<span class="codeline">$ git checkout master<span>Makes "master" the active branch</span></span>
+				<span class="codeline">$ git merge <em>mybranch</em><span>Merges the commits from "mybranch" into "master"</span></span>
+				<span class="codeline">$ git branch -d <em>mybranch</em><span>Deletes the "mybranch" branch</span></span>
+			</pre>
 			
 		</div>
 	</div>

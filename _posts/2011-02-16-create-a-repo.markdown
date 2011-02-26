@@ -33,14 +33,14 @@ While a README isn&rsquo;t a required part of a GitHub repo, it is a good idea t
 	In the prompt, type the following code:
 
 	<pre class="terminal bootcamp">
-	<span class="codeline">$ mkdir ~/Hello-World<span>Creates a folder for your project called "Hello-World" in your user folder</span></span>
-	<span class="codeline">$ cd ~/Hello-World<span>Changes the active directory in the prompt to your newly created folder</span></span>
+	<span class="codeline">$ mkdir ~/Hello-World<span>Creates a directory for your project called "Hello-World" in your user directory</span></span>
+	<span class="codeline">$ cd ~/Hello-World<span>Changes the current working directory to your newly created directory</span></span>
 	<span class="codeline">$ git init<span>Sets up the necessary Git files</span></span>
-	<span class="terminal-output">Initialized empty Git repository in /Users/<em>your_user_directory</em>/Hello-World/.git/</span>
-	<span class="codeline">$ touch README<span>Creates a file called "README" in your Hello-World folder</span></span>
+	<span class="bash-output">Initialized empty Git repository in /Users/<em>your_user_directory</em>/Hello-World/.git/</span>
+	<span class="codeline">$ touch README<span>Creates a file called "README" in your Hello-World directory</span></span>
 	</pre>
 
-	Open the new README file found in your Hello-World folder in a text editor and add the text &ldquo;Hello World!.&rdquo; When you are finished, save and close the file.
+	Open the new README file found in your Hello-World directory in a text editor and add the text &ldquo;Hello World!.&rdquo; When you are finished, save and close the file.
 
 2. <span class="step-title">Commit your README</span>
 

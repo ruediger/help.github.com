@@ -60,6 +60,18 @@ At some point you may want to stay up-to-date with a specific project. We&rsquo;
 	
 	Congratulations! You are now watching the the Hello World project. If the Octocat updates it, you will see what happened in your dashboard.
 
+##<span>Then:</span> More Things You Can Do
+
+You&rsquo;ve done some of the most basic social interaction GitHub has to offer, but don&rsquo;t stop there! Check out these other social features:
+
+- <span class="step-title">Pull requests</span>
+
+	If you are hoping to contribute back to the original fork, you can send the original author a [pull request](/pull-requests/).
+	
+- <span class="step-title">Issues</span>
+
+	When you are collaborating on a project with someone, you some times come across problems that need to be fixed. To help you keep track of these problems, each GitHub repo has a section called Issues. For an example, check out the [issues](https://github.com/octocat/Spoon-Knife/issues) for the Spoon-Knife repo.
+
 ##<span>Lastly:</span> Celebrate
 
 Congratulations! You are quite the socialite. What do you want to do next?
