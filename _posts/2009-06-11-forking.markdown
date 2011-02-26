@@ -9,7 +9,7 @@ main_category: collaborating
 This guide will step you through the process of forking, pushing your changes,
 and pulling in changes from the upstream repo.
 
-We'll use [github-services](http://github.com/pjhyett/github-services) as an
+We'll use [github-services](http://github.com/github/github-services) as an
 example to fork, submit a change, and re-sync with the forked repo.
 
 All of the examples on this page assume you're working in the `master` branch.
@@ -35,7 +35,7 @@ not__ point to the original repo you forked from.  To help you keep track of
 that repo we will add another remote named "upstream":
 
 <pre class="terminal">$ cd github-services
-$ git remote add upstream git://github.com/pjhyett/github-services.git
+$ git remote add upstream git://github.com/github/github-services.git
 $ git fetch upstream
 </pre>
 
