@@ -101,7 +101,20 @@ To make sure you generate a brand new key, you need to check if one already exis
 	<span class="bash-output">Enter file in which to save the key (/c/Users/<em>your_user_directory</em>/.ssh/id_rsa):</span>
 	</pre>
 	
-	Now you need to enter a passphrase. _[Why is this important?](../working-with-key-passphrases)_
+	Now you need to enter a passphrase.
+	
+	<div class="more-info">
+		<h4 class="compressed">Why do passphrases matter?</h4>
+		<div class="more-content">
+			<p>Passwords aren&rsquo;t very secure, you already know this. If you use one that&rsquo;s easy to remember, it&rsquo;s easier to guess or brute-force (try many options until one works). If you use one that&rsquo;s random it&rsquo;s hard to remember, and thus you&rsquo;re more inclined to write the password down. Both of these are Very Bad Things&trade;. This is why you&rsquo;re using ssh keys.</p>
+			
+			<p>But using a key without a passphrase is basically the same as writing down that random password in a file on your computer. Anyone who gains access to your drive has gained access to every system you use that key with. This is also a Very Bad Thing&trade;. The solution is obvious: add a passphrase.</p>
+			
+			<p><em>But I don&rsquo;t want to enter a long passphrase every time I use the key!</em></p>
+			
+			<p>Neither do we! Thankfully, there&rsquo;s a nifty little tool called <code>ssh-agent</code> that can save your passphrase securely so you don&rsquo;t have to re-enter it. Unfortunately, it takes a little work to get it up and running on Windows. For more information check out our <a href="/working-with-key-passphrases">help guide</a>.</p>
+		</div>
+	</div>
 	
 	<pre class="terminal bootcamp">
 	<span class="bash-output">Enter passphrase (empty for no passphrase):</span>
