@@ -63,7 +63,7 @@ post '/' do
 end
 {% endhighlight %}
 
-The `commits` array is ordered with the most recent commit as the first element.  The last element, therefor, is the oldest commit.
+The `commits` array is ordered with the oldest commit as the first element.  The last element is the newest commit and should match the "after" value for the branch.
 
 Here's an example payload:
 
