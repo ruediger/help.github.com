@@ -6,9 +6,11 @@ categories: bootcamp
 main_category: bootcamp
 ---
 
-<span class="intro">If you&rsquo;ve found yourself on this page, we&rsquo;re assuming you&rsquo;re brand new to Git and GitHub. Being social is one of the key features of GitHub. Open source projects become even more awesome when people come together to collaborate and we are happy to help that happen!</span>
+<span class="intro">If you&rsquo;ve found yourself on this page, we&rsquo;re assuming you&rsquo;re brand new to Git and GitHub. This guide will walk you through the basics and explain a little bit about how everything works along the way.</span>
 
 ##<span>First:</span> Follow A Friend
+
+One of the great features on GitHub is the ability to see what other people are working on and who they are connecting with. When you follow someone, you will get notifications on your dashboard about their GitHub activity.
 
 1. <span class="step-title">Pick a friend.</span>
 
@@ -44,7 +46,7 @@ main_category: bootcamp
 	
 	<img src="/images/bootcamp/bootcamp_4_follow.jpg" width="558" height="151" alt="Click &ldquo;Follow"  />
 	
-	Congratulations! You are now following a friend. Their activity on GitHub will now show up on your dashboard.
+	Congratulations! You are now following a friend.
 
 ##<span>Next:</span> Watch A Project
 

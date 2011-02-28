@@ -306,6 +306,8 @@ h2 span {
 
 .step-title {
 	font-weight: bold;
+	display: inline-block;
+	margin-top: 1em;
 }
 
 .step-title span {

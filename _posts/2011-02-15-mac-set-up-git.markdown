@@ -4,7 +4,7 @@ title: Set Up Git (OSX)
 description: A quick guide to help you get started with Git
 ---
 
-<span class="intro">If you&rsquo;ve found yourself on this page, we&rsquo;re assuming you&rsquo;re brand new to Git and GitHub. This guide will walk you through setting both up, and explain a little about how everything works along the way. If you already have Git experience and just want the short version, read the <a href="http://help.github.com">technical walkthrough instead</a>.</span>
+<span class="intro">If you&rsquo;ve found yourself on this page, we&rsquo;re assuming you&rsquo;re brand new to Git and GitHub. This guide will walk you through the basics and explain a little bit about how everything works along the way.</span>
 
 ##<span>First:</span> Download and Install Git
 
@@ -34,7 +34,7 @@ To make sure you generate a brand new key, you need to check if one already exis
 			<span class="codeline">$ echo 'This is input text'<span>This tooltip tells you what's going on.</span></span>
 		</pre>
 		
-		<p>A line that begins with the dollar sign ($) indicates a line of Bash script you need to type. To enter it, type the text that follows the $, hitting the return key at the end of each line. You can hover your mouse over each line for an explanation of what the script is doing</p>
+		<p>A line that begins with the dollar sign ($) indicates a line of Bash script you need to type. To enter it, type the text that follows the $, hitting the return key at the end of each line. You can hover your mouse over each line for an explanation of what the script is doing.</p>
 		
 		<h4>Output</h4>
 		<pre class="terminal bootcamp">
@@ -45,10 +45,10 @@ To make sure you generate a brand new key, you need to check if one already exis
 		
 		<h4>User Specific Input</h4>
 		<pre class="terminal bootcamp">
-			<span class="codeline">$ echo '<em>username</em>'<span>Outputs the text in the quote marks.</span></span>
+			<span class="codeline">$ echo '<em>username</em>'<span>Outputs the text in the quotation marks.</span></span>
 		</pre>
 		
-		<p>Areas of yellow text represent your own personal info, repos, etc. If it is part of an input ($) line, you should replace your it with your own info when you type it. If it is part of output text, it is just for your reference. It will automatically show your own info in Terminal</p>
+		<p>Areas of yellow text represent your own personal info, repos, etc. If it is part of an input ($) line, you should replace it with your own info when you type it. If it is part of output text, it is just for your reference. It will automatically show your own info in Terminal.</p>
 		
 		<p><strong>Good to know</strong>: There will be times when you type code, hit return, and all you are given is another prompt. Some actions that you execute in Terminal don&rsquo;t have any output. Don&rsquo;t worry, if there is ever a problem with your code, Terminal will let you know.</p>
 	
@@ -68,12 +68,12 @@ To make sure you generate a brand new key, you need to check if one already exis
 	
 2. <span class="step-title">Backup and remove existing SSH keys.</span>
 	
-	Since there is already an SSH directory you&rsquo;ll want to back it up and remove it:
+	Since there is already an SSH directory you&rsquo;ll want to back the old one up and remove it:
 	
 	<pre class="terminal bootcamp">
 	<span class="codeline">$ ls<span>Lists all the subdirectories in the current directory</span></span>
 	<span class="bash-output">config  id_rsa  id_rsa.pub  known_hosts</span>
-	<span class="codeline">$ mkdir key_backup<span>Makes a directory called "key_backup" in the current directory</span></span>
+	<span class="codeline">$ mkdir key_backup<span>makes a subdirectory called "key_backup" in the current directory</span></span>
 	<span class="codeline">$ cp id_rsa* key_backup<span>Copies the contents of the id_rsa directory into key_backup  </span></span>
 	<span class="codeline">$ rm id_rsa*<span>Deletes the contents of the id_rsa directory</span></span>
 	</pre>
@@ -173,21 +173,38 @@ To make sure you generate a brand new key, you need to check if one already exis
 
 	</pre>
 
-	Don&rsquo;t worry, about the &ldquo;failed&rdquo; part. All you should about is that you see &ldquo;You&rsquo;ve successfully authenticated&rdquo;
+	Don&rsquo;t worry, about the &ldquo;failed&rdquo; part. All you should care about is that you see &ldquo;You&rsquo;ve successfully authenticated&rdquo;
 
 
 ##<span>Then: </span> Set Up Your Info
 
-Now that you have Git set up and your SSH keys entered in GitHub, it&rsquo;s time to configure  your personal info.
+Now that you have Git set up and your SSH keys entered into GitHub, it&rsquo;s time to configure  your personal info.
 
 1. <span class="step-title">Set your username and email.</span>
 
 	Git tracks who makes each commit by checking the user&rsquo;s name and email. In addition, we use this info to associate your commits with your GitHub account. To set these, enter the code below, replacing the name and email with your own. The name should be your _actual name_, not your GitHub username.
 	
 	<pre class="terminal bootcamp">
-	<span class="codeline">$ git config --global user.name "<em>Firstname Lastname</em>"<span>Sets the name of the user for all git instances on the system</span></span>
-	<span class="codeline">$ git config --global user.email "<em>your_email@youremail.com</em>"<span>Sets the email of the user for all git instances on the system</span></span>
+		<span class="codeline">$ git config --global user.name "<em>Firstname Lastname</em>"<span>Sets the name of the user for all git instances on the system</span></span>
+		<span class="codeline">$ git config --global user.email "<em>your_email@youremail.com</em>"<span>Sets the email of the user for all git instances on the system</span></span>
 	</pre>
+
+	<div class="more-info">
+		<h4 class="compressed">More about user info</h4>
+		<div class="more-content">
+			<p>
+				The steps listed above show you how to set your user info globally. This means that no matter which repo you work in on your computer, you&rsquo;ll be making commits as that user. If you find yourself needing to make commits with different user info for a specific repo (perhaps for work vs. personal projects), you will have to change the info in that repo itself.
+			</p>
+			<pre class="terminal bootcamp">
+				<span class="codeline">$ cd <em>my_other_repo</em><span>Changes the working directory to the repo you need to switch info for</span></span>
+				<span class="codeline">$ git config user.name "<em>Different Name</em>"<span>Sets the user's name for this specific repo</span></span>
+				<span class="codeline">$ git config user.email "<em>differentemail@email.com</em>"<span>Sets the user's email for this specific repo</span></span>
+			</pre>
+			<p>
+				Now your commits will be &ldquo;blamed&rdquo; on (associated with) new user name and email whenever working in the specified repo.
+			</p>
+		</div>
+	</div>
 
 2. <span class="step-title">Set your GitHub token.</span>
 
@@ -200,8 +217,8 @@ Now that you have Git set up and your SSH keys entered in GitHub, it&rsquo;s tim
 	In Terminal, run the following code, using your GitHub username and token in place of the ones shown.
 	
 	<pre class="terminal bootcamp">
-	<span class="codeline">$ git config --global github.user <em>username</em><span>Sets the GitHub username for all git instances on the system</span></span>
-	<span class="codeline">$ git config --global github.token <em>0123456789yourf0123456789token</em><span>Sets the GitHub token for all git instances on the system</span></span>
+		<span class="codeline">$ git config --global github.user <em>username</em><span>Sets the GitHub username for all git instances on the system</span></span>
+		<span class="codeline">$ git config --global github.token <em>0123456789yourf0123456789token</em><span>Sets the GitHub token for all git instances on the system</span></span>
 	</pre>
 	
 	__&#42;Note&#42;__ If you ever change your GitHub password, a new token will be created and will need to be updated.

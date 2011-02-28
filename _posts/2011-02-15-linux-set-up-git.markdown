@@ -4,7 +4,7 @@ title: Set Up Git (Linux)
 description: A quick guide to help you get started with Git
 ---
 
-<span class="intro">If you&rsquo;ve found yourself on this page, we&rsquo;re assuming you&rsquo;re brand new to Git and GitHub. This guide will walk you through setting both up, and explain a little about how everything works along the way. If you already have Git experience and just want the short version, read the <a href="http://help.github.com">technical walkthrough instead</a>.</span>
+<span class="intro">If you&rsquo;ve found yourself on this page, we&rsquo;re assuming you&rsquo;re brand new to Git and GitHub. This guide will walk you through the basics and explain a little bit about how everything works along the way.</span>
 
 ##<span>First:</span> Download and Install Git
 
@@ -24,7 +24,7 @@ _&#42;If you don&rsquo;t already know what Git is, <a href="http://progit.org/bo
 	
 	<img src="/images/bootcamp/bootcamp_1_linux_install_4.jpg" width="558" height="173" alt="Click Apply" />
 	
-	If you don&rsquo;t have a package manager like Synaptic, or you&rsquo;d rather install the necessary git components from the command line, run the script below:
+	If you don&rsquo;t have a package manager like Synaptic, or you&rsquo;d rather install the necessary git components from the command line, you can alternatively run the script below:
 	
 	<pre class="terminal bootcamp">
 		<span class="codeline">$ sudo apt-get install git-core git-gui git-doc<span>Installs git-core, git-gui, and git-doc on your system</span></span>
@@ -43,14 +43,14 @@ To make sure you generate a brand new key, you need to check if one already exis
 <div class="more-info">
 	<h4 class="compressed">Need a quick lesson about Terminal?</h4>
 	<div class="more-content">
-		<p>Code blocks like those on this page are part of a scripting language called Bash. To use Bash scripts, we need to use an application that comes with your Mac called Terminal.</p>
+		<p>Code blocks like those on this page are part of a scripting language called Bash. To use Bash scripts, we need to use an application that comes with Linux called Terminal.</p>
 		
 		<h4>Input</h4>
 		<pre class="terminal bootcamp">
 			<span class="codeline">$ echo 'This is input text'<span>This tooltip tells you what's going on.</span></span>
 		</pre>
 		
-		<p>A line that begins with the dollar sign ($) indicates a line of Bash script you need to type. To enter it, type the text that follows the $, hitting the return key at the end of each line. You can hover your mouse over each line for an explanation of what the script is doing</p>
+		<p>A line that begins with the dollar sign ($) indicates a line of Bash script you need to type. To enter it, type the text that follows the $, hitting the return key at the end of each line. You can hover your mouse over each line for an explanation of what the script is doing.</p>
 		
 		<h4>Output</h4>
 		<pre class="terminal bootcamp">
@@ -61,10 +61,10 @@ To make sure you generate a brand new key, you need to check if one already exis
 		
 		<h4>User Specific Input</h4>
 		<pre class="terminal bootcamp">
-			<span class="codeline">$ echo '<em>username</em>'<span>Outputs the text in the quote marks.</span></span>
+			<span class="codeline">$ echo '<em>username</em>'<span>Outputs the text in the quotation marks.</span></span>
 		</pre>
 		
-		<p>Areas of yellow text represent your own personal info, repos, etc. If it is part of an input ($) line, you should replace your it with your own info when you type it. If it is part of output text, it is just for your reference. It will automatically show your own info in Terminal</p>
+		<p>Areas of yellow text represent your own personal info, repos, etc. If it is part of an input ($) line, you should replace your it with your own info when you type it. If it is part of output text, it is just for your reference. It will automatically show your own info in Terminal.</p>
 		
 		<p><strong>Good to know</strong>: There will be times when you type code, hit return, and all you are given is another prompt. Some actions that you execute in Terminal don&rsquo;t have any output. Don&rsquo;t worry, if there is ever a problem with your code, Terminal will let you know.</p>
 	
@@ -84,12 +84,12 @@ To make sure you generate a brand new key, you need to check if one already exis
 
 2. <span class="step-title">Backup and remove existing SSH keys.</span>
 	
-	Since there is already an SSH directory you&rsquo;ll want to back it up and remove it:
+	Since there is already an SSH directory you&rsquo;ll want to back the old one up and remove it:
 	
 	<pre class="terminal bootcamp">
 	<span class="codeline">$ ls<span>Lists all the subdirectories in the current directory</span></span>
 	<span class="bash-output">config  id_rsa  id_rsa.pub  known_hosts</span>
-	<span class="codeline">$ mkdir key_backup<span>Makes a directory called "key_backup" in the current directory</span></span>
+	<span class="codeline">$ mkdir key_backup<span>makes a subdirectory called "key_backup" in the current directory</span></span>
 	<span class="codeline">$ cp id_rsa* key_backup<span>Copies the contents of the id_rsa directory into key_backup directory</span></span>
 	<span class="codeline">$ rm id_rsa*<span>Deletes the contents of the id_rsa directory</span></span>
 	</pre>
@@ -189,11 +189,11 @@ To make sure you generate a brand new key, you need to check if one already exis
 
 	</pre>
 
-	Don&rsquo;t worry, about the &ldquo;failed&rdquo; part. All you should about is that you see &ldquo;You&rsquo;ve successfully authenticated&rdquo;
+	Don&rsquo;t worry, about the &ldquo;failed&rdquo; part. All you should care about is that you see &ldquo;You&rsquo;ve successfully authenticated&rdquo;
 
 ##<span>Then: </span> Set Up Your Info
 
-Now that you have Git set up and your SSH keys entered in GitHub, it&rsquo;s time to configure  your personal info.
+Now that you have Git set up and your SSH keys entered into GitHub, it&rsquo;s time to configure  your personal info.
 
 1. <span class="step-title">Set your username and email.</span>
 

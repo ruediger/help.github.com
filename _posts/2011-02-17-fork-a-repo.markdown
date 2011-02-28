@@ -6,11 +6,11 @@ categories: bootcamp
 main_category: bootcamp
 ---
 
-<span class="intro">If you&rsquo;ve found yourself on this page, we&rsquo;re assuming you&rsquo;re brand new to Git and GitHub. At some point you may want use another user&rsquo;s project as the starting point for your own. This is known as &ldquo;forking.&rdquo;</span>
+<span class="intro">If you&rsquo;ve found yourself on this page, we&rsquo;re assuming you&rsquo;re brand new to Git and GitHub. This guide will walk you through the basics and explain a little bit about how everything works along the way.</span>
 
 ##<span>First:</span> Fork A Repo
 
-For this tutorial, we&rsquo;ll be using the <a href="https://github.com/octocat/Spoon-Knife" target="_blank">Spoon-Knife</a> project.
+At some point you may find yourself wanting to contribute to someone else's project, or would like to use someone's project as the starting point for your own. This is known as &ldquo;forking.&rdquo; For this tutorial, we&rsquo;ll be using the <a href="https://github.com/octocat/Spoon-Knife" target="_blank">Spoon-Knife</a> project.
 
 1. <span class="step-title">Fork the &ldquo;Spoon-Knife &rdquo; repo</span>
 
@@ -32,7 +32,19 @@ You&rsquo;ve successfully forked the Spoon-Knife repo, but so far it only exists
 
 2. <span class="step-title">Configure remotes</span>
 
-	Each repo has a default remote called `origin`. A &ldquo;remote&rdquo; is a repo stored on another computer, in this case on GitHub's server. The `origin` remote in your local repo points to your fork on GitHub, not the original repo it was forked from. To help you keep track of the original repo, you will add another remote named `upstream`:
+	When clone a repo, it has a default remote called `origin` that points to your fork on GitHub, not the original repo it was forked from. To keep track of the original repo, you need to add another remote named `upstream`:
+	
+	<div class="more-info">
+		<h4 class="compressed">More about remotes</h4>
+		<div class="more-content">
+			<p>
+				A <em>remote</em> is a repo stored on another computer, in this case on GitHub&rsquo;s server. It is standard practice (and also the default in some cases) to give the name <code>origin</code> to the remote that points to your main offsite repo (for example, your GitHub repo).
+			</p>
+			<p>
+				Git supports multiple remotes. This is commonly used when forking a repo.
+			</p>
+		</div>
+	</div>
 	
 	<pre class="terminal bootcamp">
 	<span class="codeline">$ cd Spoon-Knife<span>Changes the active directory in the prompt to the newly cloned "Spoon-Knife" directory</span></span>
@@ -47,6 +59,15 @@ You&rsquo;ve successfully forked a repo, but get a load of these other cool thin
 - <span class="step-title">Push commits</span>
 
 	Once you&rsquo;ve made some commits to a forked repo and want to push it to your forked project, you do it the same way you would with a regular repo:
+	
+	<div class="more-info">
+		<h4 class="compressed">More about commits</h4>
+		<div class="more-content">
+			<p>
+				Think of a <em>commit</em> as a snapshot of your project &mdash;code, files, everything &mdash; at a particular point in time. More accurately, after your first commit, each subsequent commit is only a snapshot of your changes. For code files, this means it only takes a snapshot of the lines of code that have changed. For everything else like music or image files, it saves a new copy of the file.
+			</p>
+		</div>
+	</div>
 	
 	<pre class="terminal bootcamp">
 	<span class="codeline">$ git push origin master<span>Pushes commits to your remote repo stored on GitHub</span></span>
