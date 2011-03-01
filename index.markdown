@@ -21,6 +21,8 @@ If you are still new to things, we&rsquo;ve provided a few walkthroughs to get y
 4. [Fork a Repo](fork-a-repo)
 5. [Be Social](be-social)
 
+To learn more about git's commands, we highly recommend you check out [GitRef](http://gitref.org/), the [Pro Git book](http://progit.org/) and the [git man pages](http://www.kernel.org/pub/software/scm/git/docs/).  If you need help or have any questions, feel free to [contact support](http://support.github.com) or [ask the community](http://groups.google.com/group/github/).
+
 Popular guides
 --------------
 
