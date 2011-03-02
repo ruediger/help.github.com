@@ -7,13 +7,13 @@ Welcome to the GitHub Help site. Here we have compiled many guides to help you s
 
 Use the sidebar on the right side of this site to access our guides!
 
-If you would like to submit your own guides, please fork [our repo](http://github.com/github/help.github.com/) and send pull requests to [tekkub](http://github.com/tekkub)
+If you would like to submit your own guides, please fork [our repo](http://github.com/github/help.github.com/) and send a pull request.
 
 
 GitHub Bootcamp
------------------------------------
+---------------
 
-If you are still new to things, we&rsquo;ve provided a few walkthroughs to get you started:
+If you are still new to things, we've provided a few walkthroughs to get you started:
 
 1. Take a quick [crash course](http://gitref.org/) on git
 2. [Set up git](set-up-git-redirect)
