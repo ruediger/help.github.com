@@ -2,6 +2,7 @@
 layout: default
 title: Set Up Git (Linux)
 description: A quick guide to help you get started with Git
+categories: linux
 ---
 
 <span class="intro">If you&rsquo;ve found yourself on this page, we&rsquo;re assuming you&rsquo;re brand new to Git and GitHub. This guide will walk you through the basics and explain a little bit about how everything works along the way.</span>
