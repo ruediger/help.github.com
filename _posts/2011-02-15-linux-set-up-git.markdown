@@ -54,7 +54,7 @@ To make sure you generate a brand new key, you need to check if one already exis
 		
 		<h4>Output</h4>
 		<pre class="terminal bootcamp">
-			<span class="bash-output">$ This is output text.</span>
+			<span class="bash-output">This is output text.</span>
 		</pre>
 		
 		<p>A line that does not begin with a $ is output text that is intended to give you information or tell you what to do next. We&rsquo;ve colored output text green in these bootcamp tutorials.</p>
