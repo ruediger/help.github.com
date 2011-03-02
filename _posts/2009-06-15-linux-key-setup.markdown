@@ -3,7 +3,6 @@ layout: default
 title: Generating SSH keys (Linux)
 description: Setting up SSH keys on Linux
 categories: linux
-main_category: setup
 ---
 
 This guide will step you through the process of generating a keypair on linux and uploading it to GitHub.  We use Ubuntu and bash in this guide, command may vary depending on your linux flavor and shell.

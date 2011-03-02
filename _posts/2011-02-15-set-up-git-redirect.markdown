@@ -3,7 +3,6 @@ layout: default
 title: Set Up Git
 description: A quick guide to help you get started with Git
 categories: bootcamp
-main_category: bootcamp
 ---
 
 Attempting to redirect to the guide for your OS.  If the redirect fails, pick your OS:

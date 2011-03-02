@@ -3,7 +3,6 @@ layout: default
 title: Generating SSH keys (OSX)
 description: Setting up SSH keys on Mac OSX
 categories: mac
-main_category: setup
 ---
 
 This guide will step you through the process of generating a keypair on Mac OSX and uploading it to GitHub

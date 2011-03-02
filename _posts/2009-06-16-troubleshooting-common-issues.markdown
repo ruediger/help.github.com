@@ -3,7 +3,6 @@ layout: default
 title: Common issues and questions
 description: Solutions to the most common issues and answers to common questions
 categories: troubleshooting popular
-main_category: troubleshooting
 ---
 
 I can't push, "Permission denied (publickey)"

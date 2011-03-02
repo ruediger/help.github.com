@@ -3,7 +3,6 @@ layout: default
 title: Sending pull requests
 description: How to notify others of your changes using Pull Requests.
 categories: collaborating
-main_category: collaborating
 ---
 
 <style type="text/css">
