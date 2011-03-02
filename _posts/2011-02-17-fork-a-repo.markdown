@@ -2,7 +2,7 @@
 layout: default
 title: Fork A Repo
 description: Copy a repo to create a new, unique project from its contents.
-categories: bootcamp
+categories: bootcamp collaborating
 main_category: bootcamp
 ---
 
