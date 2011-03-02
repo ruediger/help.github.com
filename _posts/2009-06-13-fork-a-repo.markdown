@@ -15,7 +15,7 @@ At some point you may find yourself wanting to contribute to someone else's proj
 1. <span class="step-title">Fork the &ldquo;Spoon-Knife &rdquo; repo</span>
 
 	To fork this project, click the &ldquo;Fork&rdquo; button.
-	
+
 	<img src="/images/bootcamp/bootcamp_3_fork.jpg" width="558" height="137" alt="Click &ldquo;Fork"  />
 
 ##Next: Set Up Your Local Repo
@@ -25,7 +25,7 @@ You&rsquo;ve successfully forked the Spoon-Knife repo, but so far it only exists
 1. <span class="step-title">Clone the &ldquo;Spoon-Knife&rdquo; project</span>
 
 	Run the following code:
-	
+
 	<pre class="terminal bootcamp">
 	<span class="codeline">$ git clone git@github.com:<em>username</em>/Spoon-Knife.git<span>Clones your copy of the repo into the current directory in terminal</span></span>
 	</pre>
@@ -33,7 +33,7 @@ You&rsquo;ve successfully forked the Spoon-Knife repo, but so far it only exists
 2. <span class="step-title">Configure remotes</span>
 
 	When clone a repo, it has a default remote called `origin` that points to your fork on GitHub, not the original repo it was forked from. To keep track of the original repo, you need to add another remote named `upstream`:
-	
+
 	<div class="more-info">
 		<h4 class="compressed">More about remotes</h4>
 		<div class="more-content">
@@ -45,7 +45,7 @@ You&rsquo;ve successfully forked the Spoon-Knife repo, but so far it only exists
 			</p>
 		</div>
 	</div>
-	
+
 	<pre class="terminal bootcamp">
 	<span class="codeline">$ cd Spoon-Knife<span>Changes the active directory in the prompt to the newly cloned "Spoon-Knife" directory</span></span>
 	<span class="codeline">$ git remote add upstream git://github.com/octocat/Spoon-Knife.git<span>Assigns the original repo to a remote called "upstream"</span></span>
@@ -59,7 +59,7 @@ You&rsquo;ve successfully forked a repo, but get a load of these other cool thin
 - <span class="step-title">Push commits</span>
 
 	Once you&rsquo;ve made some commits to a forked repo and want to push it to your forked project, you do it the same way you would with a regular repo:
-	
+
 	<div class="more-info">
 		<h4 class="compressed">More about commits</h4>
 		<div class="more-content">
@@ -68,7 +68,7 @@ You&rsquo;ve successfully forked a repo, but get a load of these other cool thin
 			</p>
 		</div>
 	</div>
-	
+
 	<pre class="terminal bootcamp">
 	<span class="codeline">$ git push origin master<span>Pushes commits to your remote repo stored on GitHub</span></span>
 	</pre>
@@ -76,12 +76,12 @@ You&rsquo;ve successfully forked a repo, but get a load of these other cool thin
 - <span class="step-title">Pull in upstream changes</span>
 
 	If the original repo you forked your project from gets updated, you can add those updates to your fork by running the following code:
-	
+
 	<pre class="terminal bootcamp">
 	<span class="codeline">$ git fetch upstream<span>Fetches any new changes from the original repo</span></span>
 	<span class="codeline">$ git merge upstream/master<span>Merges any changes fetched into your working files</span></span>
 	</pre>
-	
+
 	<div class="more-info">
 		<h4 class="compressed">What is the difference between fetch and pull?</h4>
 		<div class="more-content">
@@ -93,7 +93,7 @@ You&rsquo;ve successfully forked a repo, but get a load of these other cool thin
 					<span class="codeline">$ git pull upstream<span>Pulls commits from 'upstream' and adds them to the local repo</span></span>
 				</pre>
 			<p>When you use <code>pull</code>, Git tries to automatically do your work for you. It is context sensitive, so Git will merge any pulled commits into the branch you are currently working in. One thing to keep in mind is that <code>pull</code> automatically merges the commits without letting you review them first. If you don&rsquo;t closely manage your branches you may run into frequent conflicts.</p>
-			
+
 			<h4>Fetch/Merge</h4>
 				<pre class="terminal bootcamp">
 					<span class="codeline">$ git fetch upstream<span>Fetches any new commits from the original repo</span></span>
@@ -102,49 +102,49 @@ You&rsquo;ve successfully forked a repo, but get a load of these other cool thin
 			<p>When you <code>fetch</code>, Git gathers any commits from the target branch that do not exist in your current branch and stores them in your local repo. However, it does not merge them with your current branch. This is particularly useful if you need to keep your repo up to date but are working on something that might break if you update your files. To integrate the commits into your master branch, you use <code>merge</code>. This combines the specified branches and prompts you if there are any conflicts.</p>
 		</div>
 	</div>
-	
+
 - <span class="step-title">Work with branches</span>
 
 	Branching allows you to build new features or test out ideas without putting your main project at risk. A Git branch is a small file that references the commit it was spawned from. This makes Git branches very small and easy to work with.
-	
+
 	<div class="more-info">
 		<h4 class="compressed">How do I use branches?</h4>
 		<div class="more-content">
-			
+
 			<p>
 				Branches are pretty easy to work with and will save you a lot of headaches, especially when working with multiple people. To create a branch and begin working in it, use the following script:
 			</p>
-			
+
 			<pre class="terminal bootcamp">
 				<span class="codeline">$ git branch <em>mybranch</em><span>Creates a new branch called "mybranch"</span></span>
 				<span class="codeline">$ git checkout <em>mybranch</em><span>Makes "mybranch" the active branch</span></span>
 			</pre>
-			
+
 			<p>Alternatively, you can use the shortcut:</p>
-			
+
 			<pre class="terminal bootcamp">
 				<span class="codeline">$ git checkout -b <em>mybranch</em><span>Creates a new branch called "mybranch" and makes it the active branch</span></span>
 			</pre>
-			
+
 			<p>To switch between branches, use <code>checkout</code>.</p>
-			
+
 			<pre class="terminal bootcamp">
 				<span class="codeline">$ git checkout master<span>Makes "master" the active branch</span></span>
 				<span class="codeline">$ git checkout <em>mybranch</em><span>Makes "mybranch" the active branch</span></span>
 			</pre>
-			
+
 			<p>Once you&rsquo;re finished working on your branch and are ready to combine it back into the <code>master</code> branch, use <code>merge</code>.</p>
-			
+
 			<pre class="terminal bootcamp">
 				<span class="codeline">$ git checkout master<span>Makes "master" the active branch</span></span>
 				<span class="codeline">$ git merge <em>mybranch</em><span>Merges the commits from "mybranch" into "master"</span></span>
 				<span class="codeline">$ git branch -d <em>mybranch</em><span>Deletes the "mybranch" branch</span></span>
 			</pre>
-			
+
 		</div>
 	</div>
 
-	
+
 - <span class="step-title">Pull requests</span>
 
 	If you are hoping to contribute back to the original fork, you can send the original author a [pull request](/pull-requests/).
@@ -158,4 +158,4 @@ You have now created forked a repo. What do you want to do next?
 <li><a href="/create-a-repo/">Create A Repository</a></li>
 <li>Fork A Repository</li>
 <li><a href="/be-social/">Be Social</a></li>
-</ol> 
+</ol>
