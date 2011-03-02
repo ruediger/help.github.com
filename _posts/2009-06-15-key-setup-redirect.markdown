@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Installing git
-description: How to install git
+title: Generating SSH keys
+description: How to generate SSH keys and add them to GitHub
 ---
 
 Attempting to redirect to the guide for your OS.  If the redirect fails, pick your OS:
@@ -15,3 +15,4 @@ Attempting to redirect to the guide for your OS.  If the redirect fails, pick yo
   else if (navigator.appVersion.indexOf("Mac") != -1) {window.location = '/mac-set-up-git'}
   else if (navigator.appVersion.indexOf("X11") != -1 || navigator.appVersion.indexOf("Linux") != -1) {window.location = '/linux-set-up-git'}
 </script>
+>

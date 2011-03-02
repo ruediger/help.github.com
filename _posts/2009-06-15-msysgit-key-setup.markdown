@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Installing git (Win/msysgit)
-description: How to install git on Windows
+title: Generating SSH keys (Win/msysgit)
+description: Setting up SSH keys with msysgit on Windows
 ---
 
 This page has moved.  If the redirect fails, [click me](win-set-up-git)
