@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Importing from Subversion
-categories: setup
+categories: other
 ---
 
 GitHub can directly import SVN projects.  All you need is the repository URL.  After creating a repo you can pick "Import a Subversion Repository" option:

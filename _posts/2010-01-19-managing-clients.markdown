@@ -2,8 +2,7 @@
 layout: default
 title: Managing multiple clients
 description: How to manage multiple clients and their repositories
-categories: collaborating setup
-main_category: setup
+categories: collaborating
 ---
 
 Are you a freelance developer working on multiple projects for multiple clients, and want to manage them here on GitHub?  Never fear, this guide will detail the most common solutions to this problem

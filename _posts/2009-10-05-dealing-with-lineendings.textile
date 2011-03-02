@@ -2,7 +2,7 @@
 layout: default
 title: Dealing with line endings
 description: How to ensure that line endings are consistent in your repo
-categories: setup windows mac linux
+categories: troubleshooting windows mac linux
 main_category: windows
 ---
 

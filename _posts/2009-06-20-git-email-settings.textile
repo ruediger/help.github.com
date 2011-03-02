@@ -2,8 +2,7 @@
 layout: default
 title: Setting user name, email and GitHub token
 description: Configure your local git installation so that commits are linked to your GitHub account
-categories: setup popular
-main_category: setup
+categories: troubleshooting popular
 ---
 
 This guide covers basic git settings you should set before making any commits.
