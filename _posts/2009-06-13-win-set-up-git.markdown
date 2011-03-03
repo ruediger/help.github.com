@@ -208,6 +208,3 @@ Congratulations, you now have Git and GitHub all set up! What do you want to do 
 <li><a href="/fork-a-repo/">Fork A Repository</a></li>
 <li><a href="/be-social/">Be Social</a></li>
 </ol>
-<script>
-  $('#os').html("<b>" + $.client.os + "</b>");
-</script>
