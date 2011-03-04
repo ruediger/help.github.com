@@ -126,7 +126,7 @@ pre .codeline span {
   -moz-user-select: none;
   -khtml-user-select: none;
   user-select: none;
-
+  cursor: default;
 }
 
 pre .codeline span:hover {
