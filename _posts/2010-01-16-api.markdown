@@ -33,5 +33,4 @@ Projects using the API
 
 * [github user page bookmarklet](http://tagaholic.me/2009/04/06/github-bookmarklet-for-user-pages.html) - adds additional repo stats to github user pages and provides repository sorting.
 
-* [RefactorMe](http://www.refactorme.com) - Site posts daily code snippets from open source projects. All code is powered by Github Gists' and the site will also create the gist for users if they do not want to create it themselves.
 * [GithubNotifier](http://github.com/ctshryock/GithubNotifier) - Little OS X menu-bar app that posts Growl notifications from your Github network activity.
