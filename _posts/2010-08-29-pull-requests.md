@@ -60,7 +60,7 @@ In the following example, **kneath** has completed some work on an error page
 for the GitHub Jobs web application, pushed three commits to a topic branch in
 his fork, and would like someone to review and merge.
 
-Navigate to your repository with the changes you want someone else to pull and
+Navigate to **your repository** with the changes you want someone else to pull and
 press the *Pull Request* button.
 
 ![](http://img.skitch.com/20100831-qfk1c9wyt89pfgfxg61bh1r8rn.png)
