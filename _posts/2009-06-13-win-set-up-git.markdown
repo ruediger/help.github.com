@@ -14,9 +14,9 @@ At the heart of GitHub is an open source version control system (VCS) called Git
 _&#42;If you don&rsquo;t already know what Git is, <a href="http://progit.org/book/ch1-3.html" target="_blank">take a crash course.</a>_
 
 1. <span class="step-title">Download and install the latest version of <a href="http://code.google.com/p/msysgit/downloads/list" target="_blank">msysgit</a>.</span>
-	
+
 	Use the default options for each step.
-	
+
 	<img src="/images/bootcamp/bootcamp_1_win_install_1.jpg" width="558" height="442" alt="Welcome page" />
 	<img src="/images/bootcamp/bootcamp_1_win_install_2.jpg" width="558" height="442" alt="Information" />
 	<img src="/images/bootcamp/bootcamp_1_win_install_3.jpg" width="558" height="442" alt="Select destination location" />
@@ -27,7 +27,7 @@ _&#42;If you don&rsquo;t already know what Git is, <a href="http://progit.org/bo
 	<img src="/images/bootcamp/bootcamp_1_win_install_8.jpg" width="558" height="442" alt="Installing" />
 	<img src="/images/bootcamp/bootcamp_1_win_install_9.jpg" width="558" height="442" alt="Installation complete" />
 
-	
+
 	__Do not use PuTTY if you are given the option. GitHub only provides support for openssh.__
 
 ##<span>Next:</span> Set Up SSH Keys
@@ -42,30 +42,30 @@ To make sure you generate a brand new key, you need to check if one already exis
 	<h4 class="compressed">Need a quick lesson about Git Bash?</h4>
 	<div class="more-content">
 		<p>Code blocks like those on this page are part of a scripting language called Bash. To use Bash scripts, we need to use an application that was installed with Git called Git Bash.</p>
-		
+
 		<h4>Input</h4>
 		<pre class="terminal bootcamp">
 			<span class="codeline">$ echo 'This is input text'<span>This tooltip tells you what's going on.</span></span>
 		</pre>
-		
+
 		<p>A line that begins with the dollar sign ($) indicates a line of Bash script you need to type. To enter it, type the text that follows the $, hitting the return key at the end of each line. You can hover your mouse over each line for an explanation of what the script is doing.</p>
-		
+
 		<h4>Output</h4>
 		<pre class="terminal bootcamp">
 			<span class="bash-output">This is output text.</span>
 		</pre>
-		
+
 		<p>A line that does not begin with a $ is output text that is intended to give you information or tell you what to do next. We&rsquo;ve colored output text green in these bootcamp tutorials.</p>
-		
+
 		<h4>User Specific Input</h4>
 		<pre class="terminal bootcamp">
 			<span class="codeline">$ echo '<em>username</em>'<span>Outputs the text in the quotation marks.</span></span>
 		</pre>
-		
+
 		<p>Areas of yellow text represent your own personal info, repos, etc. If it is part of an input ($) line, you should replace it with your own info when you type it. If it is part of output text, it is just for your reference. It will automatically show your own info in Git Bash.</p>
-		
+
 		<p><strong>Good to know</strong>: There will be times when you type code, hit return, and all you are given is another prompt. Some actions that you execute in Git Bash don&rsquo;t have any output. Don&rsquo;t worry, if there is ever a problem with your code, Git Bash will let you know.</p>
-	
+
 		<p><strong>Good to know</strong>: For security reasons, Git Bash will not display what you type when entering passwords. Just type your password and hit the return key.</p>
 	</div>
 </div>
@@ -73,17 +73,17 @@ To make sure you generate a brand new key, you need to check if one already exis
 1. <span class="step-title">Check for SSH keys. <span>Have an existing kepair? You can skip to Step 4.</span></span>
 
 	First, we need to check for existing ssh keys on your computer:
-	
+
 	<pre class="terminal bootcamp">
 	<span class="codeline">$ cd ~/.ssh<span>Checks to see if there is a directory named ".ssh" in your user directory</span></span>
 	</pre>
-	
+
 	If it says &ldquo;No such file or directory&ldquo; skip to __step 3__. Otherwise continue to __step 2__.
 
 2. <span class="step-title">Backup and remove existing SSH keys.</span>
 
 	Since there is already an SSH directory you&rsquo;ll want to back the old one up and remove it:
-	
+
 	<pre class="terminal bootcamp">
 	<span class="codeline">$ ls<span>Lists all the subdirectories in the current directory</span></span>
 	<span class="bash-output">config  id_rsa  id_rsa.pub  known_hosts</span>
@@ -95,35 +95,35 @@ To make sure you generate a brand new key, you need to check if one already exis
 3. <span class="step-title">Generate a new SSH key.</span>
 
 	To generate a new SSH key, enter the code below. We want the default settings so when asked to enter a file in which to save the key, just press enter.
-	
+
 	<pre class="terminal bootcamp">
 	<span class="codeline">$ ssh-keygen -t rsa -C "<em>user_name@username.com</em>"<span>Creates a new ssh key using the provided email</span></span>
 	<span class="bash-output">Generating public/private rsa key pair.</span>
 	<span class="bash-output">Enter file in which to save the key (/c/Users/<em>your_user_directory</em>/.ssh/id_rsa):</span>
 	</pre>
-	
+
 	Now you need to enter a passphrase.
-	
+
 	<div class="more-info">
 		<h4 class="compressed">Why do passphrases matter?</h4>
 		<div class="more-content">
 			<p>Passwords aren&rsquo;t very secure, you already know this. If you use one that&rsquo;s easy to remember, it&rsquo;s easier to guess or brute-force (try many options until one works). If you use one that&rsquo;s random it&rsquo;s hard to remember, and thus you&rsquo;re more inclined to write the password down. Both of these are Very Bad Things&trade;. This is why you&rsquo;re using ssh keys.</p>
-			
+
 			<p>But using a key without a passphrase is basically the same as writing down that random password in a file on your computer. Anyone who gains access to your drive has gained access to every system you use that key with. This is also a Very Bad Thing&trade;. The solution is obvious: add a passphrase.</p>
-			
+
 			<p><em>But I don&rsquo;t want to enter a long passphrase every time I use the key!</em></p>
-			
+
 			<p>Neither do we! Thankfully, there&rsquo;s a nifty little tool called <code>ssh-agent</code> that can save your passphrase securely so you don&rsquo;t have to re-enter it. Unfortunately, it takes a little work to get it up and running on Windows. For more information check out our <a href="/working-with-key-passphrases">help guide</a>.</p>
 		</div>
 	</div>
-	
+
 	<pre class="terminal bootcamp">
 	<span class="bash-output">Enter passphrase (empty for no passphrase):</span>
 	<span class="bash-output">Enter same passphrase again:</span>
 	</pre>
-	
+
 	Which should give you something like this:
-	
+
 	<pre class="terminal bootcamp">
 	<span class="bash-output">Your identification has been saved in /c/Users/<em>your_user_directory</em>/.ssh/id_rsa.</span>
 	<span class="bash-output">Your public key has been saved in /c/Users/<em>your_user_directory</em>/.ssh/id_rsa.pub.</span>
@@ -134,31 +134,31 @@ To make sure you generate a brand new key, you need to check if one already exis
 4. <span class="step-title">Add your SSH key to GitHub.</span>
 
 	On the GitHub site _Click &ldquo;Account Settings&rdquo;_ &gt; _Click &ldquo;SSH Public Keys&rdquo;_ &gt; _Click &ldquo;Add another public key&rdquo;_
-	
+
 	Open the id_rsa.pub file with a text editor (Notepad will do just fine). This is your SSH key. __It&rsquo;s important you copy your SSH key exactly as it is written without adding any newlines or whitespace.__ Now paste it into the &ldquo;Key&rdquo; field.
-	
+
 	<img src="/images/bootcamp/bootcamp_1_ssh.jpg" width="558" height="402" alt="Paste your SSH Key" />
-	
+
 	Hit &ldquo;Add Key.&rdquo;
 
 5. <span class="step-title">Test everything out.</span>
 
 	To make sure everything is working you&rsquo;ll now SSH to GitHub. Don&rsquo;t change the &ldquo;git@github.com&rdquo; part. That&rsquo;s supposed to be there.
-	
+
 	<pre class="terminal bootcamp">
 	<span class="codeline">$ ssh git@github.com<span>Attempts to ssh to github</span></span>
 	</pre>
-	
+
 	Which should give you this:
-	
+
 	<pre class="terminal bootcamp">
 	<span class="bash-output">The authenticity of host 'github.com (207.97.227.239)' can't be established.</span>
 	<span class="bash-output">RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.</span>
 	<span class="bash-output">Are you sure you want to continue connecting (yes/no)?</span>
 	</pre>
-	
+
 	Don&rsquo;t worry, this is supposed to happen. Type &ldquo;yes&rdquo;.
-	
+
 	<pre class="terminal bootcamp">
 	<span class="bash-output">PTY allocation request failed on channel 0</span>
 	<span class="bash-output">Hi <em>username</em>! You've successfully authenticated, but GitHub does not provide shell access.</span>
