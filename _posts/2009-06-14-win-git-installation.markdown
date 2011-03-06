@@ -1,11 +1,6 @@
 ---
-layout: default
+layout: redirect
 title: Installing git (Win/msysgit)
 description: How to install git on Windows
+redirect_to: /win-set-up-git
 ---
-
-This page has moved.  If the redirect fails, [click me](win-set-up-git)
-
-<script type="text/javascript">
-  window.location = '/win-set-up-git'
-</script>

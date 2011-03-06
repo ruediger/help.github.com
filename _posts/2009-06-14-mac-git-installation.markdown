@@ -1,11 +1,6 @@
 ---
-layout: default
+layout: redirect
 title: Installing git (OSX)
 description: How to install git on OSX
+redirect_to: /mac-set-up-git
 ---
-
-This page has moved.  If the redirect fails, [click me](mac-set-up-git)
-
-<script type="text/javascript">
-  window.location = '/mac-set-up-git'
-</script>
