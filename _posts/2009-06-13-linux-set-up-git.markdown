@@ -77,7 +77,7 @@ To make sure you generate a brand new key, you need to check if one already exis
 
 ##<span>Then: </span> Set Up Your Info
 
-Now that you have Git set up and your SSH keys entered into GitHub, it&rsquo;s time to configure	your personal info.
+Now that you have Git set up and your SSH keys entered into GitHub, it&rsquo;s time to configure your personal info.
 
 {% include email_setup.markdown %}
 
