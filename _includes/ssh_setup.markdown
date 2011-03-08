@@ -138,13 +138,13 @@
 			<h4>Agent admitted failure to sign using the key</h4>
 			<p>This one only seems to happen to Linux users. To solve it, try this:</p>
 			<pre class="terminal bootcamp">
-			<span class="codeline">ssh-add ~/.ssh/id_rsa<span>Associates your ssh key with ssh-agent</span></span>
+			<span class="codeline">$ ssh-add ~/.ssh/id_rsa<span>Associates your ssh key with ssh-agent</span></span>
 			</pre>
 			<p>If that doesn&rsquo;t solve it, check out <a href="https://bugs.launchpad.net/ubuntu/+source/gnome-keyring/+bug/201786">this thread</a>.</p>
 			<h4>My connection was refused</h4>
 			<p>You may be blocked by a firewall. First, you should check your ssh debug info:</p>
 			<pre class="terminal bootcamp">
-			<span class="codeline">ssh -v git@github.com<span>Prints debug info for the git@github.com SSH connection</span></span>
+			<span class="codeline">$ ssh -v git@github.com<span>Prints debug info for the git@github.com SSH connection</span></span>
 			</pre>
 			<p>Make sure it is connecting to GitHub on port 22. If it is, check to make sure your firewall is not blocking port 22.</p>
 			<h4>When all else fails</h4>
