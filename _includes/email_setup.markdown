@@ -31,7 +31,7 @@
 
 	On the GitHub site _Click &ldquo;Account Settings&rdquo;_ &gt; _Click &ldquo;Account Admin.&rdquo;_
 
-	<img src="/images/bootcamp/bootcamp_1_token.jpg" width="558" height="245" alt="Copy your API token"  />
+	<img src="/images/bootcamp/bootcamp_1_token.jpg" width="558" height="245" alt="Copy your API token"	 />
 
 	At the command line run the following code, using your GitHub username and token in place of the ones shown.
 
