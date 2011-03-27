@@ -12,6 +12,7 @@ h3. Cheat sheets
 * "http://cheat.errtheblog.com/s/git/":http://cheat.errtheblog.com/s/git/
 * Nate Murray's "Git Cheat Sheet":http://www.xcombinator.com/2010/09/01/git-cheat-sheet-and-class-notes/
 * "Git - Der Spickzettel":https://github.com/esc/git-cheatsheet-de/ (in German)
+* "DZone Git RefCard Cheat Sheet":http://refcardz.dzone.com/refcardz/getting-started-git
 
 h3. A practical git guide
 
