@@ -14,3 +14,5 @@ Go to the repository homepage &rarr; Admin:
 At the bottom of the page there is a button to delete the repo:
 
 ![](http://img.skitch.com/20100527-fgtcuthgr5xrbcyqmxgiue5jwb.png)
+
+Collaborators can not delete repos, but they can [leave them](/leave-a-repo).
