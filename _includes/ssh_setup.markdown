@@ -28,7 +28,7 @@
 	<pre class="terminal bootcamp">
 	<span class="codeline">$ ssh-keygen -t rsa -C "<em>your_email@youremail.com</em>"<span>Creates a new ssh key using the provided email</span></span>
 	<span class="bash-output">Generating public/private rsa key pair.</span>
-	<span class="bash-output">Enter file in which to save the key (/Users/<em>your_user_directory</em>/.ssh/id_rsa):</span>
+	<span class="bash-output">Enter file in which to save the key (/Users/<em>your_user_directory</em>/.ssh/id_rsa):<em>&lt;press enter&gt;</em></span>
 	</pre>
 
 	Now you need to enter a passphrase.
@@ -49,8 +49,8 @@
 	</div>
 
 	<pre class="terminal bootcamp">
-	<span class="bash-output">Enter passphrase (empty for no passphrase):</span>
-	<span class="bash-output">Enter same passphrase again:</span>
+	<span class="bash-output">Enter passphrase (empty for no passphrase):<em>&lt;enter a passphrase&gt;</em></span>
+	<span class="bash-output">Enter same passphrase again:<em>&lt;enter passphrase again&gt;</em></span>
 	</pre>
 
 	Which should give you something like this:
