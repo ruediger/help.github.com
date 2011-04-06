@@ -31,7 +31,7 @@ You&rsquo;ve successfully forked the Spoon-Knife repo, but so far it only exists
 
 2. <span class="step-title">Configure remotes</span>
 
-	When clone a repo, it has a default remote called `origin` that points to your fork on GitHub, not the original repo it was forked from. To keep track of the original repo, you need to add another remote named `upstream`:
+	When a repo is cloned, it has a default remote called `origin` that points to your fork on GitHub, not the original repo it was forked from. To keep track of the original repo, you need to add another remote named `upstream`:
 
 	<div class="more-info">
 		<h4 class="compressed">More about remotes</h4>
