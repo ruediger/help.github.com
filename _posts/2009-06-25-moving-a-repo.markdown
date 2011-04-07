@@ -31,5 +31,5 @@ git clone --bare url/for/my-old-repo.git
 cd my-old-repo.git
 git push --mirror git@github.com:mycompany/my-new-repo.git
 cd ..
-rm -rf my-old-repo
+rm -rf my-old-repo.git
 </pre>
