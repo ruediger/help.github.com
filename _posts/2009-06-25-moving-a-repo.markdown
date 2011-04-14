@@ -32,13 +32,13 @@ If you wish to move a repo between users or organizations, please [contact suppo
 
 *Repositories*
 
-myaccount/repoA
-myaccount/repoB
-myaccount/repoC
+    myaccount/repoA
+    myaccount/repoB
+    myaccount/repoC
 
 *Destination*
 
-destinationaccount
+    destinationaccount
 
 Existing forks
 --------------
