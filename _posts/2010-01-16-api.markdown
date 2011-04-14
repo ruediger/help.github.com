@@ -34,3 +34,4 @@ Projects using the API
 * [github user page bookmarklet](http://tagaholic.me/2009/04/06/github-bookmarklet-for-user-pages.html) - adds additional repo stats to github user pages and provides repository sorting.
 
 * [GithubNotifier](http://github.com/ctshryock/GithubNotifier) - Little OS X menu-bar app that posts Growl notifications from your Github network activity.
+* [ForkFeed](http://github.com/svetlyak40wt/forkfeed) -- Utility to track changes in all forks of your projects on GitHub.
