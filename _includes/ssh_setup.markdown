@@ -78,7 +78,7 @@
 
 	On the GitHub site _Click &ldquo;Account Settings&rdquo;_ &gt; _Click &ldquo;SSH Public Keys&rdquo;_ &gt; _Click &ldquo;Add another public key&rdquo;_
 
-	Open the id_rsa.pub file with a text editor (Notepad or TextEdit will do just fine). This is your public SSH key. You may need turn on &ldquo;view hidden files&rdquo; to find it because the <em>.ssh</em> directory is hidden. __It&rsquo;s important you copy your SSH key exactly as it is written without adding any newlines or whitespace.__ Now paste it into the &ldquo;Key&rdquo; field.
+	Open the id_rsa.pub file with a text editor (Notepad, TextEdit, or gedit will do just fine). This is your public SSH key. You may need turn on &ldquo;view hidden files&rdquo; to find it because the <em>.ssh</em> directory is hidden. __It&rsquo;s important you copy your SSH key exactly as it is written without adding any newlines or whitespace.__ Now paste it into the &ldquo;Key&rdquo; field.
 
 	<div class="more-info">
 		<h4 class="compressed">Can&rsquo;t view hidden files? Other ways to copy:</h4>
