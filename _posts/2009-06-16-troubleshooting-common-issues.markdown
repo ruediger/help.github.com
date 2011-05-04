@@ -10,17 +10,17 @@ I can't push, "Permission denied (publickey)"
 
 Make sure you've [set up an SSH key](/key-setup-redirect) and are using the correct URL (they are case-sensitive).  Check [this guide](/troubleshooting-ssh) for more information.
 
-My commits aren't linked to my user, to the wrong user, or don't have a gravatar
+My commits aren't linked to my user, to the wrong user, or don't have a Gravatar
 -----------------------------------------------------------------------------------
 
 Make sure your [git](/git-email-settings) and [GitHub](https://github.com/account#email_bucket) email settings match.
 
 You may also need to check your Gravatar account to make sure your Gravatar has a "G" rating.
 
-I changed my gravatar but it's not updating
+I changed my Gravatar but it's not updating
 -------------------------------------------
 
-Browsers cache gravatar images for a very long time, clear your cache.
+Gravatar images are cached for a very long time. Clear your browser's cache.
 
 Syntax highlighting isn't working for my language
 -------------------------------------------------
