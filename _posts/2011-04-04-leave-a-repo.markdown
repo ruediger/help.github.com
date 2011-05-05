@@ -5,7 +5,7 @@ description: Leave a repo you are collaborating on
 categories: collaborating
 ---
 
-To leave a repository you are collaborating on:
+To leave a repository on which you are collaborating:
 
 _Click "Account Settings"_ > _Click "Repositories"_
 
