@@ -42,7 +42,7 @@ tekkub@iSenberg ~/tmp/fixing_bad_tree master+
  delete mode 100644 badtree/temp
 </pre>
 
-we can then confirm the tree is removed by making sure it is not listed by `git ls-tree`:
+We can then confirm the tree is removed by making sure it is not listed by `git ls-tree`:
 
 <pre class="terminal">tekkub@iSenberg ~/tmp/fixing_bad_tree master
 > git ls-tree -r HEAD | grep badtree
