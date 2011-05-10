@@ -5,7 +5,7 @@ description: How to fix corruption in a remote repo caused by egit
 categories: troubleshooting
 ---
 
-Due to a bug in the (EGit)[http://eclipse.org/egit/]/(JGit)[http://eclipse.org/jgit/] implementation of the `git push` command, remote repos can become corrupted due to missing objects:
+Due to a bug in the [EGit](http://eclipse.org/egit/)/[JGit](http://eclipse.org/jgit/) implementation of the `git push` command, remote repos can become corrupted due to missing objects:
 
 <pre class="terminal">$ git fsck
 broken link from  commit 5b90a930763c442f0fc3d819685083b4eda69f8e
