@@ -5,7 +5,7 @@ description: How to fix corruption in a remote repo caused by egit
 categories: troubleshooting
 ---
 
-Due to a bug in EGit implementation of the `git push` command, remote repos can become corrupted due to missing objects:
+Due to a bug in the (EGit)[http://eclipse.org/egit/]/(JGit)[http://eclipse.org/jgit/] implementation of the `git push` command, remote repos can become corrupted due to missing objects:
 
 <pre class="terminal">$ git fsck
 broken link from  commit 5b90a930763c442f0fc3d819685083b4eda69f8e
@@ -14,7 +14,7 @@ missing commit e1ea55d308b7808cb982f509c8dfa199ada4677e</pre>
 
 This can prevent cloning and fetching from the repo.  The objects were never pushed to the remote repo, therefore support cannot recover the repo directly for the user.  The only solution is for the user that pushed the commits to push them again from the command line.
 
-_This issue was fixed in EGit 0.8.4.  We recommend updating and trying the following commands from EGit before resorting to the commandline._
+_This issue was fixed in EGit/JGit 0.8.4.  We recommend updating and trying the following commands from EGit/JGit before resorting to the commandline._
 
 Correcting the remote repo
 --------------------------
@@ -54,4 +54,4 @@ If you have re-pushed all branches in your repo and cloning still fails, please 
 Avoiding future corruption
 --------------------------
 
-We recommend users avoid using EGit to push their repos if they are using a version prior to 0.8.4.
+We recommend users avoid using EGit/JGit to push their repos if they are using a version prior to 0.8.4.
