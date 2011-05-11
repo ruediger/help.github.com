@@ -1,5 +1,5 @@
 
-1. <span class="step-title">Check for SSH keys. <span>Have an existing kepair? You can skip to Step 4.</span></span>
+1. <span class="step-title">Check for SSH keys. <span>Have an existing key pair? You can skip to Step 4.</span></span>
 
 	First, we need to check for existing ssh keys on your computer:
 
