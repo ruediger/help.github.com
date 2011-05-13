@@ -130,6 +130,13 @@ p.next-step strong, .next-steps {
   padding-right: 20px;
   text-decoration:  none;
 }
+.intro {
+  color: #868686;
+}
+
+h2 span {
+  color: #666666;
+}
 
 .founders {
   overflow: hidden;
