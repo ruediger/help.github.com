@@ -3,35 +3,62 @@ layout: default
 title: Welcome
 ---
 
-Welcome to the GitHub Help site. Here we have compiled many guides to help you set up and use git and GitHub.
+<div class="bootcamp-help">
+  <h1>GitHub Bootcamp <span>New to Git and GitHub? This will get you started.</span>
+  </h1>
+  <div class="bootcamp-body">
+  <ul>
+    <li class="setup">
+      <a href="http://help.github.com/set-up-git-redirect" target="_blank">
+        <div class="image">&nbsp;</div>
+        <div class="desc">
+          <h2>Set Up Git</h2>
+        </div>
+      </a>
+    </li>
+    <li class="create-a-repo">
+      <a href="http://help.github.com/create-a-repo" target="_blank">
+        <div class="image">&nbsp;</div>
+        <div class="desc">
+          <h2>Create A Repo</h2>
+        </div>
+      </a>
+    </li>
+    <li class="fork-a-repo">
+      <a href="http://help.github.com/fork-a-repo" target="_blank">
+        <div class="image">&nbsp;</div>
+        <div class="desc">
+          <h2>Fork a Repo</h2>
+        </div>
+      </a>
+    </li>
+    <li class="be-social">
+      <a href="http://help.github.com/be-social" target="_blank">
+        <div class="image">&nbsp;</div>
+        <div class="desc">
+          <h2>Be social</h2>
+        </div>
+      </a>
+    </li>
+  </ul>
+  </div> <!-- /bootcamp-body -->
+</div>
 
-Use the sidebar on the right side of this site to access our guides!
-
-If you would like to submit your own guides, please fork [our repo](http://github.com/github/help.github.com/) and send a pull request.
-
-
-GitHub Bootcamp
----------------
-
-If you are still new to things, we've provided a few walkthroughs to get you started:
-
-1. Take a quick [crash course](http://gitref.org/) on git
-2. [Set up git](set-up-git-redirect)
-3. [Create a Repo](create-a-repo)
-4. [Fork a Repo](fork-a-repo)
-5. [Be Social](be-social)
-
-To learn more about git's commands, we highly recommend you check out [GitRef](http://gitref.org/), the [Pro Git book](http://progit.org/) and the [git man pages](http://www.kernel.org/pub/software/scm/git/docs/).  If you need help or have any questions, feel free to [contact support](http://support.github.com) or [ask the community](http://groups.google.com/group/github/).
-
-Popular guides
---------------
-
-<dl>
-  {% for post in site.categories.popular reversed %}
-    <dt><a href="{{ post.url }}" id="{{ cat }}">{{ post.title }}</a></dt>
-    <dd>{{ post.description }}</dd>
-  {% endfor %}
-</dl>
+<div class="popular-guides">
+  <h2>Popular Guides</h2>
+  <div class="popular-body">
+    <ul>
+      {% for post in site.categories.popular reversed %}
+        <li>
+          <a href="{{ post.url }}" id="{{ cat }}">
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.description }}</p>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
 
 Getting help
 ------------
