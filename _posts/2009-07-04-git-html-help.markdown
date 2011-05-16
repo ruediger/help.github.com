@@ -5,9 +5,9 @@ description: How to install the local git HTML help files
 categories: other
 ---
 
-This guide will help you install the local git HTML help files and set git to use them by default instead of the man pages.
+<p class="intro">This guide will help you install the local git HTML help files and set git to use them by default instead of the man pages.</p>
 
-Most git installations will install man files for help, but not the HTML help files (the same files seen on git's [online documentation](http://www.kernel.org/pub/software/scm/git-core/docs/)).  Installing these help files is a fairly simple process.
+<p class="intro">Most git installations will install man files for help, but not the HTML help files (the same files seen on git's <a href="http://www.kernel.org/pub/software/scm/git-core/docs/">online documentation</a>).  Installing these help files is a fairly simple process.</p>
 
 Windows
 -------

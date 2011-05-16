@@ -5,7 +5,7 @@ description: How to push using different SSH keys on the same computer
 categories: other
 ---
 
-This guide assumes you have already created two keypairs and attached them to different GitHub user accounts.  For this example we will be using `~/.ssh/id_rsa` attached to the user `joe` and `~/.ssh/id_rsa_client` attached to the user `client`.
+<p class="intro">This guide assumes you have already created two keypairs and attached them to different GitHub user accounts.  For this example we will be using <code>~/.ssh/id_rsa</code> attached to the user <code>joe</code> and <code>~/.ssh/id_rsa_client</code> attached to the user <code>client</code>.</p>
 
 Adding your keys to SSH
 =======================

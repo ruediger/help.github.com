@@ -5,7 +5,7 @@ description: Do you need a deploy key?
 categories: deploying
 ---
 
-Deploy keys are a handy yet misunderstood feature here on github.  This guide will explain when and how to use them instead of normal user keys.
+<p class="intro">Deploy keys are a handy yet misunderstood feature here on github.  This guide will explain when and how to use them instead of normal user keys.</p>
 
 ##Do you even need a deploy key?
 

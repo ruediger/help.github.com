@@ -4,7 +4,7 @@ title: GitHub Security
 categories: site_policy
 ---
 
-We know your code is extremely important to you and your business and we're very protective of it. After all, GitHub's code is hosted on GitHub, too!
+<p class="intro">We know your code is extremely important to you and your business and we're very protective of it. After all, GitHub's code is hosted on GitHub, too!</p>
 
 Physical Security
 -----------------

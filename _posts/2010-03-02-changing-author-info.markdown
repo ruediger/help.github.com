@@ -5,9 +5,9 @@ description: How to modify author info in your repo's history
 categories: git_ninjutsu
 ---
 
-If you need to modify the author info in your repo's history, you can do so with this script.
+<p class="intro">If you need to modify the author info in your repo's history, you can do so with this script.</p>
 
-__Big bold warning__ This action is destructive to your repo's history.  It's best to do this on a clone, just in case.  Also beware that this should not be performed on a repo that has been shared with others.  Use at your own risk.
+<p class="attention"><strong>Big bold warning</strong> This action is destructive to your repo's history.  It's best to do this on a clone, just in case.  Also beware that this should not be performed on a repo that has been shared with others.  Use at your own risk.</p>
 
 {% highlight bash %}
 #!/bin/sh

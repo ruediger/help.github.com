@@ -6,7 +6,7 @@ categories: popular git_ninjutsu
 terminal_pres: true
 ---
 
-From time to time users accidentally commit data like passwords or keys into a git repo.  While you can use `git rm` to remove the file, it will still be in the repo's history.  Fortunately, git makes it fairly simple to remove the file from the entire repo history.
+<p span="intor">From time to time users accidentally commit data like passwords or keys into a git repo.  While you can use <code>git rm</code> to remove the file, it will still be in the repo's history.  Fortunately, git makes it fairly simple to remove the file from the entire repo history.</p>
 
 Change your password
 --------------------

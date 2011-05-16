@@ -4,15 +4,15 @@ title: DMCA Takedown
 categories: site_policy
 ---
 
-GitHub, Inc. ("GitHub") supports the protection of intellectual property and asks the users of the website GitHub.com to do the same. It is the policy of GitHub to respond to all notices of alleged copyright infringement.
+<p class="intro">GitHub, Inc. ("GitHub") supports the protection of intellectual property and asks the users of the website GitHub.com to do the same. It is the policy of GitHub to respond to all notices of alleged copyright infringement.</p>
 
-Notice is specifically given that GitHub is not responsible for the content on other websites that any user may find or access when using GitHub.com. This notice describes the information that should be provided in notices alleging copyright infringement found specifically on GitHub.com, and this notice is designed to make alleged infringement notices to GitHub as straightforward as possible and, at the same time, minimize the number of notices that GitHub receives that are spurious or difficult to verify. The form of notice set forth below is consistent with the form suggested by the United States Digital Millennium Copyright Act ("DMCA") which may be found at the U.S. Copyright official website: <http://www.copyright.gov>.
+<p class="intro">Notice is specifically given that GitHub is not responsible for the content on other websites that any user may find or access when using GitHub.com. This notice describes the information that should be provided in notices alleging copyright infringement found specifically on GitHub.com, and this notice is designed to make alleged infringement notices to GitHub as straightforward as possible and, at the same time, minimize the number of notices that GitHub receives that are spurious or difficult to verify. The form of notice set forth below is consistent with the form suggested by the United States Digital Millennium Copyright Act ("DMCA") which may be found at the U.S. Copyright official website: <a href="http://www.copyright.gov" target="_blank">http://www.copyright.gov</a>.</p>
 
-It is the policy of GitHub, in appropriate circumstances and in its sole discretion, to disable and/or terminate the accounts of users of GitHub.com who may infringe upon the copyrights or other intellectual property rights of GitHub and/or others.
+<p class="intro">It is the policy of GitHub, in appropriate circumstances and in its sole discretion, to disable and/or terminate the accounts of users of GitHub.com who may infringe upon the copyrights or other intellectual property rights of GitHub and/or others.</p>
 
-Our response to a notice of alleged copyright infringement may result in removing or disabling access to material claimed to be a copyright infringement and/or termination of the subscriber. If GitHub removes or disables access in response to such a notice, we will make a reasonable effort to contact the responsible party of our decision so that they may make an appropriate response.
+<p class="intro">Our response to a notice of alleged copyright infringement may result in removing or disabling access to material claimed to be a copyright infringement and/or termination of the subscriber. If GitHub removes or disables access in response to such a notice, we will make a reasonable effort to contact the responsible party of our decision so that they may make an appropriate response.</p>
 
-To file a notice of an alleged copyright infringement with us, you are required to provide a written communication only by email or postal mail. Notice is also given that you may be liable for damages (including costs and attorney fees) if you materially misrepresent that a product or activity is infringing upon your copyright.
+<p class="intro">To file a notice of an alleged copyright infringement with us, you are required to provide a written communication only by email or postal mail. Notice is also given that you may be liable for damages (including costs and attorney fees) if you materially misrepresent that a product or activity is infringing upon your copyright.</p>
 
 A. Copyright Claims
 ===================
