@@ -6,7 +6,7 @@ categories: troubleshooting popular
 main_category: troubleshooting
 ---
 
-This guide contains the solutions to the most common SSH connection issues encountered on GitHub
+<p class="intro">This guide contains the solutions to the most common SSH connection issues encountered on GitHub.</p>
 
 The first step to testing your connection is to run <code>ssh git@github.com</code>.  If your key works, you should get a success message:
 <pre class="terminal">$ ssh git@github.com
@@ -44,7 +44,7 @@ Here we've renamed our keypair to @~/.ssh/id_rsa@.  SSH finds the key and offers
 
 h2. Issues when using sudo
 
-p((. _You shouldn't run @sudo git@ unless you have a very good reason.  If you don't know if you have a good reason to use sudo, it's likely that you do not have one._
+<p class="attention">You shouldn't run @sudo git@ unless you have a very good reason.  If you don't know if you have a good reason to use sudo, it's likely that you do not have one.</p>
 
 If you are using sudo with git commands (e.g. using <code>sudo git clone</code> because you are deploying to a root-owned folder), ensure that you also generated the key using sudo.  Otherwise, you will have generated a key for your current user, but when you are doing sudo git, you are actually the root user - thus, the keys will not match.
 

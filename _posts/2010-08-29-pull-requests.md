@@ -16,14 +16,14 @@ categories: collaborating
 }
 </style>
 
-Pull requests let you tell others about changes you've pushed to a GitHub
+<p class="intro">Pull requests let you tell others about changes you've pushed to a GitHub
 repository. Once a pull request is sent, interested parties can review the set
 of changes, discuss potential modifications, and even push follow-up commits if
-necessary.
+necessary.</p>
 
-This guide walks through the process of sending a hypothetical pull request and
+<p class="intro">This guide walks through the process of sending a hypothetical pull request and
 using the various code review and management tools to take the change to
-completion.
+completion.</p>
 
 ## A Quick Note on Collaborative Development Models
 

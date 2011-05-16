@@ -78,7 +78,7 @@
 
 	On the GitHub site _Click &ldquo;Account Settings&rdquo;_ &gt; _Click &ldquo;SSH Public Keys&rdquo;_ &gt; _Click &ldquo;Add another public key&rdquo;_
 
-	Open the id_rsa.pub file with a text editor (Notepad, TextEdit, or gedit will do just fine). This is your public SSH key. You may need turn on &ldquo;view hidden files&rdquo; to find it because the <em>.ssh</em> directory is hidden. __It&rsquo;s important you copy your SSH key exactly as it is written without adding any newlines or whitespace.__ Now paste it into the &ldquo;Key&rdquo; field.
+	Open the id_rsa.pub file with a text editor (Notepad, TextEdit, or gedit will do just fine). This is your public SSH key. You may need turn on &ldquo;view hidden files&rdquo; to find it because the <em>.ssh</em> directory is hidden. <span class="attention">It&rsquo;s important you copy your SSH key exactly as it is written without adding any newlines or whitespace.</span> Now paste it into the &ldquo;Key&rdquo; field.
 
 	<div class="more-info">
 		<h4 class="compressed">Can&rsquo;t view hidden files? Other ways to copy:</h4>
@@ -105,7 +105,7 @@
 
 5. <span class="step-title">Test everything out.</span>
 
-	To make sure everything is working you&rsquo;ll now SSH to GitHub. <strong>Don&rsquo;t change the &ldquo;git@github.com&rdquo; part.</strong> That&rsquo;s supposed to be there.
+	To make sure everything is working you&rsquo;ll now SSH to GitHub. <span class="attention">Don&rsquo;t change the &ldquo;git@github.com&rdquo; part.</span> That&rsquo;s supposed to be there.
 
 	<pre class="terminal bootcamp">
 	<span class="codeline">$ ssh git@github.com<span>Attempts to ssh to github</span></span>

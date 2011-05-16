@@ -7,7 +7,7 @@ categories: bootcamp collaborating
 
 <span class="intro">If you&rsquo;ve found yourself on this page, we&rsquo;re assuming you&rsquo;re brand new to Git and GitHub. This guide will walk you through the basics and explain a little bit about how everything works along the way.</span>
 
-##<span>First:</span> Fork A Repo
+##<span class="step">First:</span> Fork A Repo
 
 At some point you may find yourself wanting to contribute to someone else's project, or would like to use someone's project as the starting point for your own. This is known as &ldquo;forking.&rdquo; For this tutorial, we&rsquo;ll be using the <a href="https://github.com/octocat/Spoon-Knife" target="_blank">Spoon-Knife</a> project.
 
@@ -51,7 +51,7 @@ You&rsquo;ve successfully forked the Spoon-Knife repo, but so far it only exists
 	<span class="codeline">$ git fetch upstream<span>Pulls in any changes not present in your local repository, but doesn't modify your working files</span></span>
 	</pre>
 
-##<span>Then:</span> More Things You Can Do
+##<span class="step">Then:</span> More Things You Can Do
 
 You&rsquo;ve successfully forked a repo, but get a load of these other cool things you can do:
 
@@ -148,7 +148,7 @@ You&rsquo;ve successfully forked a repo, but get a load of these other cool thin
 
 	If you are hoping to contribute back to the original fork, you can send the original author a [pull request](/pull-requests/).
 
-##<span>Lastly:</span> Celebrate
+##<span class="step">Lastly:</span> Celebrate
 
 You have now created forked a repo. What do you want to do next?
 

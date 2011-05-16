@@ -18,75 +18,83 @@ Purge the file from your repo
 
 Now that the password is changed, you want to remove the file from history and add it to the `.gitignore` to ensure it is not accidentally re-committed.  For our examples, we're going to remove `Rakefile` from the [GitHub gem](http://github.com/defunkt/github-gem) repo.
 
-    tekkub@iSenberg ~/tmp master*
-    $ git clone git@github.com:defunkt/github-gem.git
-    Initialized empty Git repository in /Users/tekkub/tmp/github-gem/.git/
-    remote: Counting objects: 1301, done.
-    remote: Compressing objects: 100% (769/769), done.
-    remote: Total 1301 (delta 724), reused 910 (delta 522)
-    Receiving objects: 100% (1301/1301), 164.39 KiB, done.
-    Resolving deltas: 100% (724/724), done.
+<pre class="terminal">
+tekkub@iSenberg ~/tmp master*
+$ git clone git@github.com:defunkt/github-gem.git
+Initialized empty Git repository in /Users/tekkub/tmp/github-gem/.git/
+remote: Counting objects: 1301, done.
+remote: Compressing objects: 100% (769/769), done.
+remote: Total 1301 (delta 724), reused 910 (delta 522)
+Receiving objects: 100% (1301/1301), 164.39 KiB, done.
+Resolving deltas: 100% (724/724), done.
 
-    tekkub@iSenberg ~/tmp master*
-    $ cd github-gem/
+tekkub@iSenberg ~/tmp master*
+$ cd github-gem/
 
-    tekkub@iSenberg ~/tmp/github-gem master
-    $ git filter-branch --index-filter 'git rm --cached --ignore-unmatch Rakefile' HEAD
-    Rewrite 48dc599c80e20527ed902928085e7861e6b3cbe6 (266/266)
-    Ref 'refs/heads/master' was rewritten
+tekkub@iSenberg ~/tmp/github-gem master
+$ git filter-branch --index-filter 'git rm --cached --ignore-unmatch Rakefile' HEAD
+Rewrite 48dc599c80e20527ed902928085e7861e6b3cbe6 (266/266)
+Ref 'refs/heads/master' was rewritten
+</pre>
 
 This command will run the entire history of the master branch and change any commit that involved the file `Rakefile`, and any commits afterwards.  Now that we've erased the file from history, lets ensure that we don't accidentally commit it again.
 
 If you wish to retain tags you must specify `--tag-name-filter "cat"`, but note that *this will overwrite your existing tags*.
 
-    tekkub@iSenberg ~/tmp/github-gem master
-    $ echo "Rakefile" >> .gitignore
+<pre class="terminal">
+tekkub@iSenberg ~/tmp/github-gem master
+$ echo "Rakefile" >> .gitignore
 
-    tekkub@iSenberg ~/tmp/github-gem master*
-    $ git add .gitignore
+tekkub@iSenberg ~/tmp/github-gem master*
+$ git add .gitignore
 
-    tekkub@iSenberg ~/tmp/github-gem master+
-    $ git commit -m "Add Rakefile to .gitignore"
-    [master 051452f] Add Rakefile to .gitignore
-     1 files changed, 1 insertions(+), 0 deletions(-)
+tekkub@iSenberg ~/tmp/github-gem master+
+$ git commit -m "Add Rakefile to .gitignore"
+[master 051452f] Add Rakefile to .gitignore
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+</pre>
 
 This would be a good time to double-check that you've removed everything that you wanted to from the history.  Note that `git filter-branch` only works on one branch at a time, so you may need to perform the cleanup on other branches as well.  This could be problematic if the branch has a complex merge history.  If we're happy with the state of the repo, we need to force-push the changes to overwrite the remote repo.
 
-    tekkub@iSenberg ~/tmp/github-gem master
-    $ git push origin master --force
-    Counting objects: 1074, done.
-    Delta compression using 2 threads.
-    Compressing objects: 100% (677/677), done.
-    Writing objects: 100% (1058/1058), 148.85 KiB, done.
-    Total 1058 (delta 590), reused 602 (delta 378)
-    To git@github.com:defunkt/github-gem.git
-     + 48dc599...051452f master -> master (forced update)
+<pre class="terminal">
+tekkub@iSenberg ~/tmp/github-gem master
+$ git push origin master --force
+Counting objects: 1074, done.
+Delta compression using 2 threads.
+Compressing objects: 100% (677/677), done.
+Writing objects: 100% (1058/1058), 148.85 KiB, done.
+Total 1058 (delta 590), reused 602 (delta 378)
+To git@github.com:defunkt/github-gem.git
+ + 48dc599...051452f master -> master (forced update)
+</pre>
 
 ### Cleanup and reclaiming space
 
 While `git filter-branch` rewrites the history for you, the objects will remain in your local repo until they've been dereferenced and garbage collected.  If you are working in your main repo you might want to force these objects to be purged.
 
-    tekkub@iSenberg ~/tmp/github-gem master
-    $ rm -rf .git/refs/original/
+<pre class="terminal">
+tekkub@iSenberg ~/tmp/github-gem master
+$ rm -rf .git/refs/original/
 
-    tekkub@iSenberg ~/tmp/github-gem master
-    $ git reflog expire --expire=now --all
+tekkub@iSenberg ~/tmp/github-gem master
+$ git reflog expire --expire=now --all
 
-    tekkub@iSenberg ~/tmp/github-gem master
-    $ git gc --prune=now
-    Counting objects: 2437, done.
-    Delta compression using up to 4 threads.
-    Compressing objects: 100% (1378/1378), done.
-    Writing objects: 100% (2437/2437), done.
-    Total 2437 (delta 1461), reused 1802 (delta 1048)
+tekkub@iSenberg ~/tmp/github-gem master
+$ git gc --prune=now
+Counting objects: 2437, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (1378/1378), done.
+Writing objects: 100% (2437/2437), done.
+Total 2437 (delta 1461), reused 1802 (delta 1048)
 
-    tekkub@iSenberg ~/tmp/github-gem master
-    $ git gc --aggressive --prune=now
-    Counting objects: 2437, done.
-    Delta compression using up to 4 threads.
-    Compressing objects: 100% (2426/2426), done.
-    Writing objects: 100% (2437/2437), done.
-    Total 2437 (delta 1483), reused 0 (delta 0)
+tekkub@iSenberg ~/tmp/github-gem master
+$ git gc --aggressive --prune=now
+Counting objects: 2437, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2426/2426), done.
+Writing objects: 100% (2437/2437), done.
+Total 2437 (delta 1483), reused 0 (delta 0)
+</pre>
 
 Note that pushing the branch to a new or empty GitHub repo and then making a fresh clone from GitHub will have the same effect.
 

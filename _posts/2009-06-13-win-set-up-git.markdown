@@ -7,7 +7,7 @@ categories: windows
 
 <span class="intro">If you&rsquo;ve found yourself on this page, we&rsquo;re assuming you&rsquo;re brand new to Git and GitHub. This guide will walk you through the basics and explain a little bit about how everything works along the way.</span>
 
-##<span>First:</span> Download and Install Git
+##<span class="step">First:</span> Download and Install Git
 
 At the heart of GitHub is an open source version control system (VCS) called Git&#42;. Created by the same dudes that created Linux, Git is responsible for everything GitHub related that happens locally on your computer.
 
@@ -30,7 +30,7 @@ _&#42;If you don&rsquo;t already know what Git is, <a href="http://progit.org/bo
 
 	__Do not use PuTTY if you are given the option. GitHub only provides support for openssh.__
 
-##<span>Next:</span> Set Up SSH Keys
+##<span class="step">Next:</span> Set Up SSH Keys
 
 We use SSH keys to establish a secure connection between your computer and GitHub. Setting them up is fairly easy, but does involve a number of steps.
 
@@ -72,13 +72,13 @@ To make sure you generate a brand new key, you need to check if one already exis
 
 {% include ssh_setup.markdown %}
 
-##<span>Then: </span> Set Up Your Info
+##<span class="step">Then: </span> Set Up Your Info
 
 Now that you have Git set up and your SSH keys entered into GitHub, it&rsquo;s time to configure your personal info.
 
 {% include email_setup.markdown %}
 
-##<span>Lastly:</span> Celebrate
+##<span class="step">Lastly:</span> Celebrate
 
 Congratulations, you now have Git and GitHub all set up! What do you want to do next?
 

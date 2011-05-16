@@ -7,7 +7,7 @@ categories: bootcamp
 
 <span class="intro">If you&rsquo;ve found yourself on this page, we&rsquo;re assuming you&rsquo;re brand new to Git and GitHub. This guide will walk you through the basics and explain a little bit about how everything works along the way.</span>
 
-##<span>First:</span> Follow A Friend
+##<span class="step">First:</span> Follow A Friend
 
 One of the great features on GitHub is the ability to see what other people are working on and who they are connecting with. When you follow someone, you will get notifications on your dashboard about their GitHub activity.
 
@@ -47,7 +47,7 @@ One of the great features on GitHub is the ability to see what other people are 
 	
 	Congratulations! You are now following a friend.
 
-##<span>Next:</span> Watch A Project
+##<span class="step">Next:</span> Watch A Project
 
 At some point you may want to stay up-to-date with a specific project. We&rsquo;ve made this easy to do.
 
@@ -61,7 +61,7 @@ At some point you may want to stay up-to-date with a specific project. We&rsquo;
 	
 	Congratulations! You are now watching the the Hello World project. If the Octocat updates it, you will see what happened in your dashboard.
 
-##<span>Then:</span> More Things You Can Do
+##<span class="step">Then:</span> More Things You Can Do
 
 You&rsquo;ve done some of the most basic social interaction GitHub has to offer, but don&rsquo;t stop there! Check out these other social features:
 
@@ -83,7 +83,7 @@ You&rsquo;ve done some of the most basic social interaction GitHub has to offer,
 	
 	Have you found yourself wishing you could collaborate with multiple developers on one project? You can manage everyone with Organizations! With an organization you can establish teams with special permissions, have a public organization profile, and keep track of activity within the organization.
 	
-##<span>Lastly:</span> Celebrate
+##<span class="step">Lastly:</span> Celebrate
 
 Congratulations! You are quite the socialite. What do you want to do next?
 

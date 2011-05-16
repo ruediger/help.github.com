@@ -60,8 +60,7 @@ a:active {
 
 blockquote {
   margin:0 -5px;
-  padding:5px 30px 5px 50px;
-  font-size:14px;
+  padding: 0px 20px;
 }
 
 ul,
@@ -456,12 +455,10 @@ pre {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   background-color: #FAFAFB;
-  white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: o-pre-wrap;
   color: #393939;
 }
 
+pre code {white-space: pre;}
 pre span.comment {color: #aaa;}
 
 pre.headers {
@@ -579,6 +576,9 @@ span.bash-output {
   color: #63e463;
   display: block;
   position: relative;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
 }
 
 /* end */

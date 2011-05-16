@@ -7,7 +7,7 @@ categories: bootcamp
 
 <span class="intro">If you&rsquo;ve found yourself on this page, we&rsquo;re assuming you&rsquo;re brand new to Git and GitHub. This guide will walk you through the basics and explain a little bit about how everything works along the way.</span>
 
-##<span>First:</span> Create A Repo
+##<span class="step">First:</span> Create A Repo
 
 Every time you make a commit with Git, it is stored in a repository (a.k.a. &ldquo;repo&rdquo;). To put your project up on GitHub, you&rsquo;ll need to have a GitHub repository for it to live in.
 
@@ -32,7 +32,7 @@ Every time you make a commit with Git, it is stored in a repository (a.k.a. &ldq
 	
 	Congratulations! You have successfully created your first repo!
 
-##<span>Next:</span> Create a README for your repo.
+##<span class="step">Next:</span> Create a README for your repo.
 
 While a README isn&rsquo;t a required part of a GitHub repo, it is a good idea to have one. READMEs are a great place to describe your project or add some documentation such as how to install or use your project.
 
@@ -101,7 +101,7 @@ While a README isn&rsquo;t a required part of a GitHub repo, it is a good idea t
 	
 	<img src="/images/bootcamp/bootcamp_2_updatedreadme.jpg" width="558" height="577" alt="Your README has been created" />
 	
-##<span>Lastly:</span> Celebrate
+##<span class="step">Lastly:</span> Celebrate
 
 Congratulations! You have now created a repository on GitHub, created a README, committed it, and pushed it to GitHub. What do you want to do next?
 

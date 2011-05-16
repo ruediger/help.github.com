@@ -5,7 +5,7 @@ description: SSH key passphrases, why you should use them, and how to avoid re-e
 categories: windows mac troubleshooting
 ---
 
-This guide will step you through the process of securing your ssh keys while avoiding re-entry of your passphrase every time you use the key.
+<p class="intro">This guide will step you through the process of securing your ssh keys while avoiding re-entry of your passphrase every time you use the key.</p>
 
 h2. Why do I need a passphrase?
 
@@ -34,7 +34,7 @@ h2. Auto-launching ssh-agent on msysgit
 
 You can run @ssh-agent@ automatically when you open bash by adding the following to your @~/.profile@ or @~/.bashrc@ file:
 
-<pre>
+{% highlight bash %}
 SSH_ENV="$HOME/.ssh/environment"
 
 # start the ssh-agent
@@ -80,7 +80,7 @@ else
         start_agent
     fi
 fi
-</pre>
+{% endhighlight %}
 
 p(. *Note:* If you don't use the default key names, or store your keys in a different path, you will need to add the path to the @/usr/bin/ssh-add@ line so that ssh knows where to find your key.
 
@@ -114,7 +114,7 @@ If you are on OSX Leopard or later, ssh-agent is run automatically for you.  It 
 
 The default key files (@.ssh/id_rsa@, @.ssh/id_dsa@ and @.ssh/identity@) should be handled automatically.  If you have a key with a different name, you can add it with @ssh-add path/to/my_key@
 
-p(. _Make sure that you're using the default OS X ssh-add command and not one installed by macports or some other external source._
+<p class="attention">Make sure that you're using the default OS X ssh-add command and not one installed by macports or some other external source.</p>
 
 When you first try to use the key you will be prompted to enter your passphrase:
 
@@ -122,4 +122,4 @@ When you first try to use the key you will be prompted to enter your passphrase:
 
 If you choose to save the passphrase with your keychain, you won't have to enter it again.  Instead you'll simply need to unlock your keychain.
 
-p(. <em>This section was written with help from "this guide":http://www.dribin.org/dave/blog/archives/2007/11/28/ssh_agent_leopard/.  If you would like to use more paranoid keychain settings like locking after sleep, check out "this guide":http://www.dribin.org/dave/blog/archives/2007/11/28/securing_ssh_agent/.</em>
+<p class="attention">This section was written with help from "this guide":http://www.dribin.org/dave/blog/archives/2007/11/28/ssh_agent_leopard/.  If you would like to use more paranoid keychain settings like locking after sleep, check out "this guide":http://www.dribin.org/dave/blog/archives/2007/11/28/securing_ssh_agent/.</p>

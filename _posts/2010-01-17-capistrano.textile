@@ -22,39 +22,39 @@ h2. Settings
 
 Here are the 5 most notable Capistrano config options (found in deploy.rb):
 
-<pre>
+{% highlight ruby %}
 default_run_options[:pty] = true  # Must be set for the password prompt from git to work
 set :repository, "git@github.com:vanpelt/rails-app.git"  # Your clone URL
 set :scm, "git"
 set :user, "deployer"  # The server's user for deploys
 set :scm_passphrase, "p@ssw0rd"  # The deploy user's password
-</pre>
+{% endhighlight %}
 
 h3. Agent Forwarding
 
 If you're using your own private keys for git you might want to tell Capistrano to use agent forwarding with this command.  Agent forwarding can make key management much simpler as it uses your local keys instead of keys installed on the server.
 
-<pre>ssh_options[:forward_agent] = true</pre>
+{% highlight ruby %}ssh_options[:forward_agent] = true{% endhighlight %}
 
 h3. Set Branch
 
 You need to tell cap the branch to checkout during deployment:
 
-<pre>set :branch, "master"</pre>
+{% highlight ruby %}set :branch, "master"{% endhighlight %}
 
 Older versions of cap need the full branch name:
 
-<pre>set :branch, "origin/master"</pre>
+{% highlight ruby %}set :branch, "origin/master"{% endhighlight %}
 
 Older versions of git (e.g. 1.4.4.2) don't support @git checkout -q@, this will cause your deployment to fail.  To fix either upgrade git or:
 
-<pre>set :scm_verbose, true</pre>
+{% highlight ruby %}set :scm_verbose, true{% endhighlight %}
 
 h3. Remote Cache
 
 In most cases you want to use this option, otherwise each deploy will do a full repository clone every time.
 
-<pre>set :deploy_via, :remote_cache</pre>
+{% highlight ruby %}set :deploy_via, :remote_cache{% endhighlight %}
 
 Remote caching will keep a local git repo on the server you're deploying to and simply run a fetch from that rather than an entire clone.  This is probably the best option as it will only fetch the changes since the last.
 
@@ -62,7 +62,7 @@ h3. Shallow Clone
 
 As an alternative to the remote cache approach, you can use shallow cloning.
 
-<pre>set :git_shallow_clone, 1</pre>
+{% highlight ruby %}set :git_shallow_clone, 1{% endhighlight %}
 
 Shallow cloning will do a clone each time, but will only get the top commit, not the entire repo.  This makes it a bit closer to how an svn checkout works.  Be warned, shallow clone won't work well with the @set :branch@ option.
 
@@ -70,7 +70,7 @@ h3. Submodules
 
 If you're using git submodules you must tell cap to fetch them.
 
-<pre>set :git_enable_submodules, 1</pre>
+{% highlight ruby %}set :git_enable_submodules, 1{% endhighlight %}
 
 h2. Migrating from SVN
 

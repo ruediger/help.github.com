@@ -5,9 +5,9 @@ description: How to ensure that line endings are consistent in your repo
 categories: troubleshooting windows mac linux
 ---
 
-Line endings... the scourge of every Windows-based developer that tries to mingle with linux- or mac-based developers.  Though most modern text editors can handle both newline types without issue, git is not as graceful.
+<p class="intro">Line endings... the scourge of every Windows-based developer that tries to mingle with linux- or mac-based developers.  Though most modern text editors can handle both newline types without issue, git is not as graceful.</p>
 
-For more info on the issue see "Wikipedia":http://en.wikipedia.org/wiki/Newline.
+<p class="intro">For more info on the issue see "Wikipedia":http://en.wikipedia.org/wiki/Newline.</p>
 
 h2. Mac and Linux users, you don't get to sit this one out
 

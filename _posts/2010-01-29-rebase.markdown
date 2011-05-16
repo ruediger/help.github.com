@@ -7,7 +7,7 @@ categories: everyday_git
 
 One often overlooked feature of git is the `git rebase` command.  Rebase allows you to easily change a series of commits, reordering, editing, or squashing commits together into a single commit.
 
-_It is considered bad practice to rebase commits which you have already pushed to a remote repo.  Doing so may invoke the wrath of the git gods... you have been warned._
+<span class="attention">It is considered bad practice to rebase commits which you have already pushed to a remote repo.  Doing so may invoke the wrath of the git gods... you have been warned.</span>
 
 So, you've cloned a repository, and hacked away at it; separated it into logical chunks, and it's now ready to submit!
 

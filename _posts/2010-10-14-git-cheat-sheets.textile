@@ -24,7 +24,7 @@ identify yourself to git: email and your name
 
 @git config --global user.name "David Beckwith"@
 
-@git config --global user.email "dbitsolutions@@@gmail.com"@
+<p><code>git config --global user.email "dbitsolutions@gmail.com"</code></p>
 
 To view all options:
 
@@ -241,7 +241,7 @@ h4. Setting up a repository for use on a remote server
 
 Copy up your repository. e.g.:
 
-@scp -r my_project deploy@@@yourbox.com:my_project@
+<p><code>scp -r my_project deploy@yourbox.com:my_project</code></p>
 
 Move your files on the remote server to @/var/git/my_project@
 For security make the owner of this project git
@@ -253,7 +253,7 @@ Then (for security) restrict the "deploy" user to doing git-related things in @/
 
 h4. Checking out a git repository from a remote to your local storage
 
- @git clone git@@@yourbox.com:/var/git/my_project@
+ <p><code>git clone git@yourbox.com:/var/git/my_project</code></p>
 
 h4. Viewing extra info about a remote repository
 

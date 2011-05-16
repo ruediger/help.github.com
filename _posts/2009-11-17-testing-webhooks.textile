@@ -5,7 +5,7 @@ description: How to test post-receive webhook calls from your repo
 categories: collaborating troubleshooting
 ---
 
-Testing that a webhook works can be a bit of a pain.  Thankfully with the help of "PostBin":http://www.postbin.org/ the pain can be avoided.
+<p class="intro">Testing that a webhook works can be a bit of a pain.  Thankfully with the help of "PostBin":http://www.postbin.org/ the pain can be avoided.</p>
 
 h2. When hooks are fired
 

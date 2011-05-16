@@ -5,10 +5,10 @@ description: How to manage multiple clients and their repositories
 categories: collaborating
 ---
 
-Are you a freelance developer working on multiple projects for multiple clients, and want to manage them here on GitHub?  Never fear, this guide will detail the most common solutions to this problem
+<p class="intro">Are you a freelance developer working on multiple projects for multiple clients, and want to manage them here on GitHub?  Never fear, this guide will detail the most common solutions to this problem.</p>
 
 One account, multiple collaborators
-===================================
+-----------------------------------
 
 This design lets you retain control over the repos, but still gives your clients access to them.
 
@@ -17,14 +17,14 @@ This is the simplest (and cheapest) approach.  Simply create one account with a 
 If you wish, you can even bill your clients for the cost of your account, and maintaining their repos on it!
 
 Multiple accounts, one collaborator
-===================================
+-----------------------------------
 
 This design gives the control over the repos (and the bill) to your client, but still allows you to push into all your clients' repos from a single account.
 
 With this design, have your clients each open their own paid account and create empty repos for each project.  Add your account to the repos as a collaborator.  You can now push to their repos as if they were your own!
 
 Multiple accounts, no collaborators
-===================================
+-----------------------------------
 
 __This is by far the most complicated setup, and should be avoided if at all possible.__
 
