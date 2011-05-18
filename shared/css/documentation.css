@@ -13,17 +13,13 @@ body {
 }
 
 p {
-  margin: 1em 0;
+  margin-bottom: 1em;
 }
 
 h1 {
   font-size: 20px;
   border-bottom: 1px solid #cccccc;
   padding: .5em 0;
-  margin: 2em 0 1em;
-}
-
-h1:first-child {
   margin: 0 0 1em;
 }
 
@@ -199,21 +195,14 @@ div.sidebar-module li {
 
 div.sidebar-module > ul > li {
   border-bottom: 1px solid #CACACA;
-  text-decoration: none;
 }
-
-div.sidebar-module > ul > li:hover {
-  text-decoration: none;
-}
-
 
 div.sidebar-module > ul h3 {
   margin: 0px;
   color: #666;
   text-shadow: 1px 1px 0px #fff; 
+  background-color: #f1f1f1;
   border-bottom: 1px solid #CACACA;
-  font-size: 14px;
-  background-color: #e1e1e1;
   background-image: -moz-linear-gradient(top, #f1f1f1, #e1e1e1); 
   background-image: -ms-linear-gradient(top, #f1f1f1, #e1e1e1); 
   background-image: -o-linear-gradient(top, #f1f1f1, #e1e1e1); 
@@ -221,10 +210,11 @@ div.sidebar-module > ul h3 {
   background-image: -webkit-linear-gradient(top, #f1f1f1, #e1e1e1); 
   background-image: linear-gradient(top, #f1f1f1, #e1e1e1);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f1f1f1', EndColorStr='#e1e1e1');
+  font-size: 14px;
 }
 
-div.sidebar-module > ul li:hover h3,
-div.sidebar-module > ul h3.disable {
+div.sidebar-module > ul h3:hover {
+  text-decoration: none;
   background-color: #e1e1e1;
   background-image: -moz-linear-gradient(top, #e1e1e1, #d1d1d1);
   background-image: -ms-linear-gradient(top, #e1e1e1, #d1d1d1);
@@ -236,21 +226,13 @@ div.sidebar-module > ul h3.disable {
 }
 
 
-div.sidebar-module > ul h3 a,
-div.sidebar-module > ul h3.disable span {
+div.sidebar-module > ul h3 a {
   padding: 8px 0px 8px 10px;
   color: #666;
   display: block;
   text-decoration: none;
 }
 
-div.sidebar-module > ul h3.disable span {
-  padding-left: 20px;
-  background-image: url(/shared/images/active-arrow.png);
-  background-position: left center;
-  background-repeat: no-repeat;
-  cursor: default;
-}
 div.sidebar-module > ul h3:hover a {
   text-decoration: none;
 }
@@ -258,8 +240,8 @@ div.sidebar-module > ul h3:hover a {
 div.sidebar-module ul ul,
 div.sidebar-module .spacer {
   display: block;
-  height: 2px;
-  background-color: #FAFAFB;
+  margin-bottom: 2px;
+  padding: 0px;
 }
 
 div.sidebar-module ul ul li {
@@ -391,7 +373,6 @@ div.sidebar-module ul ul li span {
   position: relative;
   float: left;
   color: #393939;
-  z-index: 2;
 }
 
 .content dl {
@@ -471,7 +452,8 @@ pre {
   border: 1px solid #cacaca;
   line-height: 1.2em;
   font: 12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
-  padding: 10px;
+  margin-bottom: 1em;
+  padding: 1em;
   overflow:auto;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -481,16 +463,9 @@ pre {
   background-clip: padding-box;
   background-color: #FAFAFB;
   color: #393939;
-  margin: 0px;
-}
-
-pre + pre,
-ul + pre {
-  margin-top: 1em;
 }
 
 pre code {white-space: pre;}
-
 pre span.comment {color: #aaa;}
 
 pre.headers {
@@ -534,6 +509,7 @@ pre.highlight {
 pre.terminal {
   background-color: #444;
   color: #fff;
+  display: block;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -606,6 +582,7 @@ span.codeline:hover em {
 pre.bootcamp {
   white-space: normal;
   margin-left: -10px;
+  margin-bottom: 1.5em;
   background-image: none;
 }
 
