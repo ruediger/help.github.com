@@ -32,3 +32,23 @@ No!  You can simply use the public clone URL for the project.
 The simplest way is to add your server's key to the account of the repo owner.  This will allow the server access to any private repo that user owns or is a collaborator on.
 
 If you don't want your deploy server to have access to every repo, you can make an account specifically for the server, attach its key to the account, and add that account as a collaborator to any repo you do want access to.
+
+## How do I add my deploy key?
+
+To add your deploy key, you first have to click on one of your repos. Once you've done that:
+
+1. In your repo, click the "admin" button.
+
+   ![In your repo, click the "admin" button.](/images/deploy_1.jpg)
+
+2. Click on "deploy keys"
+
+   ![Click on "deploy keys"](/images/deploy_2.jpg)
+
+3. Click "Add another deploy key"
+
+   ![Click "Add another deploy key"](/images/deploy_3.jpg)
+
+4. Fill in your info and click "Add key"
+
+   ![Fill in your info and click "Add key"](/images/deploy_4.jpg)
