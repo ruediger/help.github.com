@@ -22,14 +22,14 @@ Every time you make a commit with Git, it is stored in a repository (a.k.a. &ldq
 
 1. <span class="step-title">Create a new repo</span>
 
-	Click &ldquo;New Repository.
+	Click [New Repository](https://github.com/repositories/new).
 
 	<img src="/images/bootcamp/bootcamp_2_newrepo.jpg" width="558" height="291" alt="Click &ldquo;New Repository" />
-	
+
 	Fill out the information on this page. When you&rsquo;re done, click &ldquo;Create Repository.&rdquo;
-	
+
 	<img src="/images/bootcamp/bootcamp_2_repoinfo.jpg" width="558" height="437" alt="Fill in the info" />
-	
+
 	Congratulations! You have successfully created your first repo!
 
 ##<span class="step">Next:</span> Create a README for your repo.
@@ -62,7 +62,7 @@ While a README isn&rsquo;t a required part of a GitHub repo, it is a good idea t
 2. <span class="step-title">Commit your README</span>
 
 	Now that you have your README set up, it&ldquo;s time to commit it. A commit is essentially a snapshot of all the files in your project at a particular point in time. In the prompt, type the following code:
-	
+
 	<div class="more-info">
 		<h4 class="compressed">More about commits</h4>
 		<div class="more-content">
@@ -71,14 +71,14 @@ While a README isn&rsquo;t a required part of a GitHub repo, it is a good idea t
 			</p>
 		</div>
 	</div>
-	
+
 	<pre class="terminal bootcamp">
 	<span class="codeline">$ git add README<span>Stages your README file, adding it to the list of files to be committed</span></span>
 	<span class="codeline">$ git commit -m 'first commit'<span></span>Commits your files, adding the message "first commit"</span>
 	</pre>
-	
+
 	The code above executes actions locally, meaning you still haven&rsquo;t done anything on GitHub yet. To connect your local repository to your GitHub account, you will need to set a remote for your repo and push your commits to it:
-	
+
 	<div class="more-info">
 		<h4 class="compressed">More about remotes</h4>
 		<div class="more-content">
@@ -91,16 +91,16 @@ While a README isn&rsquo;t a required part of a GitHub repo, it is a good idea t
 		</div>
 	</div>
 
-	
+
 	<pre class="terminal bootcamp">
 	<span class="codeline">$ git remote add origin git@github.com:<em>username</em>/Hello-World.git<span>Sets the origin for the Hello-World repo</span></span>
 	<span class="codeline">$ git push origin master<span></span>Sends your commit to GitHub</span>
 	</pre>
-	
+
 	Now if you look at your repository on GitHub, you will see your README has been added to it.
-	
+
 	<img src="/images/bootcamp/bootcamp_2_updatedreadme.jpg" width="558" height="577" alt="Your README has been created" />
-	
+
 ##<span class="step">Lastly:</span> Celebrate
 
 Congratulations! You have now created a repository on GitHub, created a README, committed it, and pushed it to GitHub. What do you want to do next?
@@ -110,4 +110,4 @@ Congratulations! You have now created a repository on GitHub, created a README, 
 <li>Create A Repository</li>
 <li><a href="/fork-a-repo/">Fork A Repository</a></li>
 <li><a href="/be-social/">Be Social</a></li>
-</ol> 
+</ol>
