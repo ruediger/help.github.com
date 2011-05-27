@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Leave a repo
+title: Leave a collaborative repo
 description: Leave a repo you are collaborating on
 categories: beginner
 ---

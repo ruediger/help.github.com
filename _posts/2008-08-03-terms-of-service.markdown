@@ -1,6 +1,6 @@
 ---
 layout: default
-title: GitHub Terms of Service
+title: Terms of Service
 categories: site_policy
 ---
 

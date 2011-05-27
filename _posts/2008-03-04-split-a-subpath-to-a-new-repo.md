@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Splitting a subpath out into a new repo
+title: Split a subpath into a new repo
 description: How to generate a new repo from a subpath, retaining history.
 categories: advanced
 ---

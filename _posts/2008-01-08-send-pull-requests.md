@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Sending pull requests
+title: Send pull requests
 description: How to notify others of your changes using Pull Requests.
 categories: beginner
 ---

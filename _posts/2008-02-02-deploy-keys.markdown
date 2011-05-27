@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Understanding deploy keys
+title: Deploy keys
 description: Do you need a deploy key?
 categories: intermediate
 ---

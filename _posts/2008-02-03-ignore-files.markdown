@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Ignoring files
+title: Ignore files
 description: How to tell git to ignore files
 categories: intermediate
 ---

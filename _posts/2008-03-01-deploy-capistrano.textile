@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Deploying with Capistrano
+title: Deploy with Capistrano
 description: How to set up capistrano to pull from a GitHub repo
 categories: advanced
 ---

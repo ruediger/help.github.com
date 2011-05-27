@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Removing sensitive data
+title: Remove sensitive data
 description: Dealing with accidentally committed passwords or other sensitive information
 categories: popular advanced
 terminal_pres: true

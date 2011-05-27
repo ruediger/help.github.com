@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Dealing with firewalls and proxies
+title: Firewalls and proxies
 categories: troubleshooting
 ---
 

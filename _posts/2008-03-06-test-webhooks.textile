@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Testing webhooks
+title: Test webhooks
 description: How to test post-receive webhook calls from your repo
 categories: advanced
 ---

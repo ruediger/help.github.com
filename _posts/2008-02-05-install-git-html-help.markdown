@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Installing Git HTML help
+title: Install Git HTML help
 description: How to install the local git HTML help files
 categories: intermediate
 ---

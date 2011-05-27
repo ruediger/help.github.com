@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Managing multiple clients
+title: Manage multiple clients
 description: How to manage multiple clients and their repositories
 categories: intermediate
 ---

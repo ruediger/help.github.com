@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Changing author info
+title: Change author info
 description: How to modify author info in your repo's history
 categories: intermediate
 ---

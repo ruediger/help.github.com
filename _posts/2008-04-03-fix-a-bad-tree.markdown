@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Fixing bad tree
+title: Fix a bad tree
 description: How to fix the bad tree error on a github repo caused by egit
 categories: troubleshooting
 ---

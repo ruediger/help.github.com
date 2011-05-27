@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Deleting a repo
+title: Delete a repo
 description: How to remove a repo from your GitHub account
 categories: beginner
 ---

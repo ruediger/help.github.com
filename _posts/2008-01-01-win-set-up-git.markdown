@@ -1,10 +1,12 @@
 ---
 layout: default
-title: Set Up Git (Windows)
+title: Set Up Git
 description: A quick guide to help you get started with Git
 ---
 
-<span class="intro">If you&rsquo;ve found yourself on this page, we&rsquo;re assuming you&rsquo;re brand new to Git and GitHub. This guide will walk you through the basics and explain a little bit about how everything works along the way.</span>
+<p class="intro">If you&rsquo;ve found yourself on this page, we&rsquo;re assuming you&rsquo;re brand new to Git and GitHub. This guide will walk you through the basics and explain a little bit about how everything works along the way.</p>
+
+<p class="intro">This is the guide for setting up git in <strong>OSX</strong>. There are also guides for <strong><a href="/mac-set-up-git">OSX</a></strong> and <strong><a href="/linux-set-up-git">Linux</a></strong>.</p>
 
 ##<span class="step">First:</span> Download and Install Git
 

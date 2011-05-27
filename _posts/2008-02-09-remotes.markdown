@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Working with remotes
+title: Remotes
 description: Pushing, fetching, merging and deleting remote branches
 categories: intermediate
 ---

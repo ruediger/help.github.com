@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Working with subtree merge
+title: Subtree Merge
 description: How to use subtree merge to merge one repo into another as a subpath.
 categories: advanced
 ---

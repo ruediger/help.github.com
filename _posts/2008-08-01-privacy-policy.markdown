@@ -1,6 +1,6 @@
 ---
 layout: default
-title: GitHub Privacy Policy
+title: Privacy Policy
 categories: site_policy
 ---
 

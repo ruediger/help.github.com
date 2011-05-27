@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Importing from Subversion
+title: Import from Subversion
 categories: intermediate
 ---
 

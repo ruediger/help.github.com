@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Troubleshooting SSH issues
+title: SSH issues
 description: Solutions to common SSH issues
 categories: troubleshooting popular
 main_category: troubleshooting

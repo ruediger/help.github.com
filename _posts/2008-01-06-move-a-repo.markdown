@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Moving a repo
+title: Move a repo
 description: How to move a repo from one account to another
 categories: beginner
 ---
