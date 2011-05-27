@@ -2,7 +2,7 @@
 layout: default
 title: Working with SSH key passphrases
 description: SSH key passphrases, why you should use them, and how to avoid re-entering them
-categories: windows mac troubleshooting
+categories: troubleshooting
 ---
 
 <p class="intro">This guide will step you through the process of securing your ssh keys while avoiding re-entry of your passphrase every time you use the key.</p>

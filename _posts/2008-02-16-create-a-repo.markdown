@@ -2,7 +2,7 @@
 layout: default
 title: Create A Repo
 description: Create the place where your commits will be stored
-categories: bootcamp
+categories: beginner
 ---
 
 <span class="intro">If you&rsquo;ve found yourself on this page, we&rsquo;re assuming you&rsquo;re brand new to Git and GitHub. This guide will walk you through the basics and explain a little bit about how everything works along the way.</span>

@@ -2,7 +2,7 @@
 layout: default
 title: Creating a repo
 description: How to create a new repo on GitHub
-categories: repos
+redirect_to: /create-a-repo
 ---
 
 Creating a new repo is a simple process.  Log in and go to the [dashboard](https://github.com/).

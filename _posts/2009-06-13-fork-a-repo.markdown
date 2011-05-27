@@ -2,7 +2,7 @@
 layout: default
 title: Fork A Repo
 description: Copy a repo to create a new, unique project from its contents.
-categories: bootcamp collaborating
+categories: beginner
 ---
 
 <span class="intro">If you&rsquo;ve found yourself on this page, we&rsquo;re assuming you&rsquo;re brand new to Git and GitHub. This guide will walk you through the basics and explain a little bit about how everything works along the way.</span>

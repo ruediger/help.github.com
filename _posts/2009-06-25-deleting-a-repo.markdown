@@ -2,7 +2,7 @@
 layout: default
 title: Deleting a repo
 description: How to remove a repo from your GitHub account
-categories: repos
+categories: beginner
 ---
 
 <p class="attention">Deleting a private repo will delete all forks of the repo.  Deleting a public repo will not.</p>

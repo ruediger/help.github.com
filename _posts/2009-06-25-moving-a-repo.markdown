@@ -2,7 +2,7 @@
 layout: default
 title: Moving a repo
 description: How to move a repo from one account to another
-categories: repos
+categories: beginner
 ---
 
 This guide details the process of moving a repo to another account.
