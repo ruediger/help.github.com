@@ -2,7 +2,7 @@
 layout: default
 title: Dealing with line endings
 description: How to ensure that line endings are consistent in your repo
-categories: troubleshooting windows mac linux
+categories: troubleshooting
 ---
 
 <p class="intro">Line endings... the scourge of every Windows-based developer that tries to mingle with linux- or mac-based developers.  Though most modern text editors can handle both newline types without issue, git is not as graceful.</p>

@@ -2,7 +2,7 @@
 layout: default
 title: Working with subtree merge
 description: How to use subtree merge to merge one repo into another as a subpath.
-categories: git_ninjutsu
+categories: advanced
 ---
 
 <p class="intro">There are times when submodules are not adequate for the task at hand.  For example, blending multiple repos together into one single repo while still maintaining the history of each repo.  To do this, the subtree merge strategy is a better solution.</p>

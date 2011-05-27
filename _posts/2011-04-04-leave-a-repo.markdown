@@ -2,7 +2,7 @@
 layout: default
 title: Leave a repo
 description: Leave a repo you are collaborating on
-categories: collaborating
+categories: beginner
 ---
 
 To leave a repository on which you are collaborating:

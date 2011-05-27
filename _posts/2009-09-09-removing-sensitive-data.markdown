@@ -2,7 +2,7 @@
 layout: default
 title: Removing sensitive data
 description: Dealing with accidentally committed passwords or other sensitive information
-categories: popular git_ninjutsu
+categories: popular advanced
 terminal_pres: true
 ---
 

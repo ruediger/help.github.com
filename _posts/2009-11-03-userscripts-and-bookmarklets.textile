@@ -2,7 +2,7 @@
 layout: default
 title: Userscripts and Bookmarklets
 description: Various bits of code to enhance and personalize GitHub
-categories: other
+categories: github_resources
 ---
 
 This page contains userscripts and bookmarklets to enhance and customize GitHub.  If you have a link to add, please "fork this repo":http://github.com/github/help.github.com.

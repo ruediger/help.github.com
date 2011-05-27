@@ -2,7 +2,7 @@
 layout: default
 title: Post-Receive Hooks
 description: Working with GitHub's post-receive web hooks.
-categories: collaborating
+categories: advanced
 ---
 
 _For help testing webhooks, see [this guide](/testing-webhooks)_
