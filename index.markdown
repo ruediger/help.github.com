@@ -44,9 +44,9 @@ title: Welcome
   </div> <!-- /bootcamp-body -->
 </div>
 
-<div class="popular-guides">
+<div class="list-module">
   <h2>Popular Guides</h2>
-  <div class="popular-body">
+  <div class="list-body">
     <ul>
       {% for post in site.categories.popular reversed %}
         <li>
