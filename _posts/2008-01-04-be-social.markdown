@@ -37,7 +37,7 @@ One of the great features on GitHub is the ability to see what other people are 
 	</a>
 	</div>
 	
-	Who are these fine fellows? Why the founders of GitHub, of course!
+	Who are these fine fellows? We're the founders of GitHub, of course!
 
 2. <span class="step-title">Follow a friend</span>
 

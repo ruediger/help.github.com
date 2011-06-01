@@ -186,7 +186,7 @@ preformatted text blocks, and other formatting supported by Markdown.
 
 Once the pull request is deemed satisfactory, someone with push access to the
 destination repository must apply the changes and push the updated branch.
-There are a variety of ways to accomplish this. Two popular methods are
+There are a variety of ways to accomplish this. Three popular methods are
 described below.
 
 #### Fetch and Merge
@@ -218,6 +218,12 @@ to feed into the `git-am` command:
 <span>$</span> curl http://github.com/github/jobs/pull/25.patch | git am
 <span>$</span> git push origin master
 </pre>
+
+#### Auto Merge
+
+In many cases it is possible to ask github to auto merge a pull request using
+the merge button. This was made possible with the launch of Pull Requests 2.0
+and is covered in the [related blog post](https://github.com/blog/843-the-merge-button).
 
 ## Closing a Pull Request
 
