@@ -14,7 +14,7 @@ At the heart of GitHub is an open source version control system (VCS) called Git
 
 _&#42;If you don&rsquo;t already know what Git is, <a href="http://progit.org/book/ch1-3.html" target="_blank">take a crash course.</a>_
 
-1. <span class="step-title">Download and install the latest version of <a href="http://code.google.com/p/msysgit/downloads/list" target="_blank">msysgit</a>.</span>
+1. <span class="step-title">Download and install the latest version of <a href="http://code.google.com/p/msysgit/downloads/list" target="_blank">Git for Windows</a>.</span>
 
 	Use the default options for each step.
 
