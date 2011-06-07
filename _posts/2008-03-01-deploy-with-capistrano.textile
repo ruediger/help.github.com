@@ -1,0 +1,89 @@
+---
+layout: default
+title: Deploy with Capistrano
+description: How to set up capistrano to pull from a GitHub repo
+categories: advanced
+---
+
+To prepare your project for "Capistrano":http://www.capify.org/, go into the root directory of that project and run @capify@:
+
+<pre class="terminal">
+$ cd my_project
+$ capify .
+</pre>
+
+h2. Generate Public Key
+
+It would probably be a good idea to add a special user on your server(s) specifically for deployment.  Once created, make sure to generate a public key for the server and add it to your github account.  You may also want to add your personal public key to this new user's @~/.ssh/authorized_keys@ to ease deployment.
+
+For more help with deploy keys, see "this guide":/deploy-keys.
+
+h2. Settings
+
+Here are the 5 most notable Capistrano config options (found in deploy.rb):
+
+{% highlight ruby %}
+default_run_options[:pty] = true  # Must be set for the password prompt from git to work
+set :repository, "git@github.com:vanpelt/rails-app.git"  # Your clone URL
+set :scm, "git"
+set :user, "deployer"  # The server's user for deploys
+set :scm_passphrase, "p@ssw0rd"  # The deploy user's password
+{% endhighlight %}
+
+h3. Agent Forwarding
+
+If you're using your own private keys for git you might want to tell Capistrano to use agent forwarding with this command.  Agent forwarding can make key management much simpler as it uses your local keys instead of keys installed on the server.
+
+{% highlight ruby %}ssh_options[:forward_agent] = true{% endhighlight %}
+
+h3. Set Branch
+
+You need to tell cap the branch to checkout during deployment:
+
+{% highlight ruby %}set :branch, "master"{% endhighlight %}
+
+Older versions of cap need the full branch name:
+
+{% highlight ruby %}set :branch, "origin/master"{% endhighlight %}
+
+Older versions of git (e.g. 1.4.4.2) don't support @git checkout -q@, this will cause your deployment to fail.  To fix either upgrade git or:
+
+{% highlight ruby %}set :scm_verbose, true{% endhighlight %}
+
+h3. Remote Cache
+
+In most cases you want to use this option, otherwise each deploy will do a full repository clone every time.
+
+{% highlight ruby %}set :deploy_via, :remote_cache{% endhighlight %}
+
+Remote caching will keep a local git repo on the server you're deploying to and simply run a fetch from that rather than an entire clone.  This is probably the best option as it will only fetch the changes since the last.
+
+h3. Shallow Clone
+
+As an alternative to the remote cache approach, you can use shallow cloning.
+
+{% highlight ruby %}set :git_shallow_clone, 1{% endhighlight %}
+
+Shallow cloning will do a clone each time, but will only get the top commit, not the entire repo.  This makes it a bit closer to how an svn checkout works.  Be warned, shallow clone won't work well with the @set :branch@ option.
+
+h3. Submodules
+
+If you're using git submodules you must tell cap to fetch them.
+
+{% highlight ruby %}set :git_enable_submodules, 1{% endhighlight %}
+
+h2. Migrating from SVN
+
+Migrating from SVN-based deploys?  "Check this thread":http://groups.google.com/group/github/browse_frm/thread/c5d2620c541e4e1a if you run into any problems.
+
+h2. Known Hosts bug
+
+If you are not using agent forwarding, the first time you deploy may fail due to Capistrano not prompting with this message:
+
+<pre class="terminal">
+The authenticity of host 'github.com (207.97.227.239)' can't be established.
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)?
+</pre>
+
+To fix this, ssh into your server as the user you will deploy with, run <code>ssh git@github.com</code> and confirm the prompt.

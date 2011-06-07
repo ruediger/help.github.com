@@ -1,0 +1,10 @@
+---
+layout: default
+title: Textmate
+description: How to use Textmate as your git editor
+categories: third_party
+---
+
+Using Textmate as your git editor is fairly simple, you just need to to make sure Textmate informs git when the document is closed.  You can do this by using `mate -w`:
+
+<pre class="terminal">git config --global core.editor "mate -w"</pre>

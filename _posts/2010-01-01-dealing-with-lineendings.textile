@@ -1,0 +1,5 @@
+---
+layout: redirect
+title: Dealing with line endings
+redirect_to: /line-endings
+---

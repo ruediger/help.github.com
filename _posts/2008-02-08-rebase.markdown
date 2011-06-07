@@ -1,0 +1,154 @@
+---
+layout: default
+title: Rebase
+description: Using git rebase to restructure a branch
+categories: intermediate
+---
+
+<p class="intro">One often overlooked feature of git is the <code>git rebase</code> command. Rebase allows you to easily change a series of commits, reordering, editing, or squashing commits together into a single commit.</p>
+
+<span class="attention">It is considered bad practice to rebase commits which you have already pushed to a remote repo.  Doing so may invoke the wrath of the git gods... you have been warned.</span>
+
+So, you've cloned a repository, and hacked away at it; separated it into logical chunks, and it's now ready to submit!
+
+So you send your patch series, or publish your branch, and ask for a pull, but a quick review reveals that there are some errors in these patches!
+
+Now, the maintainer may send these patches back to you, and ask you to fix these, this guide shows several ways on how this can be accomplished.
+
+Before you start, make sure you have a clean working tree (i.e. no modified files).
+
+Using rebase -i
+---------------
+
+This is the most general (and easiest) way to edit history.
+
+### Invocation
+
+The syntax is:
+
+<pre class="terminal">git rebase -i last_good_commit</pre>
+
+For example, to rebase all the commits from master to the current branch's head:
+
+<pre class="terminal">git rebase -i master</pre>
+
+Another common practice is to rebase the last few commits in your current branch.  If our branch is named fix_stuff and we want to rebase the last 5 commits we can run:
+
+<pre class="terminal">git rebase -i fix_stuff~5</pre>
+
+Running the command with the `-i` flag will invoke your text editor with a file detailing the commits that will be rebased.  This will also list the command available:
+
+<pre>
+pick 1fc6c95 Patch A
+pick 6b2481b Patch B
+pick dd1475d something I want to split
+pick fa39187 something to add to patch A
+pick 7b36971 something to move before patch B
+
+# Rebase 41a72e6..7b36971 onto 41a72e6
+#
+# Commands:
+#  p, pick = use commit
+#  e, edit = use commit, but stop for amending
+#  s, squash = use commit, but meld into previous commit
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+# However, if you remove everything, the rebase will be aborted.
+#
+</pre>
+
+At this point you can edit the file to change the order of the commits.  There are three commands available:
+
+### Pick
+
+Pick is used to include a commit.  By default you will be given a list of the commits you chose to rebase, in order of oldest (top) to newest (bottom).  Rearranging the order of the pick commands will change the order of the commits when you begin the rebase.
+
+### Edit
+
+Using the edit command on a commit will cause rebase to pick the commit and pause.  During this pause you can amend the commit, adding to or removing from it.  You can also make more commits before you continue the rebase, this allows you to split a large commit into smaller ones.  You should always ensure that your working tree and index are clean before you resume the rebase.
+
+### Squash
+
+This command lets you combine two or more commits into a single commit.  When used the commit will be picked and then amended into the commit above it.  Git will then pause the rebase and open your text editor with the commit messages from both commits.  After you have edited the message to your satisfaction save the file and close the editor.  Git will resume the rebase.
+
+### Example
+
+In this rebase we will cover all 3 commands.  We start our rebase with `git rebase -i master~5` and are presented with this file in our editor:
+
+<pre>
+pick 1fc6c95 Patch A
+pick 6b2481b Patch B
+pick dd1475d something I want to split
+pick fa39187 something to add to patch A
+pick 7b36971 something to move before patch B
+
+# Rebase 41a72e6..7b36971 onto 41a72e6
+#
+# Commands:
+#  p, pick = use commit
+#  e, edit = use commit, but stop for amending
+#  s, squash = use commit, but meld into previous commit
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+# However, if you remove everything, the rebase will be aborted.
+#
+</pre>
+
+There are a few things we want to do here, we want to move the last two commits up before the "Patch B" commit.  One of those commits will be squashed into the "Patch A" commit.  Finally we want to edit the last commit to split it into two commits.  We'll change the file as such:
+
+<pre>
+pick 1fc6c95 Patch A
+squash fa39187 something to add to patch A
+pick 7b36971 something to move before patch B
+pick 6b2481b Patch B
+edit dd1475d something I want to split
+</pre>
+
+Now we save and close the editor to begin the rebase.  Since the first operation is a squash our editor opens:
+
+<pre>
+# This is a combination of two commits.
+# The first commit's message is:
+
+Patch A
+
+# This is the 2nd commit message:
+
+something to add to patch A
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# Not currently on any branch.
+# Changes to be committed:
+#   (use "git reset HEAD &lt;file>..." to unstage)
+#
+#	modified:   a
+#
+</pre>
+
+As usual, edit the file as we wish, save, close the editor.  The rebase will proceed until it gets to the edit operation, where it tells us:
+
+<pre class="terminal">
+You can amend the commit now, with
+
+        git commit --amend
+
+Once you are satisfied with your changes, run
+
+        git rebase --continue
+</pre>
+
+At this point we would edit the files we need, do a `git commit --amend`, make our second commit, and ensure that our working tree and index are clean.  Now we can tell git to complete the rebase with `git rebase --continue`.  You might wish to use `git-gui` for amending commits like this, it can make things much easier by visualizing the changes you are committing.
+
+Notes
+-----
+
+* If others have branched off of the work you have doing, do _not_ modify any of the commits.  The rule in Git is that if you have work that people are working off of, you will make it hell for them if you change it.  Rebasing and amending are only for commits where you *know* no one is working off of.
+* In the upcoming 1.5.6, there will be new rebase -i commands "tag", "merge", and "reset", as well.
+
+References
+----------
+
+* [Git user manual - Cleaning up history](http://www.kernel.org/pub/software/scm/git/docs/user-manual.html#cleaning-up-history)
+* [git-rebase documentation](http://www.kernel.org/pub/software/scm/git/docs/git-rebase.html)
+* [git-commit documentation](http://www.kernel.org/pub/software/scm/git/docs/git-commit.html)
