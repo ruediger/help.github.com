@@ -6,7 +6,7 @@ description: A quick guide to help you get started with Git
 
 <p class="intro">If you&rsquo;ve found yourself on this page, we&rsquo;re assuming you&rsquo;re brand new to Git and GitHub. This guide will walk you through the basics and explain a little bit about how everything works along the way.</p>
 
-<p class="intro">This is the guide for setting up git in <strong>OSX</strong>. There are also guides for <strong><a href="/mac-set-up-git">OSX</a></strong> and <strong><a href="/win-set-up-git">Windows</a></strong>.</p>
+<p class="intro">This is the guide for setting up git in <strong>Linux</strong>. There are also guides for <strong><a href="/mac-set-up-git">OSX</a></strong> and <strong><a href="/win-set-up-git">Windows</a></strong>.</p>
 
 ##<span class="step">First:</span> Download and Install Git
 
