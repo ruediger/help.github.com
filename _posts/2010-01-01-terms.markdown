@@ -1,0 +1,5 @@
+---
+layout: redirect
+title: GitHub Terms of Service
+redirect_to: /terms-of-service
+---

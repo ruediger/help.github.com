@@ -1,0 +1,5 @@
+---
+layout: redirect
+title: GitHub Privacy Policy
+redirect_to: /privacy-policy
+---
