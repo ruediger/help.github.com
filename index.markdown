@@ -59,23 +59,3 @@ title: Welcome
     </ul>
   </div>
 </div>
-
-Getting help
-------------
-
-There are a number of resources available to help you learn git or fix issues with GitHub:
-
-### GitHub
-
-* [GitHub Support](http://support.github.com) -- Resolve issues with GitHub or get help with basic git issues.
-* [Contact GitHub](http://github.com/contact) -- This is your direct line to us.
-* [GitHub Google Group](http://groups.google.com/group/github/) -- Ask the community for help
-* [GitHub Status](http://status.github.com) -- Is GitHub down, or is it just me?
-
-### Git
-
-* [Pro Git](http://progit.org/) -- The greatest book on git, by GitHub's very own Scott Chacon. Available online for free.
-* [git-scm](http://git-scm.com/) -- The official git website.
-* [git man pages](http://www.kernel.org/pub/software/scm/git/docs/) -- In-depth documentation for every git command.
-* [git user's manual](http://www.kernel.org/pub/software/scm/git/docs/user-manual.html) -- Concepts and workflows.
-* [git ready](http://www.gitready.com/) -- Tips and hints for using git.
