@@ -3,5 +3,5 @@ layout: redirect
 title: GitHub Support
 description: Resolve issues with GitHub or get help with basic git issues.
 categories: github_resources
-redirect_to: http://support.github.com/
+redirect_to: https://github.com/contact
 ---

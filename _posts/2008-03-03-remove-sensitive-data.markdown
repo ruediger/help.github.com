@@ -106,7 +106,7 @@ You may have collaborators that pulled your tainted branch and created their own
 Cached data on GitHub
 ---------------------
 
-Be warned that force-pushing does not erase commits on the remote repo, it simply introduces new ones and moves the branch pointer to point to them.  If you are worried about users accessing the bad commits directly via SHA1, you will have to delete the repo and recreate it.  If the commits were viewed online the pages may also be cached.  Check for cached pages after you recreate the repo, if you find any open a ticket on [GitHub Support](http://support.github.com) and provide links so staff can purge them from the cache.
+Be warned that force-pushing does not erase commits on the remote repo, it simply introduces new ones and moves the branch pointer to point to them.  If you are worried about users accessing the bad commits directly via SHA1, you will have to delete the repo and recreate it.  If the commits were viewed online the pages may also be cached.  Check for cached pages after you recreate the repo, if you find any open a ticket on [GitHub Support](https://github.com/contact) and provide links so staff can purge them from the cache.
 
 Avoiding accidental commits in the future
 -----------------------------------------

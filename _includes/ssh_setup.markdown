@@ -148,6 +148,6 @@
 			</pre>
 			<p>Make sure it is connecting to GitHub on port 22. If it is, check to make sure your firewall is not blocking port 22.</p>
 			<h4>When all else fails</h4>
-			<p>If none of these solved your problem, check out <a href="/troubleshooting-ssh">this guide</a> or contact <a href="http://support.github.com/">GitHub support</a></p>
+			<p>If none of these solved your problem, check out <a href="/troubleshooting-ssh">this guide</a> or contact <a href="https://github.com/contact">GitHub support</a></p>
 		</div>
 	</div>
