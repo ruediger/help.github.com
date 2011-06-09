@@ -10,35 +10,9 @@ This guide details the process of moving a repo to another account.
 Direct move
 -----------
 
-If you wish to move a repo between users or organizations, please [contact support](https://github.com/contact) following the details below.
+You can transfer ownership of a repository you own in the Admin page of your repository. For example https://github.com/amiridis/playground/admin. There you can find the following section:
 
-**What to check before creating the support request**
-
-1. Make sure that there is not a repo with the same name on the destination account.
-
-2. Make sure the destination account has unused private repos available if the repo being moved is private.
-
-3. **Please** make sure you login with the account that owns the repositories you want support to move for you. If the repositories belong to different accounts, please create one support request per account.
-
-**What to include in your support request**
-
-1. List the repositories you want support to move.
-
-2. Tell us the destination account (the username)
-
-**Example**
-
-*Subject:* Move repositories
-
-*Repositories*
-
-    myaccount/repoA
-    myaccount/repoB
-    myaccount/repoC
-
-*Destination*
-
-    destinationaccount
+![Type in the new owner and click the "Tranfer" button.](/images/danger_zone_transfer.jpg)
 
 Existing forks
 --------------
