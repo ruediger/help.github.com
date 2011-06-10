@@ -362,3 +362,73 @@ img.top-margin {
 
 /* @end */
 
+/****************************/
+/*        Tip Widget        */
+/****************************/
+
+.sidebar-module > .tip-box {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+}
+
+.sidebar-module > .tip-box h4 {
+  padding: 8px 10px;
+  background-color: #f1f1f1;
+  background-image: -moz-linear-gradient(top, #f1f1f1, #e1e1e1); 
+  background-image: -ms-linear-gradient(top, #f1f1f1, #e1e1e1); 
+  background-image: -o-linear-gradient(top, #f1f1f1, #e1e1e1); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#e1e1e1)); 
+  background-image: -webkit-linear-gradient(top, #f1f1f1, #e1e1e1); 
+  background-image: linear-gradient(top, #f1f1f1, #e1e1e1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f1f1f1', EndColorStr='#e1e1e1');
+  color: #666;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  border: solid #CACACA;
+  border-width: 1px;
+  margin: 0px;
+}
+
+.sidebar-module > .tip-box a.next {
+  padding: 7px 10px 8px;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  font-size: 11px;
+  color: #666;
+  font-weight: bold;
+  border-left: 1px solid #CACACA;
+  border-top: 1px solid #f2f2f2;
+  background-color: #eaeaea;
+  background-image: -moz-linear-gradient(top, #eaeaea, #d6d6d6); 
+  background-image: -ms-linear-gradient(top, #eaeaea, #d6d6d6); 
+  background-image: -o-linear-gradient(top, #eaeaea, #d6d6d6); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eaeaea), to(#d6d6d6)); 
+  background-image: -webkit-linear-gradient(top, #eaeaea, #d6d6d6); 
+  background-image: linear-gradient(top, #eaeaea, #d6d6d6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eaeaea', EndColorStr='#d6d6d6');
+}
+
+.sidebar-module > .tip-box a.next:hover {
+  border-top: 1px solid #efefef;
+  background-color: #e5e5e5;
+  background-image: -moz-linear-gradient(top, #e5e5e5, #cecece); 
+  background-image: -ms-linear-gradient(top, #e5e5e5, #cecece); 
+  background-image: -o-linear-gradient(top, #e5e5e5, #cecece); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e5e5e5), to(#cecece)); 
+  background-image: -webkit-linear-gradient(top, #e5e5e5, #cecece); 
+  background-image: linear-gradient(top, #e5e5e5, #cecece);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#e5e5e5', EndColorStr='#cecece');
+}
+
+.sidebar-module div.tip-body {
+  border: solid #CACACA;
+  border-width: 0px 1px 1px 1px;
+  background-color: #FAFAFB;
+  padding: 0px 10px;
+  overflow: hidden;
+}
+
+/* @end */
