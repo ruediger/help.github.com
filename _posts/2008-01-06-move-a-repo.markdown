@@ -22,7 +22,9 @@ There are a few caveats, especially with regards to private repos:
 
 We cannot set up redirects with git, so every clone of the repository will need to have its remote updated. All you need to run to update your local repository is
 
-    git remote set-url remote_name new_url
+<pre class="terminal">
+git remote set-url remote_name new_url
+</pre>
 
 Existing forks
 --------------
