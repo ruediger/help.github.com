@@ -467,10 +467,16 @@ img.top-margin {
   background-position: 0px -297px;
 }
 
+.sidebar-module img.status-anim {
+  display: none
+}
+
 .sidebar-module .loading img.status-anim {
+  display: inline;
   float: right;
   margin-top: 4px;
   position: relative;
 }
+
 /* @end */
 
