@@ -51,7 +51,11 @@ sidebar_cats:
           <ul>
             {% for cat in (page.sidebar_cats) %}
             <li class="js-topic">
-              <h3><a href="#">{{ cat | replace:'_',' ' | capitalize }}</a></h3>
+              {% if cat == 'github_resources' %}
+                <h3><a href="#">GitHub Resources</a></h3>
+              {% else %}
+                <h3><a href="#">{{ cat | replace:'_',' ' | capitalize }}</a></h3>
+              {% endif %}
               <ul class="js-guides">
                 {% for post in site.posts reversed %}{% if post.categories contains cat %}
                   {% if page.title == post.title %}
@@ -68,6 +72,13 @@ sidebar_cats:
         <div class="sidebar-module">
           <p>This website is <a href="http://github.com/github/help.github.com#readme" target="_blank">open source</a>. Please help us by forking the project and adding to it.</p>
         </div>
+        <div class="sidebar-module">
+          <div class="status-box loading">
+            <h4>Site Status:</h4>
+            <a href="http://status.github.com">All Systems Operational <img class="status-anim" src="/images/load-anim.gif" height="10" width="43" alt="loading"/></a>
+          </div>
+        </div> <!-- /sidebar-module -->
+
       </div><!-- /sidebar-shell -->
 
     </div><!-- #wrapper -->
