@@ -14,6 +14,16 @@ You can transfer ownership of a repository you own in the Admin page of your rep
 
 ![Type in the new owner and click the "Tranfer" button.](/images/danger_zone_transfer.jpg)
 
+There are a few caveats, especially with regards to private repos:
+
+* The target user must not have a repository with the same name, or a fork in the same network.
+* If the repository is private the target user must have a paid account with at least one unused private repository available.
+* Private forks cannot be transferred, only root private repos.
+
+We cannot set up redirects with git, so every clone of the repository will need to have its remote updated. All you need to run to update your local repository is
+
+    git remote set-url remote_name new_url
+
 Existing forks
 --------------
 
