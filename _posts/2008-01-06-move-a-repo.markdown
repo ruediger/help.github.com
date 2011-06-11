@@ -10,8 +10,6 @@ This guide details the process of moving a repo to another account.
 Direct move
 -----------
 
-Since we've had some user harassment lately, we've decided to restrict these transfers before a problem arises. Instead of being able to transfer to anyone and everyone, you can now only transfer a repo into an organization account for which you have admin rights. This should cover the majority of cases, in the rare chance you want to transfer to another user you can always contact support.
-
 You can transfer a repository you own into an organization account for which you have admin rights. This covers the majority of cases. You can [contact support](https://github.com/contact) in the rare chance you want to transfer to another user.
 
 In the admin page of your repository, you can find the following section:
