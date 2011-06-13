@@ -21,7 +21,7 @@ At some point you may find yourself wanting to contribute to someone else's proj
 
 You&rsquo;ve successfully forked the Spoon-Knife repo, but so far it only exists on GitHub. To be able to work on the project, you will need to clone it to your local machine.
 
-1. <span class="step-title">Clone the &ldquo;Spoon-Knife&rdquo; project</span>
+2. <span class="step-title">Clone the &ldquo;Spoon-Knife&rdquo; project</span>
 
 	Run the following code:
 
@@ -29,7 +29,7 @@ You&rsquo;ve successfully forked the Spoon-Knife repo, but so far it only exists
 	<span class="codeline">$ git clone git@github.com:<em>username</em>/Spoon-Knife.git<span>Clones your copy of the repo into the current directory in terminal</span></span>
 	</pre>
 
-2. <span class="step-title">Configure remotes</span>
+3. <span class="step-title">Configure remotes</span>
 
 	When a repo is cloned, it has a default remote called `origin` that points to your fork on GitHub, not the original repo it was forked from. To keep track of the original repo, you need to add another remote named `upstream`:
 
