@@ -10,7 +10,7 @@ categories: advanced
 The Good Stuff
 --------------
 
-Splitting a subpath into a repo is a fairly straightforward process, even if the command is hard to remember.  For this example, we split <code>lib/</code> out of the "GitHub gem":http://github.com/defunkt/github-gem repo, removing empty commits but retaining the path's history.
+Splitting a subpath into a repo is a fairly straightforward process, even if the command is hard to remember.  For this example, we split <code>lib/</code> out of the [GitHub gem](http://github.com/defunkt/github-gem) repo, removing empty commits but retaining the path's history.
 
 <pre class="terminal">[tekkub@tekBook: ~/tmp] $ git clone git://github.com/defunkt/github-gem.git
 Initialized empty Git repository in /Users/tekkub/tmp/github-gem/.git/
