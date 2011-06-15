@@ -70,3 +70,4 @@ Links
 
 * [Pro Git](http://progit.org/book/ch2-2.html)
 * [gitignore man page](http://www.kernel.org/pub//software/scm/git/docs/gitignore.html)
+* [A collection of useful .gitignore templates](https://github.com/github/gitignore)
